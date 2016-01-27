@@ -9,40 +9,47 @@ Entity decoder is
 end decoder;
 
 architecture inside of decoder is
-
+    signal X4,X3,X2,X1,X0: std_logic;
 begin
-	A <= INDEX(4);
-	B <= INDEX(3);
-	C <= INDEX(2);
-	D <= INDEX(1);
-	E <= INDEX(0);
-	D(0) <= not(A) and not(B) and not(C) and not(D) and not(E);
-	D(1) <= not(A) and not(B) and not(C) and not(D) and E;
-	D(2) <=	not(A) and not(B) and not(C) and D and E;
-	D(3) <= not(A) and not(B) and C and not(D) and not(E);
-	D(4) <= not(A) and not(B) and C and not(D) and E;
-	D(5) <= not(A) and not(B) and C and D and E;
-	D(6) <= not(A) and B and not(C) and not(D) and not(E);
-	D(7) <= not(A) and B and not(C) and not(D) and E;
-	D(8) <= not(A) and B and not(C) and D and E;
-	D(9) <= not(A) and B and C and not(D) and not(E);
-	D(10) <= not(A) and B and C and not(D) and E;
-	D(11) <= not(A) and B and C and D and E;
-	D(12) <= A and not(B) and not(C) and not(D) and not(E);
-	D(13) <= A and not(B) and not(C) and not(D) and E;
-	D(14) <= A and not(B) and not(C) and D and not(E);
-	D(15) <= A and not(B) and not(C) and D and E;
-	D(16) <= A and not(B) and C and not(D) and not(E);
-	D(17) <= A and not(B) and C and not(D) and E;
-	D(18) <= A and not(B) and C and D and not(E);
-	D(19) <= A and not(B) and C and D and E;
-	D(20) <= A and B and not(C) and not(D) and not(E);
-	D(21) <= A and B and not(C) and not(D) and E;
-	D(22) <= A and B and not(C) and D and not(E);
-	D(23) <= A and B and not(C) and D and E;
-	D(24) <= A and B and C and not(D) and not(E);
-	D(25) <= A and B and C and not(D) and E;
-	ERROR <= A and B and C and D and not(E);
+	X4 <= INDEX(4);
+	X3 <= INDEX(3);
+	X2 <= INDEX(2);
+	X1 <= INDEX(1);
+	X0 <= INDEX(0);
+    --
+	D(0) <= not(X4) and not(X3) and not(X2) and not(X1) and not(X0);
+	D(1) <= not(X4) and not(X3) and not(X2) and not(X1) and X0;
+	D(2) <=	not(X4) and not(X3) and not(X2) and X1 and not(X0);
+	D(3) <= not(X4) and not(X3) and not(X2) and X1 and X0;
+    --
+	D(4) <= not(X4) and not(X3) and X2 and not(X1) and not(X0);
+	D(5) <= not(X4) and not(X3) and X2 and not(X1) and X0;
+	D(6) <= not(X4) and not(X3) and X2 and X1 and not(X0);
+	D(7) <= not(X4) and not(X3) and X2 and X1 and X0;
+    --
+	D(8) <= not(X4) and X3 and not(X2) and not(X1) and not(X0);
+	D(9) <= not(X4) and X3 and not(X2) and not(X1) and X0;
+	D(10) <= not(X4) and X3 and not(X2) and X1 and not(X0);
+	D(11) <= not(X4) and X3 and not(X2) and X1 and X0;
+    --
+	D(12) <= not(X4) and X3 and X2 and not(X1) and not(X0);
+	D(13) <= not(X4) and X3 and X2 and not(X1) and X0;
+	D(14) <= not(X4) and X3 and X2 and X1 and not(X0);
+	D(15) <= not(X4) and X3 and X2 and X1 and X0;
+    --
+	D(16) <= X4 and not(X3) and not(X2) and not(X1) and not(X0);
+	D(17) <= X4 and not(X3) and not(X2) and not(X1) and X0;
+	D(18) <= X4 and not(X3) and not(X2) and X1 and not(X0);
+	D(19) <= X4 and not(X3) and not(X2) and X1 and X0;
+    --
+	D(20) <= X4 and not(X3) and X2 and not(X1) and not(X0);
+	D(21) <= X4 and not(X3) and X2 and not(X1) and X0;
+	D(22) <= X4 and not(X3) and X2 and X1 and not(X0);
+	D(23) <= X4 and not(X3) and X2 and X1 and X0;
+    --
+	D(24) <= X4 and X3 and not(X2) and not(X1) and not(X0);
+	D(25) <= X4 and X3 and not(X2) and not(X1) and X0;
+	ERROR <= X4 and X3 and (X2 or X1);
 
-end inside
+end inside;
 
