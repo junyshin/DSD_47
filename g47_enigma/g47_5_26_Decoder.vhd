@@ -49,6 +49,7 @@ begin
     --
 	D(24) <= X4 and X3 and not(X2) and not(X1) and not(X0);
 	D(25) <= X4 and X3 and not(X2) and not(X1) and X0;
+	--
 	ERROR <= X4 and X3 and (X2 or X1);
 
 end inside;
