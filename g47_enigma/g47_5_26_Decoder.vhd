@@ -2,49 +2,47 @@ Library ieee;
 use ieee.std_logic_1164.all;
 
 Entity decoder is
-	port ( INDEX: IN std_logic_vector(4 downto 0);
+	port (INDEX: IN std_logic_vector(4 downto 0);
 			D: OUT std_logic_vector(25 downto 0);
-			ERRORS: OUT std_logic
+			ERROR: OUT std_logic
 	);
 end decoder;
 
 architecture inside of decoder is
 
 begin
-	with INDEX select
-	D <= "00000000000000000000000001" when "00001",
-		 "00000000000000000000000010" when "00010",
-		 "00000000000000000000000100" when "00011",
-		 "00000000000000000000001000" when "00100",
-		 "00000000000000000000010000" when "00101",
-		 "00000000000000000000100000" when "00110",
-		 "00000000000000000001000000" when "00111",
-		 "00000000000000000010000000" when "01000",
-		 "00000000000000000100000000" when "01001",
-		 "00000000000000001000000000" when "01010",
-		 "00000000000000010000000000" when "01011",
-		 "00000000000000100000000000" when "01100",
-		 "00000000000001000000000000" when "01101",
-		 "00000000000010000000000000" when "01110",
-		 "00000000000100000000000000" when "01111",
-		 "00000000001000000000000000" when "10000",
-		 "00000000010000000000000000" when "10001",
-		 "00000000100000000000000000" when "10010",
-		 "0000000100000000000000000" when "10011",
-		 "00000010000000000000000000" when "10100",
-		 "00000100000000000000000000" when "10101",
-		 "00001000000000000000000000" when "10110",
-		 "00010000000000000000000000" when "10111",
-		 "00100000000000000000000000" when "11000",
-		 "01000000000000000000000000" when "11001",
-		 "10000000000000000000000000" when "11010",
-		 "00000000000000000000000000" when others;
+	A <= INDEX(4);
+	B <= INDEX(3);
+	C <= INDEX(2);
+	D <= INDEX(1);
+	E <= INDEX(0);
+	D(0) <= not(A) and not(B) and not(C) and not(D) and not(E);
+	D(1) <= not(A) and not(B) and not(C) and not(D) and E;
+	D(2) <=	not(A) and not(B) and not(C) and D and E;
+	D(3) <= not(A) and not(B) and C and not(D) and not(E);
+	D(4) <= not(A) and not(B) and C and not(D) and E;
+	D(5) <= not(A) and not(B) and C and D and E;
+	D(6) <= not(A) and B and not(C) and not(D) and not(E);
+	D(7) <= not(A) and B and not(C) and not(D) and E;
+	D(8) <= not(A) and B and not(C) and D and E;
+	D(9) <= not(A) and B and C and not(D) and not(E);
+	D(10) <= not(A) and B and C and not(D) and E;
+	D(11) <= not(A) and B and C and D and E;
+	D(12) <= A and not(B) and not(C) and not(D) and not(E);
+	D(13) <= A and not(B) and not(C) and not(D) and E;
+	D(14) <= A and not(B) and not(C) and D and not(E);
+	D(15) <= A and not(B) and not(C) and D and E;
+	D(16) <= A and not(B) and C and not(D) and not(E);
+	D(17) <= A and not(B) and C and not(D) and E;
+	D(18) <= A and not(B) and C and D and not(E);
+	D(19) <= A and not(B) and C and D and E;
+	D(20) <= A and B and not(C) and not(D) and not(E);
+	D(21) <= A and B and not(C) and not(D) and E;
+	D(22) <= A and B and not(C) and D and not(E);
+	D(23) <= A and B and not(C) and D and E;
+	D(24) <= A and B and C and not(D) and not(E);
+	D(25) <= A and B and C and not(D) and E;
+	ERROR <= A and B and C and D and not(E);
 
-	ERRORS <= '1' when "11011",
-	         '1' when "11100",
-	         '1' when "11101",
-	         '1' when "11110",
-	         '1' when "11111",
-	         '0' when others;
-end inside;
+end inside
 
