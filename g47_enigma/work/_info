@@ -15,7 +15,7 @@ L4
 VGBUXi2SES:fE0C09L?CTC2
 Z6 OV;C;10.1d;51
 32
-Z7 !s108 1454352669.829000
+Z7 !s108 1454353139.240000
 Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/g47_enigma/g47_5_26_Decoder.vhd|
 Z9 !s107 Y:/DSD/g47_enigma/g47_5_26_Decoder.vhd|
 Z10 o-work work -2002 -explicit -O0
@@ -29,6 +29,7 @@ DEx4 work 7 decoder 0 22 GBUXi2SES:fE0C09L?CTC2
 l13
 L11
 VC9a8Z^OaK<hS8_[O9oDVA1
+!s100 kjoLL1B>@HgK:zUWRU?UR3
 R6
 32
 R7
@@ -36,7 +37,6 @@ R8
 R9
 R10
 R11
-!s100 kjoLL1B>@HgK:zUWRU?UR3
 !i10b 1
 Edecoder_vhd_tst
 Z12 w1454339180
@@ -48,46 +48,116 @@ Z14 FY:/DSD/g47_enigma/simulation/modelsim/decoder.vht
 l0
 L30
 VL71V^5a7<Uz:8nfkkg]g<3
+!s100 l;U>8nm0WLDO4[ozYfW8P1
 R6
 32
-Z15 !s108 1454352670.079000
+!i10b 1
+Z15 !s108 1454353139.411000
 Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/g47_enigma/simulation/modelsim/decoder.vht|
 Z17 !s107 Y:/DSD/g47_enigma/simulation/modelsim/decoder.vht|
 R10
 R11
-!s100 l;U>8nm0WLDO4[ozYfW8P1
-!i10b 1
 Adecoder_arch
 R1
 R2
-DEx4 work 15 decoder_vhd_tst 0 22 L71V^5a7<Uz:8nfkkg]g<3
+Z18 DEx4 work 15 decoder_vhd_tst 0 22 L71V^5a7<Uz:8nfkkg]g<3
 l45
 L32
-VghaT0P]d:S[=7I5P5TB@;3
+Z19 VghaT0P]d:S[=7I5P5TB@;3
+Z20 !s100 >k]JZlfOl1b?Ga^kfJUH_3
 R6
 32
+!i10b 1
 R15
 R16
 R17
 R10
 R11
-!s100 >k]JZlfOl1b?Ga^kfJUH_3
-!i10b 1
-Eg47_lab1_vhd_tst
-Z18 w1454352504
+Eg47_comp6
+Z21 w1454351991
 R1
 R2
 R3
-Z19 8Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1.vht
-Z20 FY:/DSD/modelsim_test/simulation/modelsim/g47_lab1.vht
+Z22 8Y:/DSD/modelsim_test/g47_comp6.vhd
+Z23 FY:/DSD/modelsim_test/g47_comp6.vhd
+l0
+L24
+VFNRJgN5fFfOIZM;43m>D`3
+R6
+32
+Z24 !s108 1454353138.599000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/modelsim_test/g47_comp6.vhd|
+Z26 !s107 Y:/DSD/modelsim_test/g47_comp6.vhd|
+R10
+R11
+!s100 boz24D1ed>G86g[k1PKZd1
+!i10b 1
+Abdf_type
+R1
+R2
+DEx4 work 9 g47_comp6 0 22 FNRJgN5fFfOIZM;43m>D`3
+l45
+L33
+Vb1:=K8jeXi4QNf>Q<R?cH0
+R6
+32
+R24
+R25
+R26
+R10
+R11
+!s100 f^58ebP0F@EnFX`bn@4ho1
+!i10b 1
+Eg47_lab1
+Z27 w1454352293
+R1
+R2
+R3
+Z28 8Y:/DSD/modelsim_test/g47_lab1.vhd
+Z29 FY:/DSD/modelsim_test/g47_lab1.vhd
+l0
+L24
+VC?B7WZnfm0U8M]=a_iaoM1
+R6
+32
+Z30 !s108 1454353138.723000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/modelsim_test/g47_lab1.vhd|
+Z32 !s107 Y:/DSD/modelsim_test/g47_lab1.vhd|
+R10
+R11
+!s100 W26:1Enl8Y^Ch1^_4L;jz0
+!i10b 1
+Abdf_type
+R1
+R2
+DEx4 work 8 g47_lab1 0 22 C?B7WZnfm0U8M]=a_iaoM1
+l44
+L33
+VSUUSKd<oJ5>=AI4JR90gM0
+R6
+32
+R30
+R31
+R32
+R10
+R11
+!s100 ]11OA`B;;M<PDXL2h]LI10
+!i10b 1
+Eg47_lab1_vhd_tst
+Z33 w1454352504
+R1
+R2
+R3
+Z34 8Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1.vht
+Z35 FY:/DSD/modelsim_test/simulation/modelsim/g47_lab1.vht
 l0
 L30
 V[5hC>TM`>YaKCbgf>1BP;1
 R6
 32
-Z21 !s108 1454352670.267000
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1.vht|
-Z23 !s107 Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1.vht|
+Z36 !s108 1454353138.911000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1.vht|
+Z38 !s107 Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1.vht|
 R10
 R11
 !s100 bPQZQVQ`I5A^JSXO:h]D<3
@@ -99,17 +169,17 @@ DEx4 work 16 g47_lab1_vhd_tst 0 22 [5hC>TM`>YaKCbgf>1BP;1
 l45
 L32
 V@^SMgfY@8o@JIQSoH298`2
-!s100 7?DBGbS17Q3]UWRO3mb]m1
 R6
 32
-R21
-R22
-R23
+R36
+R37
+R38
 R10
 R11
+!s100 7?DBGbS17Q3]UWRO3mb]m1
 !i10b 1
 Ag47_lab1_arch_b
-Z24 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z39 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R1
 R2
 DEx4 work 16 g47_lab1_vhd_tst 0 22 J;=@cQ0hOdE<h@3VzJf?Z0
@@ -120,48 +190,48 @@ R6
 32
 R10
 R11
-Z25 FY:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht
+Z40 FY:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht
 w1454352590
-Z26 8Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht
+Z41 8Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht|
+Z43 !s107 Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht|
 !s108 1454352615.470000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht|
-!s107 Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht|
 !s100 V3NnK3PB^>0JNbF]Sf1W`3
 !i10b 1
 Eg47_lab1_vhd_tst_b
-Z28 w1454352648
-R24
+Z44 w1454352648
+R39
 R1
 R2
 R3
-R26
-R25
+R41
+R40
 l0
 L31
 VZ?17FnR_c3o7ZPgTnI<bj2
-!s100 e3a?D_chG2@fMggVnHo1T2
 R6
 32
-!i10b 1
-Z29 !s108 1454352670.439000
-R27
-Z30 !s107 Y:/DSD/modelsim_test/simulation/modelsim/g47_lab1_b.vht|
+Z45 !s108 1454353139.083000
+R42
+R43
 R10
 R11
+!s100 e3a?D_chG2@fMggVnHo1T2
+!i10b 1
 Ag47_lab1_arch_b
-R24
+R39
 R1
 R2
 DEx4 work 18 g47_lab1_vhd_tst_b 0 22 Z?17FnR_c3o7ZPgTnI<bj2
 l46
 L33
 V9YO>dRZZX@Z:zji@BC54;3
-!s100 _AT[5:WQ?=E@3i``cE;QQ2
 R6
 32
-!i10b 1
-R29
-R27
-R30
+R45
+R42
+R43
 R10
 R11
+!s100 _AT[5:WQ?=E@3i``cE;QQ2
+!i10b 1
