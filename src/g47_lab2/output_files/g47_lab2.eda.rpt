@@ -1,6 +1,6 @@
 EDA Netlist Writer report for g47_lab2
-Mon Feb 15 11:36:11 2016
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Mon Feb 15 13:35:34 2016
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -8,9 +8,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. Simulation Settings
-  4. Simulation Generated Files
-  5. EDA Netlist Writer Messages
+  3. EDA Netlist Writer Messages
 
 
 
@@ -36,60 +34,26 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Feb 15 11:36:11 2016 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb 15 13:35:34 2016 ;
 ; Revision Name             ; g47_lab2                              ;
-; Top-level Entity Name     ; g47_26_5_Encoder                      ;
+; Top-level Entity Name     ; g47_26_bit_Barrel_Shift               ;
 ; Family                    ; Cyclone II                            ;
-; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                        ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Option                                                                                            ; Setting                ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
-; Generate netlist for functional simulation only                                                   ; Off                    ;
-; Time scale                                                                                        ; 1 ps                   ;
-; Truncate long hierarchy paths                                                                     ; Off                    ;
-; Map illegal HDL characters                                                                        ; Off                    ;
-; Flatten buses into individual nodes                                                               ; Off                    ;
-; Maintain hierarchy                                                                                ; Off                    ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
-; Enable glitch filtering                                                                           ; Off                    ;
-; Do not write top level VHDL entity                                                                ; Off                    ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
-; Architecture name in VHDL output netlist                                                          ; structure              ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-
-
-+---------------------------------------------------------------+
-; Simulation Generated Files                                    ;
-+---------------------------------------------------------------+
-; Generated Files                                               ;
-+---------------------------------------------------------------+
-; Y:/DSD/src/g47_lab2/simulation/modelsim/g47_lab2.vho          ;
-; Y:/DSD/src/g47_lab2/simulation/modelsim/g47_lab2_fast.vho     ;
-; Y:/DSD/src/g47_lab2/simulation/modelsim/g47_lab2_vhd.sdo      ;
-; Y:/DSD/src/g47_lab2/simulation/modelsim/g47_lab2_vhd_fast.sdo ;
-+---------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit EDA Netlist Writer
+Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 15 11:36:10 2016
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off g47_lab2 -c g47_lab2
-Info (204026): Generated files "g47_lab2.vho", "g47_lab2_fast.vho", "g47_lab2_vhd.sdo" and "g47_lab2_vhd_fast.sdo" in directory "Y:/DSD/src/g47_lab2/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 417 megabytes
-    Info: Processing ended: Mon Feb 15 11:36:11 2016
+    Info: Processing started: Mon Feb 15 13:35:33 2016
+Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off g47_lab2 -c g47_lab2 --gen_testbench
+Info (119006): Selected device EP2C20F484C7 for design "g47_lab2"
+Info (201002): Generated VHDL Test Bench File Z:/Documents/DSD_LAB/DSD_47/src/g47_lab2/simulation/modelsim/g47_26_bit_Barrel_Shift.vht for simulation
+Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 327 megabytes
+    Info: Processing ended: Mon Feb 15 13:35:34 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
