@@ -17,7 +17,6 @@ end entity ; -- g47_26_5_Encoder
 
 architecture arch of g47_26_5_Encoder is
 begin
-
   INDEX <= "11001" when letter = "10000000000000000000000000" else
            "11000" when letter = "01000000000000000000000000" else
            "10111" when letter = "00100000000000000000000000" else
@@ -44,6 +43,6 @@ begin
            "00010" when letter = "00000000000000000000000100" else
            "00001" when letter = "00000000000000000000000010" else
            "00000" when letter = "00000000000000000000000001" else
-           "11111"
-  ERROR <= 1 when letter = "00000000000000000000000000" else 0;
+           "11111";
+  ERROR <= '1' when letter = "00000000000000000000000000" else '0';
 end architecture ; -- arch
