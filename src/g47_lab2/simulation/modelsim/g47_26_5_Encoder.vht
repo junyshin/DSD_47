@@ -113,8 +113,13 @@ BEGIN
   wait for 10 ns;
   letter <= "10000000000000000000000000";
   wait for 10 ns;
-  --
-  letter <= "00000000000000000000000000"; -- Error
+  -- Error
+  letter <= "00000000000000000000000000";
+  wait for 10 ns;
+  letter <= "00000001000100000000000000";
+  wait for 10 ns;
+  letter <= "00000000000000000000000011";
+  wait for 10 ns;
 WAIT;
 END PROCESS always;
 END g47_26_5_Encoder_arch;

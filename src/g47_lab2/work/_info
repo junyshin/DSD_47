@@ -4,7 +4,7 @@ K3
 cModel Technology
 dC:\altera\13.0sp1
 Eg47_26_5_encoder
-Z0 w1455551836
+Z0 w1455554062
 Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z3 dY:\DSD\src\g47_lab2
@@ -15,7 +15,7 @@ L10
 VTJf[XRL>>?d98@YV8<<m60
 Z6 OV;C;10.1d;51
 32
-Z7 !s108 1455553019.170000
+Z7 !s108 1455554183.568000
 Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_lab2/g47_26_5_Encoder.vhd|
 Z9 !s107 Y:/DSD/src/g47_lab2/g47_26_5_Encoder.vhd|
 Z10 o-work work -2002 -explicit -O0
@@ -26,9 +26,9 @@ Aarch
 R1
 R2
 DEx4 work 16 g47_26_5_encoder 0 22 TJf[XRL>>?d98@YV8<<m60
-l19
+l20
 L18
-V[B3]fb6a:HPO7NkP`i_CA0
+V9`ZMib6BLNJ5b[GVkk6`B0
 R6
 32
 R7
@@ -36,10 +36,10 @@ R8
 R9
 R10
 R11
-!s100 OQ;;O1Y]RNT_R^KJbc]9z2
+!s100 @baZBU_@N1dI]3a6RFTP<1
 !i10b 1
 Eg47_26_5_encoder_vhd_tst
-Z12 w1455552812
+Z12 w1455554150
 R1
 R2
 R3
@@ -52,7 +52,7 @@ V8=RXhckR?5<A?0agVYg9g2
 R6
 32
 !i10b 1
-Z15 !s108 1455553020.841000
+Z15 !s108 1455554183.693000
 Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_lab2/simulation/modelsim/g47_26_5_Encoder.vht|
 Z17 !s107 Y:/DSD/src/g47_lab2/simulation/modelsim/g47_26_5_Encoder.vht|
 R10
@@ -60,11 +60,11 @@ R11
 Ag47_26_5_encoder_arch
 R1
 R2
-DEx4 work 24 g47_26_5_encoder_vhd_tst 0 22 8=RXhckR?5<A?0agVYg9g2
+Z18 DEx4 work 24 g47_26_5_encoder_vhd_tst 0 22 8=RXhckR?5<A?0agVYg9g2
 l45
 L32
-VWU>LF`lTe@02MBOOBIhJ`2
-!s100 g0MQM?4`AB<h674dU2;T63
+VB1:]ln6TiWd<IHgW6_FMQ1
+!s100 QRC4^`3BJ>Ug`VXzZM73b3
 R6
 32
 !i10b 1

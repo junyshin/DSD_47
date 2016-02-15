@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Feb 15 11:03:51 2016
+Fitter Status : Successful - Mon Feb 15 11:36:02 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : g47_lab2
 Top-level Entity Name : g47_26_5_Encoder
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 91 / 18,752 ( < 1 % )
-    Total combinational functions : 91 / 18,752 ( < 1 % )
+Total logic elements : 41 / 18,752 ( < 1 % )
+    Total combinational functions : 41 / 18,752 ( < 1 % )
     Dedicated logic registers : 0 / 18,752 ( 0 % )
 Total registers : 0
 Total pins : 32 / 315 ( 10 % )
