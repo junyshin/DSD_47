@@ -17,7 +17,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "02/15/2016 19:57:49"
+-- Generated on "02/15/2016 13:35:33"
                                                             
 -- Vhdl Test Bench template for design  :  g47_26_bit_Barrel_Shift
 -- 
@@ -50,18 +50,21 @@ BEGIN
 	X => X,
 	Y => Y
 	);
-init : PROCESS                                               
--- variable declarations                                     
-BEGIN                                                        
-        -- code that executes only once                      
-WAIT;                                                       
-END PROCESS init;                                           
+                                        
 always : PROCESS                                              
--- optional sensitivity list                                  
--- (        )                                                 
--- variable declarations                                      
+
 BEGIN                                                         
-        -- code executes for every event on sensitivity list  
-WAIT;                                                        
+    X <= "00000000001000000000000000";
+	N <= "000000";
+	wait for 10 ns;
+	N <= "000010";
+	wait for 10 ns;
+	N <= "001000";
+	wait for 10 ns;
+	N <= "011001";
+	wait for 10 ns;
+	N <= "100000";
+WAIT;        
+
 END PROCESS always;                                          
 END g47_26_bit_Barrel_Shift_arch;

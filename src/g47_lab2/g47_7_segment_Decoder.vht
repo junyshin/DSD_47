@@ -17,51 +17,50 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "02/15/2016 19:57:49"
+-- Generated on "02/15/2016 20:01:10"
                                                             
--- Vhdl Test Bench template for design  :  g47_26_bit_Barrel_Shift
+-- Vhdl Test Bench template for design  :  g47_7_segment_Decoder
 -- 
 -- Simulation tool : ModelSim-Altera (VHDL)
 -- 
 
 LIBRARY ieee;                                               
-USE ieee.std_logic_1164.all;                                
+USE ieee.std_logic_1164.all; 
+USE ieee.std_logic_unsigned.all;                               
 
-ENTITY g47_26_bit_Barrel_Shift_vhd_tst IS
-END g47_26_bit_Barrel_Shift_vhd_tst;
-ARCHITECTURE g47_26_bit_Barrel_Shift_arch OF g47_26_bit_Barrel_Shift_vhd_tst IS
+ENTITY g47_7_segment_Decoder_vhd_tst IS
+END g47_7_segment_Decoder_vhd_tst;
+ARCHITECTURE g47_7_segment_Decoder_arch OF g47_7_segment_Decoder_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL N : STD_LOGIC_VECTOR(5 DOWNTO 0);
-SIGNAL X : STD_LOGIC_VECTOR(25 DOWNTO 0);
-SIGNAL Y : STD_LOGIC_VECTOR(25 DOWNTO 0);
-COMPONENT g47_26_bit_Barrel_Shift
+SIGNAL code : STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL segments : STD_LOGIC_VECTOR(6 DOWNTO 0);
+COMPONENT g47_7_segment_Decoder
 	PORT (
-	N : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-	X : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-	Y : OUT STD_LOGIC_VECTOR(25 DOWNTO 0)
+	code : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+	segments : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : g47_26_bit_Barrel_Shift
+	i1 : g47_7_segment_Decoder
 	PORT MAP (
 -- list connections between master ports and signals
-	N => N,
-	X => X,
-	Y => Y
-	);
-init : PROCESS                                               
--- variable declarations                                     
-BEGIN                                                        
-        -- code that executes only once                      
-WAIT;                                                       
-END PROCESS init;                                           
-always : PROCESS                                              
--- optional sensitivity list                                  
--- (        )                                                 
--- variable declarations                                      
-BEGIN                                                         
-        -- code executes for every event on sensitivity list  
+	code => code,
+	segments => segments
+	);                                    
+
+always : PROCESS
+
+BEGIN    
+	code  <= "00000";
+	WAIT FOR 10 ns;                                                     
+	FOR i IN 0 to 30 LOOP
+	code <= code+'1';
+	WAIT FOR 10 ns;
+	END LOOP; -- end the i loop
+
+	WAIT; -- we have gone through all possible input patterns, so suspend simulator forever
+ 
 WAIT;                                                        
 END PROCESS always;                                          
-END g47_26_bit_Barrel_Shift_arch;
+END g47_7_segment_Decoder_arch;

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for g47_lab2
-Mon Feb 15 13:35:34 2016
+Mon Feb 15 20:05:05 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -34,9 +34,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Feb 15 13:35:34 2016 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb 15 20:05:05 2016 ;
 ; Revision Name             ; g47_lab2                              ;
-; Top-level Entity Name     ; g47_26_bit_Barrel_Shift               ;
+; Top-level Entity Name     ; g47_7_segment_Decoder                 ;
 ; Family                    ; Cyclone II                            ;
 +---------------------------+---------------------------------------+
 
@@ -47,13 +47,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 15 13:35:33 2016
+    Info: Processing started: Mon Feb 15 20:05:04 2016
 Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off g47_lab2 -c g47_lab2 --gen_testbench
 Info (119006): Selected device EP2C20F484C7 for design "g47_lab2"
-Info (201002): Generated VHDL Test Bench File Z:/Documents/DSD_LAB/DSD_47/src/g47_lab2/simulation/modelsim/g47_26_bit_Barrel_Shift.vht for simulation
+Info (201002): Generated VHDL Test Bench File Z:/Documents/DSD_LAB/DSD_47/src/g47_lab2/simulation/modelsim/g47_7_segment_Decoder.vht for simulation
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 327 megabytes
-    Info: Processing ended: Mon Feb 15 13:35:34 2016
+    Info: Processing ended: Mon Feb 15 20:05:05 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

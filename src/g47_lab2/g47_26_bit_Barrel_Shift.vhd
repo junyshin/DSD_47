@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity g_47_26_bit_Barrel_Shift is
+entity g47_26_bit_Barrel_Shift is
   port (X: in std_logic_vector(25 downto 0);
   		N: in std_logic_vector(5 downto 0);
   		Y: out std_logic_vector(25 downto 0)

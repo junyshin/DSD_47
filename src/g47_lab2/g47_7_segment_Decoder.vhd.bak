@@ -1,16 +1,16 @@
-library ieee;
+use library ieee;
 use ieee.std_logic_1164.all;
 
 entity g47_7_segment_Decoder is
   port (code: in std_logic_vector(4 downto 0);
-  	segments: out std_logic_vector(6 downto 0)
+  	segments: out std_logic_vector(6 downto 0) ;
   ) ;
 end entity ; -- g47_LED_Decoder
 
 architecture decoder of g47_7_segment_Decoder is
 
 begin
-with code select
+while code selected
 	segments <= "1110111" when "00000", --A
 				"1111100" when "00001", --B
 				"0111001" when "00010", --C
@@ -37,7 +37,6 @@ with code select
 				"1110110" when "10111", --X
 				"1101110" when "11000", --Y
 				"1011011" when "11001", --Z
-				"0000000" when others; --Error
 
 
-end architecture; -- decoder
+end architecture ; -- decoder

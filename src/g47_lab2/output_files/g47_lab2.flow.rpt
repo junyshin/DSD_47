@@ -1,5 +1,5 @@
 Flow report for g47_lab2
-Mon Feb 15 13:35:34 2016
+Mon Feb 15 20:05:05 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Feb 15 13:35:34 2016           ;
+; Flow Status                        ; Successful - Mon Feb 15 20:05:05 2016           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; g47_lab2                                        ;
-; Top-level Entity Name              ; g47_26_bit_Barrel_Shift                         ;
+; Top-level Entity Name              ; g47_7_segment_Decoder                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 185                                             ;
-;     Total combinational functions  ; 185                                             ;
+; Total logic elements               ; 17                                              ;
+;     Total combinational functions  ; 17                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 58                                              ;
+; Total pins                         ; 12                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,28 +64,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/15/2016 13:35:21 ;
+; Start date & time ; 02/15/2016 20:00:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g47_lab2            ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                              ;
-+-------------------------------------+------------------------------+---------------+-------------------------+----------------+
-; Assignment Name                     ; Value                        ; Default Value ; Entity Name             ; Section Id     ;
-+-------------------------------------+------------------------------+---------------+-------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 121368679083.145556132005528 ; --            ; --                      ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                         ; --            ; --                      ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)       ; <None>        ; --                      ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                           ; --            ; --                      ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                            ; --            ; --                      ; --             ;
-; PARTITION_COLOR                     ; 16764057                     ; --            ; g47_26_bit_Barrel_Shift ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING        ; --            ; g47_26_bit_Barrel_Shift ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                       ; --            ; g47_26_bit_Barrel_Shift ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                 ; --            ; --                      ; --             ;
-; TOP_LEVEL_ENTITY                    ; g47_26_bit_Barrel_Shift      ; g47_lab2      ; --                      ; --             ;
-+-------------------------------------+------------------------------+---------------+-------------------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+------------------------------+---------------+-----------------------+----------------+
+; Assignment Name                     ; Value                        ; Default Value ; Entity Name           ; Section Id     ;
++-------------------------------------+------------------------------+---------------+-----------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 121368679083.145558445500680 ; --            ; --                    ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                         ; --            ; --                    ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)       ; <None>        ; --                    ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                           ; --            ; --                    ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                            ; --            ; --                    ; --             ;
+; PARTITION_COLOR                     ; 16764057                     ; --            ; g47_7_segment_Decoder ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING        ; --            ; g47_7_segment_Decoder ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                       ; --            ; g47_7_segment_Decoder ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                 ; --            ; --                    ; --             ;
+; TOP_LEVEL_ENTITY                    ; g47_7_segment_Decoder        ; g47_lab2      ; --                    ; --             ;
++-------------------------------------+------------------------------+---------------+-----------------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -93,9 +93,10 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 395 MB              ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 395 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 327 MB              ; 00:00:01                           ;
-; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 327 MB              ; 00:00:01                           ;
+; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,6 +107,7 @@ applicable agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Analysis & Synthesis ; JUN564D          ; Windows 7 ; 6.2        ; i686           ;
 ; EDA Netlist Writer   ; JUN564D          ; Windows 7 ; 6.2        ; i686           ;
+; EDA Netlist Writer   ; JUN564D          ; Windows 7 ; 6.2        ; i686           ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -113,6 +115,7 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off g47_lab2 -c g47_lab2
+quartus_eda --read_settings_files=on --write_settings_files=off g47_lab2 -c g47_lab2 --gen_testbench
 quartus_eda --read_settings_files=on --write_settings_files=off g47_lab2 -c g47_lab2 --gen_testbench
 
 
