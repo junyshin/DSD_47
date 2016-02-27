@@ -36,28 +36,28 @@ ARCHITECTURE g47_7_segment_Decoder_arch OF g47_7_segment_Decoder_vhd_tst IS
 SIGNAL code : STD_LOGIC_VECTOR(4 DOWNTO 0);
 SIGNAL segments : STD_LOGIC_VECTOR(6 DOWNTO 0);
 COMPONENT g47_7_segment_Decoder
-	PORT (
-	code : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-	segments : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
-	);
+  PORT (
+  code : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+  segments : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+  );
 END COMPONENT;
 BEGIN
-	i1 : g47_7_segment_Decoder
-	PORT MAP (
+  i1 : g47_7_segment_Decoder
+  PORT MAP (
 -- list connections between master ports and signals
-	code => code,
-	segments => segments
-	);
+  code => code,
+  segments => segments
+  );
 
 always : PROCESS
 
 BEGIN
-	code  <= "00000";
-	WAIT FOR 10 ns;
-	FOR i IN 0 to 30 LOOP
-	code <= code+'1';
-	WAIT FOR 10 ns;
-	END LOOP; -- end the i loop
+  code  <= "00000";
+  WAIT FOR 10 ns;
+  FOR i IN 0 to 30 LOOP
+  code <= code+'1';
+  WAIT FOR 10 ns;
+  END LOOP; -- end the i loop
 WAIT;-- we have gone through all possible input patterns, so suspend simulator forever
 END PROCESS always;
 END g47_7_segment_Decoder_arch;
