@@ -1,6 +1,6 @@
 Analysis & Synthesis report for g47_lab2
-Mon Feb 15 20:00:59 2016
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Mar 09 17:41:15 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -9,12 +9,13 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Elapsed Time Per Partition
-  9. Analysis & Synthesis Messages
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -40,8 +41,8 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 15 20:00:59 2016           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 09 17:41:15 2016           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; g47_lab2                                        ;
 ; Top-level Entity Name              ; g47_7_segment_Decoder                           ;
 ; Family                             ; Cyclone II                                      ;
@@ -142,13 +143,30 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+-----------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; g47_7_segment_Decoder.vhd        ; yes             ; User VHDL File  ; Z:/Documents/DSD_LAB/DSD_47/src/g47_lab2/g47_7_segment_Decoder.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
+; g47_7_segment_Decoder.vhd        ; yes             ; User VHDL File  ; Y:/DSD/src/g47_lab2/g47_7_segment_Decoder.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -219,11 +237,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 15 20:00:54 2016
+    Info: Processing started: Wed Mar 09 17:41:13 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g47_lab2 -c g47_lab2
-Info (20029): Only one processor detected - disabling parallel compilation
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file g47_7_segment_decoder.vhd
     Info (12022): Found design unit 1: g47_7_segment_Decoder-decoder
     Info (12023): Found entity 1: g47_7_segment_Decoder
@@ -240,10 +258,10 @@ Info (21057): Implemented 29 device resources after synthesis - the final resour
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 17 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 407 megabytes
-    Info: Processing ended: Mon Feb 15 20:00:59 2016
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 518 megabytes
+    Info: Processing ended: Wed Mar 09 17:41:15 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

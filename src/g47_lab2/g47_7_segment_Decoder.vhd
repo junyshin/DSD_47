@@ -37,6 +37,6 @@ with code select
          "1110110" when "10111", --X
          "1101110" when "11000", --Y
          "1011011" when "11001", --Z
-         "1111111" when others; --Error
-  segments <= not tmp
+         "0000000" when others; --Error
+  segments <= not tmp;
 end architecture; -- decoder

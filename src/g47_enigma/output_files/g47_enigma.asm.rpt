@@ -1,5 +1,5 @@
 Assembler report for g47_enigma
-Mon Feb 01 09:50:25 2016
+Wed Mar 09 18:09:13 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: Y:/DSD/g47_enigma/output_files/g47_enigma.sof
-  6. Assembler Device Options: Y:/DSD/g47_enigma/output_files/g47_enigma.pof
+  5. Assembler Device Options: Y:/DSD/src/g47_enigma/output_files/g47_enigma.sof
+  6. Assembler Device Options: Y:/DSD/src/g47_enigma/output_files/g47_enigma.pof
   7. Assembler Messages
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Feb 01 09:50:25 2016 ;
+; Assembler Status      ; Successful - Wed Mar 09 18:09:13 2016 ;
 ; Revision Name         ; g47_enigma                            ;
-; Top-level Entity Name ; decoder                               ;
+; Top-level Entity Name ; g47_7_segmentdecoder                  ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C20F484C7                          ;
 +-----------------------+---------------------------------------+
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-----------------------------------------------+
-; Assembler Generated Files                     ;
-+-----------------------------------------------+
-; File Name                                     ;
-+-----------------------------------------------+
-; Y:/DSD/g47_enigma/output_files/g47_enigma.sof ;
-; Y:/DSD/g47_enigma/output_files/g47_enigma.pof ;
-+-----------------------------------------------+
++---------------------------------------------------+
+; Assembler Generated Files                         ;
++---------------------------------------------------+
+; File Name                                         ;
++---------------------------------------------------+
+; Y:/DSD/src/g47_enigma/output_files/g47_enigma.sof ;
+; Y:/DSD/src/g47_enigma/output_files/g47_enigma.pof ;
++---------------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Assembler Device Options: Y:/DSD/g47_enigma/output_files/g47_enigma.sof ;
-+----------------+--------------------------------------------------------+
-; Option         ; Setting                                                ;
-+----------------+--------------------------------------------------------+
-; Device         ; EP2C20F484C7                                           ;
-; JTAG usercode  ; 0x001B89B7                                             ;
-; Checksum       ; 0x001B89B7                                             ;
-+----------------+--------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Assembler Device Options: Y:/DSD/src/g47_enigma/output_files/g47_enigma.sof ;
++----------------+------------------------------------------------------------+
+; Option         ; Setting                                                    ;
++----------------+------------------------------------------------------------+
+; Device         ; EP2C20F484C7                                               ;
+; JTAG usercode  ; 0x001B382D                                                 ;
+; Checksum       ; 0x001B382D                                                 ;
++----------------+------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Assembler Device Options: Y:/DSD/g47_enigma/output_files/g47_enigma.pof ;
-+--------------------+----------------------------------------------------+
-; Option             ; Setting                                            ;
-+--------------------+----------------------------------------------------+
-; Device             ; EPCS16                                             ;
-; JTAG usercode      ; 0x00000000                                         ;
-; Checksum           ; 0x1DD87A69                                         ;
-; Compression Ratio  ; 3                                                  ;
-+--------------------+----------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Assembler Device Options: Y:/DSD/src/g47_enigma/output_files/g47_enigma.pof ;
++--------------------+--------------------------------------------------------+
+; Option             ; Setting                                                ;
++--------------------+--------------------------------------------------------+
+; Device             ; EPCS16                                                 ;
+; JTAG usercode      ; 0x00000000                                             ;
+; Checksum           ; 0x1DD986D5                                             ;
+; Compression Ratio  ; 3                                                      ;
++--------------------+--------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 01 09:50:23 2016
+    Info: Processing started: Wed Mar 09 18:09:12 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off g47_enigma -c g47_enigma
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 452 megabytes
-    Info: Processing ended: Mon Feb 01 09:50:25 2016
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 453 megabytes
+    Info: Processing ended: Wed Mar 09 18:09:13 2016
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
