@@ -5,10 +5,6 @@ library lpm;
 use lpm.lpm_components.all;
 
 entity g47_pulse_generator is
-  generic (
-    SIZE: integer := 25,
-    N: integer := 24999999
-  )
   port (
     clock: in std_logic;
     epulse: out std_logic
@@ -16,20 +12,14 @@ entity g47_pulse_generator is
 end entity ; -- g47_pulse_generator
 
 architecture arch of g47_pulse_generator is
-  signal q: std_logic_vector(SIZE downto 0)
+  signal q: std_logic_vector(24 downto 0);
 begin
   COUNTER : lpm_counter
-    generic map(LPM_WIDTH => SIZE, LPM_SVALUE => N, LPM_DIRECTION => "DOWN")
+    -- Width: 25 ; Modulus: 25000000
+    -- test width: 10 ; test modulus: 1000
+    generic map(LPM_WIDTH => 25, LPM_MODULUS => 25000000, LPM_DIRECTION => "DOWN")
     port map(clock => clock, q => q);
 
-  PULSE : process(clock, q)
-  begin
-    if rising_edge(clock) then
-      if unsigned(q) = 0 then
-        epulse <= '1';
-      else
-        epulse <= '0';
-      end if ;
-    end if ;
-  end process ; -- PULSE
+  epulse <= '1' when unsigned(q) = 0 else
+            '0';
 end architecture ; -- arch

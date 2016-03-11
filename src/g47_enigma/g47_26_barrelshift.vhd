@@ -11,9 +11,9 @@ end entity ; -- g47_26_barrelshift
 
 architecture arch of g47_26_barrelshift is
 begin
-  with N select
+  with shift select
     Y <= X when "00000",
-         X(24 downto 0) & X(25) when "000001",
+         X(24 downto 0) & X(25) when "00001",
          X(23 downto 0) & X(25 downto 24) when "00010",
          X(22 downto 0) & X(25 downto 23) when "00011",
          X(21 downto 0) & X(25 downto 22) when "00100",
