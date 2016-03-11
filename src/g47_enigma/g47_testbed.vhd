@@ -2,7 +2,7 @@ entity g47_testbed is
   port (
     clock: in std_logic,
     letter_input: in std_logic_vector(4 downto 0),
-    counter_reset: in std_logic(4 downto 0) := '1',
+    counter_reset: in std_logic := '1',
     segments: out std_logic_vector(6 downto 0),
     error_decode: out std_logic,
     error_encode: out std_logic
@@ -30,5 +30,5 @@ begin
     port map(letter => letter_shifted, index => letter_output, error => error_encode);
 
   DISPLAY : g47_7_segmentdecoder
-    port map(code => letter_output, segments => segments);
+    port map(index => letter_output, segments => segments);
 end architecture ; -- arch

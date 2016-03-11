@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity g47_7_segmentdecoder is
   port (
-    code: in std_logic_vector(4 downto 0);
+    index: in std_logic_vector(4 downto 0);
     segments: out std_logic_vector(6 downto 0)
   ) ;
 end entity ; -- g47_7_segmentdecoder
@@ -11,7 +11,7 @@ end entity ; -- g47_7_segmentdecoder
 architecture arch of g47_7_segmentdecoder is
   signal tmp: std_logic_vector(6 downto 0);
 begin
-  with code select
+  with index select
     tmp <= "1110111" when "00000", --A
            "1111100" when "00001", --B
            "0111001" when "00010", --C
