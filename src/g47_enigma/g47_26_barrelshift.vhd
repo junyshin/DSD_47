@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity g47_26_barrelshift is
   port (
     X: in std_logic_vector(25 downto 0);
-    N: in std_logic_vector(4 downto 0);
+    shift: in std_logic_vector(4 downto 0);
     Y: out std_logic_vector(25 downto 0)
   ) ;
 end entity ; -- g47_26_barrelshift

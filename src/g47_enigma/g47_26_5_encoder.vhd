@@ -4,8 +4,8 @@ use ieee.std_logic_1164.all;
 entity g47_26_5_encoder is
   port (
     letter: in std_logic_vector(25 downto 0);
-    INDEX: out std_logic_vector(4 downto 0);
-    ERROR: out std_logic
+    index: out std_logic_vector(4 downto 0);
+    error: out std_logic
   ) ;
 end entity ; -- g47_26_5_encoder
 
@@ -39,6 +39,6 @@ begin
          "00001" when letter(1) = '1' else
          "00000" when letter(0) = '1' else
          "11111";
-  INDEX <= tmp;
-  ERROR <= '1' when tmp = "11111" else '0';
+  index <= tmp;
+  error <= '1' when tmp = "11111" else '0';
 end architecture ; -- arch
