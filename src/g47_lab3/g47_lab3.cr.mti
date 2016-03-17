@@ -1,12 +1,4 @@
-Y:/DSD/src/g47_lab3/g47_0_25_Counter.vht {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_lab3/g47_0_25_Counter.vht
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity g47_0_25_Counter_vhd_tst
--- Compiling architecture g47_0_25_Counter_arch of g47_0_25_Counter_vhd_tst
-
-} {} {}} Y:/DSD/src/g47_lab3/g47_0_25_Counter.vhd {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_lab3/g47_0_25_Counter.vhd
+Y:/DSD/src/g47_lab3/g47_0_25_Counter.vhd {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_lab3/g47_0_25_Counter.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -14,5 +6,13 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package NUMERIC_STD
 -- Compiling entity g47_0_25_Counter
 -- Compiling architecture arch of g47_0_25_Counter
+
+} {} {}} Y:/DSD/src/g47_lab3/g47_0_25_Counter.vht {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_lab3/g47_0_25_Counter.vht
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g47_0_25_Counter_vhd_tst
+-- Compiling architecture g47_0_25_Counter_arch of g47_0_25_Counter_vhd_tst
 
 } {} {}}

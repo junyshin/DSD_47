@@ -6,6 +6,7 @@ source_file = 1, Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd
 source_file = 1, Y:/DSD/src/g47_enigma/g47_5_26_decoder.vhd
 source_file = 1, Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd
 source_file = 1, Y:/DSD/src/g47_enigma/g47_testbed.sdc
+source_file = 1, Y:/DSD/src/g47_enigma/g47_testbed.stp
 source_file = 1, Y:/DSD/src/g47_enigma/db/g47_enigma.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd

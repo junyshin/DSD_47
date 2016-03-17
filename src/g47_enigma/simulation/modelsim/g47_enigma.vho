@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "03/11/2016 16:26:24"
+-- DATE "03/17/2016 13:29:34"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -378,8 +378,8 @@ SIGNAL \ENCODER|Equal0~1_combout\ : std_logic;
 SIGNAL \letter_input~combout\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \COUNTER|count_previous\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \PULSE|COUNTER|auto_generated|safe_q\ : std_logic_vector(24 DOWNTO 0);
-SIGNAL \ALT_INV_counter_reset~combout\ : std_logic;
 SIGNAL \DISPLAY|ALT_INV_Mux3~2_combout\ : std_logic;
+SIGNAL \ALT_INV_counter_reset~combout\ : std_logic;
 
 BEGIN
 
@@ -394,8 +394,8 @@ ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
 \clock~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \clock~combout\);
-\ALT_INV_counter_reset~combout\ <= NOT \counter_reset~combout\;
 \DISPLAY|ALT_INV_Mux3~2_combout\ <= NOT \DISPLAY|Mux3~2_combout\;
+\ALT_INV_counter_reset~combout\ <= NOT \counter_reset~combout\;
 
 -- Location: LCFF_X39_Y12_N21
 \PULSE|COUNTER|auto_generated|counter_reg_bit1a[23]\ : cycloneii_lcell_ff
