@@ -1,8 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1458236183 "G47_Lab3_report.tex" "G47_Lab3_report.pdf" "G47_Lab3_report" 1458236184
-  "./G47_Lab3_report.out" 1458236183 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1458238669 "G47_Lab3_report.tex" "G47_Lab3_report.pdf" "G47_Lab3_report" 1458238670
+  "./G47_Lab3_report.out" 1458238670 0 d41d8cd98f00b204e9800998ecf8427e ""
   "./counter_0to25.png" 1458228530 13601 fab78172c52fd46837035ab60d0ac021 ""
   "./test_0to25.png" 1458228656 18208 229133e67e65bc4dcf3abaf7863a80a0 ""
+  "./test_bed.png" 1458237377 19618 75ecdd5cb7ffece20165d8df1c45f9e6 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -77,13 +78,14 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "G47_Lab3_report.aux" 1458236184 1274 95e2670ec888e3a1b7bfc999733fd076 ""
-  "G47_Lab3_report.out" 1458236183 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "G47_Lab3_report.tex" 1458236182 4186 256242f97b31594f563729ad4f9498a1 ""
+  "G47_Lab3_report.aux" 1458238670 1462 6d6e7f9af579cbfbb813d58acd3ceea4 ""
+  "G47_Lab3_report.out" 1458238670 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "G47_Lab3_report.tex" 1458238668 4681 cc25b8413b1891b23c36162ffdfa6bf7 ""
   "counter_0to25.png" 1458228530 13601 fab78172c52fd46837035ab60d0ac021 ""
   "test_0to25.png" 1458228656 18208 229133e67e65bc4dcf3abaf7863a80a0 ""
+  "test_bed.png" 1458237377 19618 75ecdd5cb7ffece20165d8df1c45f9e6 ""
   (generated)
-  "G47_Lab3_report.out"
-  "G47_Lab3_report.log"
   "G47_Lab3_report.pdf"
+  "G47_Lab3_report.log"
+  "G47_Lab3_report.out"
   "G47_Lab3_report.aux"
