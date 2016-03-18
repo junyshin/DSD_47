@@ -71,14 +71,20 @@ The Altera DE1 development board is equiped with 4 7-segment LED displays and 10
     \end{tabular}
 \end{table}
 To decode the binary numbers being put in by the swtiches, we used the 7\_segment\_decoder to show the letters according to the table \ref{tab:alph_label}.
-The second step was to make a testbed circuit which combined all the components we have made so far including: 26\_5\_encoder, 5\_26\_decoder, 0\_25\_counter, pulse\_generator, 26\_barrelshift, and 7\_segment\_decoder. The testbed also used 5 switches to set the inital shift amount then shifts up using the 26\_barrelshift circuit. A pulse generator is used to create a 2Hz pulse that acts as a 0\_25\_counter enable signal. This is due to the FPGA's clock being 50MHz which is too quick for human perception. There is also a reset button used to reset the counter. The counter acts as our barrelshift input.\\
+The second step was to make a testbed circuit which combined all the components we have made so far including: 26\_5\_encoder, 5\_26\_decoder, 0\_25\_counter, pulse\_generator, 26\_barrelshift, and 7\_segment\_decoder. The testbed also used 5 switches to set the inital shift amount then shifts up using the 26\_barrelshift circuit. A pulse generator is used to create a 2Hz pulse that acts as a 0\_25\_counter enable signal. This is due to the FPGA's clock being 50MHz which is too quick for human perception. The calculation the number times the value is loaded into the circuit, we used the equation $\text{pulse}=(N+1)Tc$ where pulse if $0.5$s and $Tc=0.001s$. By substituing the numbers in, we got an $N=499$. For the rest of the circuit, there is also a reset button used to reset the counter. The counter acts as our barrelshift input.\\
 To test if our pulse generator worked, we our division ratio to 1000 and ran it for 10us. By doing so, we expected to have 5 pulse in the 100us which was the case as shown in figure \ref{fig:test_bed}. To make the test work, in our pulse\_generator circuit, we changed LPM\_WIDTH=10, LPM\_MODULUS=1000, and the q to std\_logic\_vector(9 downto 0).
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=.6\textwidth]{./segment.png}
+    \caption{7 segmented display output circuit.}
+    \label{fig:segment}
+\end{figure}
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.8\textwidth]{./test_bed.png}
     \caption{Testing the pulse generator.}
     \label{fig:test_bed}
-\end{figure}
+\end{figure}\\
 
 For our circuit, using the Altera EP2C20F484C7N fast model hold (FMH) slack time is 0.357ns, slow model setup (SMS) slack value is 14.167ns, and the slow model Fmax (SMFm) is 185.77MHz. If we changed to the cheaper Altera 5CSEMA5F31C6 having a FMH slack time of 0.259, a SMS slack value of 13.923, and a SMFm of 164.55MHz, we can see that the chaper model still has its SMFm higher then 50MHz clock cycle. Meaning changing to the Altera 5CSEMA5F31C6 would save to company buying 100,000 units a total of 1.557 million dollars.
 
