@@ -1,0 +1,130 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity g47_permutation is
+  port ( 	input_code:  		in std_logic_vector(4 downto 0) ;
+  			rotor_type:  		in std_logic_vector(1 downto 0) ;
+  			output_code: 		out std_logic_vector(4 downto 0) ;
+			inv_output_code:	out std_logic_vector(4 downto 0) 
+  ) ;
+end entity ; -- g47_permutation
+
+architecture permutation of g47_permutation is
+	signal 
+
+begin
+if rotor_type => "00" then
+	inv_output_code <=	"00100" when input_code="00000" else --E A
+						"01010" when input_code="00001" else --K B
+						"01100" when input_code="00010" else --M C
+						"00101" when input_code="00011" else --F D
+						"01011" when input_code="00100" else --L E
+						"00110" when input_code="00101" else --G F
+						"00011" when input_code="00110" else --D G
+						"10000" when input_code="00111" else --Q H
+						"10101" when input_code="01000" else --V I
+						"11001" when input_code="01001" else --Z J
+						"01101" when input_code="01010" else --N K
+						"10011" when input_code="01011" else --T L
+						"01110" when input_code="01100" else --O 
+						"10110" when input_code="01101" else --W
+						"11000" when input_code="01110" else --Y
+						"00111" when input_code="01111" else --H
+						"10111" when input_code="10000" else --X
+						"10100" when input_code="10001" else --U
+						"10010" when input_code="10010" else --S
+						"01111" when input_code="10011" else --P
+						"00000" when input_code="10100" else --A
+						"01000" when input_code="10101" else --I
+						"00001" when input_code="10110" else --B
+						"10001" when input_code="10111" else --R
+						"00010" when input_code="11000" else --C
+						"01001" when input_code="11001" else --J
+
+elsif rotor_type => "01" then
+	inv_output_code <=	"00000" when input_code="00000" else --A
+						"01001" when input_code="00001" else --J
+						"00011" when input_code="00010" else --D
+						"01010" when input_code="00011" else --K
+						"10010" when input_code="00100" else --S
+						"01000" when input_code="00101" else --I
+						"10001" when input_code="00110" else --R
+						"10100" when input_code="00111" else --U
+						"10111" when input_code="01000" else --X
+						"00001" when input_code="01001" else --B
+						"01011" when input_code="01010" else --L
+						"00111" when input_code="01011" else --H
+						"10110" when input_code="01100" else --W
+						"10011" when input_code="01101" else --T
+						"01100" when input_code="01110" else --M
+						"00010" when input_code="01111" else --C
+						"10000" when input_code="10000" else --Q
+						"00110" when input_code="10001" else --G
+						"11001" when input_code="10010" else --Z
+						"01101" when input_code="10011" else --N
+						"01111" when input_code="10100" else --P
+						"11000" when input_code="10101" else --Y
+						"00101" when input_code="10110" else --F
+						"10101" when input_code="10111" else --V
+						"01110" when input_code="11000" else --O
+						"00100" when input_code="11001" else --E
+
+elsif rotor_type => "10" then
+	inv_output_code <=	"00001" when input_code="00000" else --B
+						"00011" when input_code="00001" else --D
+						"00101" when input_code="00010" else --F
+						"00111" when input_code="00011" else --H
+						"01001" when input_code="00100" else --J
+						"01011" when input_code="00101" else --L
+						"00010" when input_code="00110" else --C
+						"01111" when input_code="00111" else --P
+						"10001" when input_code="01000" else --R
+						"10011" when input_code="01001" else --T
+						"10111" when input_code="01010" else --X
+						"10101" when input_code="01011" else --V
+						"11001" when input_code="01100" else --Z
+						"01101" when input_code="01101" else --N
+						"11000" when input_code="01110" else --Y
+						"00100" when input_code="01111" else --E
+						"01000" when input_code="10000" else --I
+						"10110" when input_code="10001" else --W
+						"00110" when input_code="10010" else --G
+						"00000" when input_code="10011" else --A
+						"01010" when input_code="10100" else --K
+						"01100" when input_code="10101" else --M
+						"10100" when input_code="10110" else --U
+						"10010" when input_code="10111" else --S
+						"10000" when input_code="11000" else --Q
+						"01110" when input_code="11001" else --O
+
+elsif rotor_type => "11" then
+	inv_output_code <=	"00100" when input_code="00000" else --E
+						"10010" when input_code="00001" else --S
+						"01110" when input_code="00010" else --O
+						"10101" when input_code="00011" else --V
+						"01111" when input_code="00100" else --P
+						"11001" when input_code="00101" else --Z
+						"01001" when input_code="00110" else --J
+						"00000" when input_code="00111" else --A
+						"11000" when input_code="01000" else --Y
+						"10000" when input_code="01001" else --Q
+						"10100" when input_code="01010" else --U
+						"01000" when input_code="01011" else --I
+						"10001" when input_code="01100" else --R
+						"00111" when input_code="01101" else --H
+						"11001" when input_code="01110" else --Z
+						"01011" when input_code="01111" else --L
+						"01101" when input_code="10000" else --N
+						"00101" when input_code="10001" else --F
+						"10011" when input_code="10010" else --T
+						"00110" when input_code="10011" else --G
+						"01010" when input_code="10100" else --K
+						"00011" when input_code="10101" else --D
+						"00010" when input_code="10110" else --C
+						"01100" when input_code="10111" else --M
+						"10110" when input_code="11000" else --W
+						"00001" when input_code="11001" else --B
+else inv_output_code<= "11111" --ERROR
+end if ;
+
+end architecture ; -- permutatio

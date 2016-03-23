@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 22 19:20:45 2016
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : g47_lab4
+Top-level Entity Name : g47_counter_0_25
+Family : Cyclone II
+Total logic elements : 529
+    Total combinational functions : 352
+    Dedicated logic registers : 379
+Total registers : 379
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 896
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

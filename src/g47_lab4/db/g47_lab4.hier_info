@@ -1,0 +1,19 @@
+|g47_counter_0_25
+counter_enable => start[0].LATCH_ENABLE
+counter_enable => start[1].LATCH_ENABLE
+counter_enable => start[2].LATCH_ENABLE
+counter_enable => start[3].LATCH_ENABLE
+counter_enable => start[4].LATCH_ENABLE
+reset => start[0].ACLR
+reset => start[1].ACLR
+reset => start[2].ACLR
+reset => start[3].ACLR
+reset => start[4].ACLR
+clk => ~NO_FANOUT~
+count[0] <= start[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= start[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= start[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= start[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= start[4].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -38,12 +38,14 @@ SIGNAL error_decode : STD_LOGIC;
 SIGNAL error_encode : STD_LOGIC;
 SIGNAL letter_input : STD_LOGIC_VECTOR(4 DOWNTO 0);
 SIGNAL segments : STD_LOGIC_VECTOR(6 DOWNTO 0);
+--SIGNAL index : STD_LOGIC_VECTOR(4 downto 0);
 COMPONENT g47_testbed
 	PORT (
   	clock : IN STD_LOGIC;
   	counter_reset : IN STD_LOGIC;
   	error_decode : OUT STD_LOGIC;
   	error_encode : OUT STD_LOGIC;
+    --index: OUT STD_LOGIC_VECTOR(4 downto 0);
   	letter_input : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
   	segments : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
@@ -58,6 +60,7 @@ BEGIN
   	error_encode => error_encode,
   	letter_input => letter_input,
   	segments => segments
+    --index => index
 	);
 init : PROCESS
 -- variable declarations
@@ -81,6 +84,16 @@ BEGIN
   clock <= '0';
   wait for 10 ns;
   -- test sequence
+  for i in 0 to 5000 loop
+    clock <= '1';
+    wait for 10 ns;
+    clock <= '0';
+    wait for 10 ns;
+  end loop ;
+  counter_reset <= '0';
+  wait for 1000 ns;
+  counter_reset <= '1';
+  letter_input <= "11001";
   for i in 0 to 5000 loop
     clock <= '1';
     wait for 10 ns;
