@@ -7,7 +7,10 @@ entity g47_0_25_counter is
     clock: in std_logic;
     reset: in std_logic;
     count_enable: in std_logic;
-    count: out std_logic_vector(4 downto 0)
+    count: out std_logic_vector(4 downto 0);
+    --
+    load: in std_logic;
+    load_value: in std_logic_vector(4 downto 0)
   ) ;
 end entity ; -- g47_0_25_counter
 
@@ -19,7 +22,9 @@ begin
     if reset = '0' then
       count_previous <= "00000";
     elsif rising_edge(clock) then
-      if count_enable = '1' then
+      if load = '1' then
+        count_previous <= unsigned(load_value);
+      elsif count_enable = '1' then
         if count_previous = 25 then
           count_previous <= "00000";
         else

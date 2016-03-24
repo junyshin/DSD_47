@@ -4,7 +4,7 @@ K3
 cModel Technology
 dY:\DSD\src\g47_lab3
 Eg47_0_25_counter
-Z0 w1457564495
+Z0 w1457568095
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -16,7 +16,7 @@ L5
 V[M9`j[6bjVIJ?bgAkJ;310
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1457736309.801000
+Z8 !s108 1458855352.290000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd|
 Z10 !s107 Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd|
 Z11 o-work work -2002 -explicit -O0
@@ -41,7 +41,7 @@ R12
 !s100 9@mmJH5ol:;>>4_NR8g[c1
 !i10b 1
 Eg47_26_5_encoder
-Z13 w1457656034
+Z13 w1458831927
 R2
 R3
 R4
@@ -52,7 +52,7 @@ L4
 VLj>oGFk>AjbVk``AGffmE0
 R7
 32
-Z16 !s108 1457736310.566000
+Z16 !s108 1458855352.807000
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_26_5_encoder.vhd|
 Z18 !s107 Y:/DSD/src/g47_enigma/g47_26_5_encoder.vhd|
 R11
@@ -76,7 +76,7 @@ R12
 !s100 onmFVlJAIhA9AGY^jRMeL2
 !i10b 1
 Eg47_26_barrelshift
-Z19 w1457722703
+Z19 w1457726303
 R2
 R3
 R4
@@ -87,7 +87,7 @@ L4
 V<W;V=cR7:?;C`cVQ90>@Z1
 R7
 32
-Z22 !s108 1457736310.754000
+Z22 !s108 1458855352.978000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd|
 Z24 !s107 Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd|
 R11
@@ -111,7 +111,7 @@ R12
 !s100 M5@z1h7JS1c@_hXdV0S3_1
 !i10b 1
 Eg47_5_26_decoder
-Z25 w1457656590
+Z25 w1457660190
 R2
 R3
 R4
@@ -122,7 +122,7 @@ L4
 VB;V@l]WjafZm^WTN]G5>@3
 R7
 32
-Z28 !s108 1457736309.988000
+Z28 !s108 1458855352.448000
 Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_5_26_decoder.vhd|
 Z30 !s107 Y:/DSD/src/g47_enigma/g47_5_26_decoder.vhd|
 R11
@@ -146,7 +146,7 @@ R12
 !s100 ]HO<8[F694?l]YMOP_Wco1
 !i10b 1
 Eg47_7_segmentdecoder
-Z31 w1457657117
+Z31 w1457660717
 R2
 R3
 R4
@@ -157,7 +157,7 @@ L4
 VldjF8EYOS<YYMM9PFMT[L3
 R7
 32
-Z34 !s108 1457736310.410000
+Z34 !s108 1458855352.634000
 Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd|
 Z36 !s107 Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd|
 R11
@@ -180,60 +180,204 @@ R11
 R12
 !s100 4_FX<6>F>CYJLX5=4zbbV0
 !i10b 1
+Eg47_fsm
+Z37 w1458854638
+R2
+R3
+R4
+Z38 8Y:/DSD/src/g47_enigma/g47_fsm.vhd
+Z39 FY:/DSD/src/g47_enigma/g47_fsm.vhd
+l0
+L4
+VTBXEi2N@5M8YL`2c`]?S01
+R7
+32
+Z40 !s108 1458855353.994000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_fsm.vhd|
+Z42 !s107 Y:/DSD/src/g47_enigma/g47_fsm.vhd|
+R11
+R12
+!s100 E3HA;@cTC>=Qdj4z?aB7n2
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 7 g47_fsm 0 22 TBXEi2N@5M8YL`2c`]?S01
+l20
+L18
+VO5DdgTUz<DX[36P7RO85d3
+!s100 CQ^3;Yf`V]n:;_a;?WoWa0
+R7
+32
+R40
+R41
+R42
+R11
+R12
+!i10b 1
+Eg47_fsm_vhd_tst
+Z43 w1458855328
+R2
+R3
+R4
+Z44 8Y:/DSD/src/g47_enigma/g47_fsm.vht
+Z45 FY:/DSD/src/g47_enigma/g47_fsm.vht
+l0
+L30
+V^jND18W>4YBP912zXBe;^2
+!s100 66C0HbkISQ97=2CzMlo>z2
+R7
+32
+!i10b 1
+Z46 !s108 1458855354.197000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_fsm.vht|
+Z48 !s107 Y:/DSD/src/g47_enigma/g47_fsm.vht|
+R11
+R12
+Ag47_fsm_arch
+R2
+R3
+Z49 DEx4 work 15 g47_fsm_vhd_tst 0 22 ^jND18W>4YBP912zXBe;^2
+l57
+L32
+Z50 V<_<ebfcQlDK?F>ZH4Zf?H3
+Z51 !s100 j=gJQ2NCncI8d0DTQ9Eg>0
+R7
+32
+!i10b 1
+R46
+R47
+R48
+R11
+R12
+Eg47_permutation
+Z52 w1458849886
+R2
+R3
+R4
+Z53 8Y:/DSD/src/g47_enigma/g47_permutation.vhd
+Z54 FY:/DSD/src/g47_enigma/g47_permutation.vhd
+l0
+L309
+Vjc^N<V6Di^>_8]f<RE=033
+R7
+32
+Z55 !s108 1458855353.681000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_permutation.vhd|
+Z57 !s107 Y:/DSD/src/g47_enigma/g47_permutation.vhd|
+R11
+R12
+!s100 P=o2ZIGK4a]Mk>m^X[2ec1
+!i10b 1
+Apermutation
+R2
+R3
+DEx4 work 15 g47_permutation 0 22 jc^N<V6Di^>_8]f<RE=033
+l319
+L317
+VbdGn0HCVK84V]B@K8?^CJ1
+R7
+32
+R55
+R56
+R57
+R11
+R12
+!s100 zi>R6G?j>DoAJ=m5J0oFg2
+!i10b 1
+Eg47_permutation_vhd_tst
+Z58 w1458846276
+Z59 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z60 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R2
+R3
+R4
+Z61 8Y:/DSD/src/g47_enigma/g47_permutation.vht
+Z62 FY:/DSD/src/g47_enigma/g47_permutation.vht
+l0
+L31
+VbUn_<Eobe8cmGD0G_MEe72
+R7
+32
+Z63 !s108 1458855353.806000
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_permutation.vht|
+Z65 !s107 Y:/DSD/src/g47_enigma/g47_permutation.vht|
+R11
+R12
+!s100 Hd1D=8=UL3o_MOHY@W>iG3
+!i10b 1
+Ag47_permutation_arch
+R59
+R60
+R2
+R3
+DEx4 work 23 g47_permutation_vhd_tst 0 22 bUn_<Eobe8cmGD0G_MEe72
+l48
+L33
+V?lDXeQT@Lg]=BMQcXFfV:3
+R7
+32
+R63
+R64
+R65
+R11
+R12
+!s100 8[QUTXDEi5c^z>89o@JOz1
+!i10b 1
 Eg47_pulse_generator
-Z37 w1457736298
-Z38 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
+Z66 w1457739935
+Z67 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
 R1
 R2
 R3
 R4
-Z39 8Y:/DSD/src/g47_enigma/g47_pulse_generator.vhd
-Z40 FY:/DSD/src/g47_enigma/g47_pulse_generator.vhd
+Z68 8Y:/DSD/src/g47_enigma/g47_pulse_generator.vhd
+Z69 FY:/DSD/src/g47_enigma/g47_pulse_generator.vhd
 l0
 L7
 VGf;7klAdi?3Ad8mkQ@C@S2
-!s100 9ikAK558]K6PB9_W8FfZF0
 R7
 32
-!i10b 1
-Z41 !s108 1457736311.347000
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_pulse_generator.vhd|
-Z43 !s107 Y:/DSD/src/g47_enigma/g47_pulse_generator.vhd|
+Z70 !s108 1458855353.495000
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_pulse_generator.vhd|
+Z72 !s107 Y:/DSD/src/g47_enigma/g47_pulse_generator.vhd|
 R11
 R12
+!s100 9ikAK558]K6PB9_W8FfZF0
+!i10b 1
 Aarch
-R38
+R67
 R1
 R2
 R3
-Z44 DEx4 work 19 g47_pulse_generator 0 22 Gf;7klAdi?3Ad8mkQ@C@S2
+DEx4 work 19 g47_pulse_generator 0 22 Gf;7klAdi?3Ad8mkQ@C@S2
 l16
 L14
-VHjPN<GZf8caIM6lRbb0b_3
-!s100 hh8eJZRA7j31n:=k8Xz8[1
+VUjFAYM6hhJI^FRXGn;0j;3
 R7
 32
-!i10b 1
-R41
-R42
-R43
+R70
+R71
+R72
 R11
 R12
+!s100 eE3?l<:^K706DIh?@P5iL2
+!i10b 1
 Eg47_pulse_generator_tst
-Z45 w1457729280
+Z73 w1457729280
 R2
 R3
 R4
-Z46 8Y:/DSD/src/g47_enigma/g47_pulse_generator.vht
-Z47 FY:/DSD/src/g47_enigma/g47_pulse_generator.vht
+Z74 8Y:/DSD/src/g47_enigma/g47_pulse_generator.vht
+Z75 FY:/DSD/src/g47_enigma/g47_pulse_generator.vht
 l0
 L30
 VnoB_RGX=@1ogMiUWD@2F50
 R7
 32
-Z48 !s108 1457729820.506000
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_pulse_generator.vht|
-Z50 !s107 Y:/DSD/src/g47_enigma/g47_pulse_generator.vht|
+Z76 !s108 1457729820.506000
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_pulse_generator.vht|
+Z78 !s107 Y:/DSD/src/g47_enigma/g47_pulse_generator.vht|
 R11
 R12
 !s100 nXHEd1cI]DX6JZBSe6ecJ3
@@ -247,28 +391,28 @@ L32
 VD19=O9S^mX:m1nlBg=O::1
 R7
 32
-R48
-R49
-R50
+R76
+R77
+R78
 R11
 R12
 !s100 58_FLl4[UBj4kG@O0e16a2
 !i10b 1
 Eg47_testbed
-Z51 w1457729374
+Z79 w1457732974
 R2
 R3
 R4
-Z52 8Y:/DSD/src/g47_enigma/g47_testbed.vhd
-Z53 FY:/DSD/src/g47_enigma/g47_testbed.vhd
+Z80 8Y:/DSD/src/g47_enigma/g47_testbed.vhd
+Z81 FY:/DSD/src/g47_enigma/g47_testbed.vhd
 l0
 L4
 V8R5Fde;lfZKTXYi]EdnSh2
 R7
 32
-Z54 !s108 1457736310.972000
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_testbed.vhd|
-Z56 !s107 Y:/DSD/src/g47_enigma/g47_testbed.vhd|
+Z82 !s108 1458855353.166000
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_testbed.vhd|
+Z84 !s107 Y:/DSD/src/g47_enigma/g47_testbed.vhd|
 R11
 R12
 !s100 F_8>d;1NSU<fQ3=`kV[;J1
@@ -282,28 +426,28 @@ L15
 V9d1H3fiY8iW8ffUD96Rc=0
 R7
 32
-R54
-R55
-R56
+R82
+R83
+R84
 R11
 R12
 !s100 jIJgTOfb4OD7IZoQ;gkJ:3
 !i10b 1
 Eg47_testbed_vhd_tst
-Z57 w1457729803
+R13
 R2
 R3
 R4
-Z58 8Y:/DSD/src/g47_enigma/g47_testbed.vht
-Z59 FY:/DSD/src/g47_enigma/g47_testbed.vht
+Z85 8Y:/DSD/src/g47_enigma/g47_testbed.vht
+Z86 FY:/DSD/src/g47_enigma/g47_testbed.vht
 l0
 L30
 Vm7RK<A>IU5MgCM<VZTjM_3
 R7
 32
-Z60 !s108 1457736311.160000
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_testbed.vht|
-Z62 !s107 Y:/DSD/src/g47_enigma/g47_testbed.vht|
+Z87 !s108 1458855353.322000
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_testbed.vht|
+Z89 !s107 Y:/DSD/src/g47_enigma/g47_testbed.vht|
 R11
 R12
 !s100 ^c==4_^TnSOQ8Z;@hfZbm2
@@ -312,15 +456,15 @@ Ag47_testbed_arch
 R2
 R3
 DEx4 work 19 g47_testbed_vhd_tst 0 22 m7RK<A>IU5MgCM<VZTjM_3
-l51
+l53
 L32
-VAU`>9e9;I?kK0QVWj<8:P2
-!s100 mGdKQIWN?Gb3_eani0VXK1
+Vj_YCHM:I67f2?i25@oOUD2
 R7
 32
-R60
-R61
-R62
+R87
+R88
+R89
 R11
 R12
+!s100 UBReZ>R2VdB;;CI`GVdVF3
 !i10b 1

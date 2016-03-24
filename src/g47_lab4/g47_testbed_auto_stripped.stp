@@ -74,12 +74,13 @@
         <trigger_in_editor/>
         <trigger_out_editor/>
       </presentation>
-      <trigger CRC="F1A55B3B" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2016/03/22 19:19:21  #0" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+      <trigger CRC="F1A55B3B" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2016/03/22 19:19:21  #0" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
         <events use_custom_flow_control="no">
           <level enabled="yes" name="condition1" type="basic">'count_enable' == rising edge
             <power_up enabled="yes">
-            </power_up><op_node>
+            </power_up>
+            <op_node>
               <op_node left="570" selected="1" top="172" type="Advanced Trigger Level Result"/>
             </op_node>
           </level>
@@ -105,7 +106,7 @@
           </storage_qualifier_level>
         </storage_qualifier_events>
         <log>
-          <data global_temp="1" name="log: 2016/03/22 19:21:31  #0" power_up_mode="false" sample_depth="0" trigger_position="-1"/>
+          <data global_temp="1" name="log: 2016/03/22 19:20:26  #0"/>
           <extradata/>
         </log>
       </trigger>
