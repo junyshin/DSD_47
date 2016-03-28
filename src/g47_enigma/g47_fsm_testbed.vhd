@@ -5,7 +5,7 @@ entity g47_fsm_testbed is
   port (
     clock: in std_logic;
     reset: in std_logic;
-    init: in std_logic := '1';
+    init: in std_logic := '0';
     segments_l: out std_logic_vector(6 downto 0);
     segments_m: out std_logic_vector(6 downto 0);
     segments_r: out std_logic_vector(6 downto 0)
@@ -99,8 +99,8 @@ begin
     port map(A => letter_r, B => KNOCK_LETTER_R, Eq => knock_r);
 
   FSM : g47_fsm
-    port map(clock => clock, keypress => not keypress,
-             knock_m => knock_m, knock_r => knock_r, init => not init,
+    port map(clock => clock, keypress => keypress,
+             knock_m => knock_m, knock_r => knock_r, init => init,
              en_l => en_l, en_m => en_m, en_r => en_r, load => load);
 
   DISPLAY_l : g47_7_segmentdecoder

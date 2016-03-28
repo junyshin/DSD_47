@@ -17,6 +17,7 @@ end entity ; -- g47_fsm
 
 architecture arch of g47_fsm is
   signal state: std_logic_vector(1 downto 0) := "00";
+  signal hold: std_logic := '0';
 begin
   STATE_MACHINE : process( clock, keypress, knock_m, knock_r, init )
   begin
@@ -49,6 +50,7 @@ begin
       elsif state = "10" then --D
         state <= "11";
         load <= '0';
+        hold <= '1';
         if knock_m = '1' then
           en_l <= '1';
           en_m <= '1';
@@ -63,11 +65,17 @@ begin
           en_r <= '1';
         end if ;
       else -- E
-        state <= "00";
-        en_l <= '0';
-        en_m <= '0';
-        en_r <= '0';
-        load <= '0';
+        if rising_edge(clock) then
+          if hold = '1' then
+            hold <= '0';
+          else
+            state <= "00";
+            en_l <= '0';
+            en_m <= '0';
+            en_r <= '0';
+            load <= '0';
+          end if ;
+        end if ;
       end if ;
     --end if ;
   end process ; -- STATE_MACHINE

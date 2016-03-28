@@ -12,12 +12,12 @@ entity g47_pulse_generator is
 end entity ; -- g47_pulse_generator
 
 architecture arch of g47_pulse_generator is
-  signal q: std_logic_vector(24 downto 0);
+  signal q: std_logic_vector(9 downto 0);
 begin
   COUNTER : lpm_counter
     -- Width: 25 ; Modulus: 25000000
     -- test width: 10 ; test modulus: 1000
-    generic map(LPM_WIDTH => 25, LPM_MODULUS => 25000000, LPM_DIRECTION => "DOWN")
+    generic map(LPM_WIDTH => 10, LPM_MODULUS => 1000, LPM_DIRECTION => "DOWN")
     port map(clock => clock, q => q);
 
   epulse <= '1' when unsigned(q) = 0 else

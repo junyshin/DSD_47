@@ -6,6 +6,15 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity g47_26_5_encoder
 -- Compiling architecture arch of g47_26_5_encoder
 
+} {} {}} Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g47_0_25_counter
+-- Compiling architecture arch of g47_0_25_counter
+
 } {} {}} Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
@@ -40,14 +49,6 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity g47_testbed_vhd_tst
 -- Compiling architecture g47_testbed_arch of g47_testbed_vhd_tst
 
-} {} {}} Y:/DSD/src/g47_enigma/g47_fsm.vht {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_fsm.vht
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity g47_fsm_vhd_tst
--- Compiling architecture g47_fsm_arch of g47_fsm_vhd_tst
-
 } {} {}} Y:/DSD/src/g47_enigma/g47_fsm.vhd {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_fsm.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
@@ -56,6 +57,14 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity g47_fsm
 -- Compiling architecture arch of g47_fsm
 
+} {} {}} Y:/DSD/src/g47_enigma/g47_fsm.vht {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_fsm.vht
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g47_fsm_vhd_tst
+-- Compiling architecture g47_fsm_arch of g47_fsm_vhd_tst
+
 } {} {}} Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
@@ -63,6 +72,22 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_1164
 -- Compiling entity g47_7_segmentdecoder
 -- Compiling architecture arch of g47_7_segmentdecoder
+
+} {} {}} Y:/DSD/src/g47_enigma/g47_fsm_testbed.vht {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_fsm_testbed.vht
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g47_fsm_testbed_vhd_tst
+-- Compiling architecture g47_fsm_testbed_arch of g47_fsm_testbed_vhd_tst
+
+} {} {}} Y:/DSD/src/g47_enigma/g47_fsm_testbed.vhd {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_fsm_testbed.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g47_fsm_testbed
+-- Compiling architecture arch of g47_fsm_testbed
 
 } {} {}} Y:/DSD/src/g47_enigma/g47_permutation.vhd {1 {vcom -work work -2002 -explicit Y:/DSD/src/g47_enigma/g47_permutation.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
