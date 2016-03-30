@@ -1,558 +1,386 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
---entity g47_permutation is
---  port (
---    input_code: in std_logic_vector(4 downto 0);
---    rotor_type: in std_logic_vector(1 downto 0);
---    output_code: out std_logic_vector(4 downto 0);
---    inv_output_code: out std_logic_vector(4 downto 0)
---  ) ;
---end entity ; -- g47_permutation
-
---architecture arch of g47_permutation is
---begin
---  if    input_code = "00000" then -- A
---    with rotor_type select
---      output_code <= "00100" when "00"
---                     "00000" when "01"
---                     "00001" when "10"
---                     "00100" when "11"
---      inv_output_code <= "10100" when "00"
---                         "00000" when "01"
---                         "10011" when "10"
---                         "00111" when "11"
---  elsif input_code = "00001" then -- B
---    with rotor_type select
---      output_code <= "01010" when "00"
---                     "01001" when "01"
---                     "00011" when "10"
---                     "10010" when "11"
---      inv_output_code <= "10110" when "00"
---                         "01001" when "01"
---                         "00000" when "10"
---                         "11001" when "11"
---  elsif input_code = "00010" then -- C
---    with rotor_type select
---      output_code <= "01100" when "00"
---                     "00011" when "01"
---                     "00101" when "10"
---                     "01110" when "11"
---      inv_output_code <= 11000 when "00"
---                         "01111" when "01"
---                         "00110" when "10"
---                         "10110" when "11"
---  elsif input_code = "00011" then -- D
---    with rotor_type select
---      output_code <= "00101" when "00"
---                     "01010" when "01"
---                     "00111" when "10"
---                     "10101" when "11"
---      inv_output_code <= "00110" when "00"
---                         "00010" when "01"
---                         "00001" when "10"
---                         "10101" when "11"
---  elsif input_code = "00100" then -- E
---    with rotor_type select--00000,11001,01111,00000
---      output_code <= "01011" when "00"
---                     "10010" when "01"
---                     "01001" when "10"
---                     "01111" when "11"
---      inv_output_code <= "00000" when "00"
---                         "11001" when "01"
---                         "01111" when "10"
---                         "00000" when "11"
---  elsif input_code = "00101" then -- F
---    with rotor_type select
---      output_code <= "00110" when "00"
---                     "01000" when "01"
---                     "01011" when "10"
---                     "11001" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "00110" then -- G
---    with rotor_type select
---      output_code <= "00011" when "00"
---                     "10001" when "01"
---                     "00010" when "10"
---                     "01001" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "00111" then -- H
---    with rotor_type select
---      output_code <= "10000" when "00"
---                     "10100" when "01"
---                     "01111" when "10"
---                     "00000" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "01000" then -- I
---    with rotor_type select
---      output_code <= "10101" when "00"
---                     "10111" when "01"
---                     "10001" when "10"
---                     "11000" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "01001" then -- J
---    with rotor_type select
---      output_code <= "11001" when "00"
---                     "00001" when "01"
---                     "10011" when "10"
---                     "10000" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "01010" then -- K
---    with rotor_type select
---      output_code <= "01101" when "00"
---                     "01011" when "01"
---                     "10111" when "10"
---                     "10000" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "01011" then -- L
---    with rotor_type select
---      output_code <= "10011" when "00"
---                     "00111" when "01"
---                     "10101" when "10"
---                     "01000" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "01100" then -- M
---    with rotor_type select
---      output_code <= "01110" when "00"
---                     "10110" when "01"
---                     "11001" when "10"
---                     "10001" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "01101" then -- N
---    with rotor_type select
---      output_code <= "10110" when "00"
---                     "10011" when "01"
---                     "01101" when "10"
---                     "00111" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "01110" then -- O
---    with rotor_type select
---      output_code <= "11000" when "00"
---                     "01100" when "01"
---                     "11000" when "10"
---                     "10111" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "01111" then -- P
---    with rotor_type select
---      output_code <= "00111" when "00"
---                     "00010" when "01"
---                     "00100" when "10"
---                     "01011" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "10000" then -- Q
---    with rotor_type select
---      output_code <= "10111" when "00"
---                     "10000" when "01"
---                     "01000" when "10"
---                     "01101" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "10001" then -- R
---    with rotor_type select
---      output_code <= "10100" when "00"
---                     "00110" when "01"
---                     "10110" when "10"
---                     "00101" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "10010" then -- S
---    with rotor_type select
---      output_code <= "10010" when "00"
---                     "11001" when "01"
---                     "00110" when "10"
---                     "10011" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "10011" then -- T
---    with rotor_type select
---      output_code <= "01111" when "00"
---                     "01101" when "01"
---                     "00000" when "10"
---                     "00110" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "10100" then -- U
---    with rotor_type select
---      output_code <= "00000" when "00"
---                     "01111" when "01"
---                     "01010" when "10"
---                     "01010" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "10101" then -- V
---    with rotor_type select
---      output_code <= "01000" when "00"
---                     "11000" when "01"
---                     "01100" when "10"
---                     "00011" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "10110" then -- W
---    with rotor_type select
---      output_code <= "00001" when "00"
---                     "00101" when "01"
---                     "10100" when "10"
---                     "00010" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "10111" then -- X
---    with rotor_type select
---      output_code <= "10001" when "00"
---                     "10101" when "01"
---                     "10010" when "10"
---                     "01100" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "11000" then -- Y
---    with rotor_type select
---      output_code <= "00010" when "00"
---                     "01110" when "01"
---                     "10000" when "10"
---                     "10110" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  elsif input_code = "11001" then -- Z
---    with rotor_type select
---      output_code <= "01001" when "00"
---                     "00100" when "01"
---                     "01110" when "10"
---                     "00001" when "11"
---      inv_output_code <= "" when "00"
---                         "" when "01"
---                         "" when "10"
---                         "" when "11"
---  end if ;
-
---end architecture ; -- arch
-
--- "00000" -- A
--- "00001" -- B
--- "00010" -- C
--- "00011" -- D
--- "00100" -- E
--- "00101" -- F
--- "00110" -- G
--- "00111" -- H
--- "01000" -- I
--- "01001" -- J
--- "01010" -- K
--- "01011" -- L
--- "01100" -- M
--- "01101" -- N
--- "01110" -- O
--- "01111" -- P
--- "10000" -- Q
--- "10001" -- R
--- "10010" -- S
--- "10011" -- T
--- "10100" -- U
--- "10101" -- V
--- "10110" -- W
--- "10111" -- X
--- "11000" -- Y
--- "11001" -- Z
-
-
-
-
 entity g47_permutation is
-  port ( 	input_code:  		in std_logic_vector(4 downto 0) ;
-  			rotor_type:  		in std_logic_vector(1 downto 0) ;
-  			output_code: 		out std_logic_vector(4 downto 0) ;
-			inv_output_code:	out std_logic_vector(4 downto 0)
+  port (
+    rotor_type: in std_logic_vector(1 downto 0);
+    input_code: in std_logic_vector(4 downto 0);
+    output_code: out std_logic_vector(4 downto 0);
+    inv_output_code: out std_logic_vector(4 downto 0)
   ) ;
 end entity ; -- g47_permutation
 
-architecture permutation of g47_permutation is
---signal tmp: std_logic_vector(4 downto 0);
+architecture arch of g47_permutation is
+  constant LETTER_A : std_logic_vector(4 downto 0) := "00000"; -- A
+  constant LETTER_B : std_logic_vector(4 downto 0) := "00001"; -- B
+  constant LETTER_C : std_logic_vector(4 downto 0) := "00010"; -- C
+  constant LETTER_D : std_logic_vector(4 downto 0) := "00011"; -- D
+  constant LETTER_E : std_logic_vector(4 downto 0) := "00100"; -- E
+  constant LETTER_F : std_logic_vector(4 downto 0) := "00101"; -- F
+  constant LETTER_G : std_logic_vector(4 downto 0) := "00110"; -- G
+  constant LETTER_H : std_logic_vector(4 downto 0) := "00111"; -- H
+  constant LETTER_I : std_logic_vector(4 downto 0) := "01000"; -- I
+  constant LETTER_J : std_logic_vector(4 downto 0) := "01001"; -- J
+  constant LETTER_K : std_logic_vector(4 downto 0) := "01010"; -- K
+  constant LETTER_L : std_logic_vector(4 downto 0) := "01011"; -- L
+  constant LETTER_M : std_logic_vector(4 downto 0) := "01100"; -- M
+  constant LETTER_N : std_logic_vector(4 downto 0) := "01101"; -- N
+  constant LETTER_O : std_logic_vector(4 downto 0) := "01110"; -- O
+  constant LETTER_P : std_logic_vector(4 downto 0) := "01111"; -- P
+  constant LETTER_Q : std_logic_vector(4 downto 0) := "10000"; -- Q
+  constant LETTER_R : std_logic_vector(4 downto 0) := "10001"; -- R
+  constant LETTER_S : std_logic_vector(4 downto 0) := "10010"; -- S
+  constant LETTER_T : std_logic_vector(4 downto 0) := "10011"; -- T
+  constant LETTER_U : std_logic_vector(4 downto 0) := "10100"; -- U
+  constant LETTER_V : std_logic_vector(4 downto 0) := "10101"; -- V
+  constant LETTER_W : std_logic_vector(4 downto 0) := "10110"; -- W
+  constant LETTER_X : std_logic_vector(4 downto 0) := "10111"; -- X
+  constant LETTER_Y : std_logic_vector(4 downto 0) := "11000"; -- Y
+  constant LETTER_Z : std_logic_vector(4 downto 0) := "11001"; -- Z
+  constant LETTER_ERROR : std_logic_vector(4 downto 0) := "11111"; -- ERROR
 begin
-	permutation : process( input_code, rotor_type )
-begin
-if rotor_type = "00" then
-	if 		  input_code = "00000" then output_code <=	"00100"; --when input_code="00000" else --E
-	elsif 	input_code = "00001" then output_code <=	"01010";
-	elsif 	input_code = "00010" then output_code <=	"01100";
-	elsif 	input_code = "00011" then output_code <=	"00101";
-	elsif 	input_code = "00100" then output_code <=	"01011";
-	elsif 	input_code = "00101" then output_code <=	"00110";
-	elsif 	input_code = "00110" then output_code <=	"00011";
-	elsif 	input_code = "00111" then output_code <=	"10000";
-	elsif 	input_code = "01000" then output_code <=	"10101";
-	elsif 	input_code = "01001" then output_code <=	"11001";
-	elsif 	input_code = "01010" then output_code <=	"01101";
-	elsif 	input_code = "01011" then output_code <=	"10011";
-	elsif 	input_code = "01100" then output_code <=	"01110";
-	elsif 	input_code = "01101" then output_code <=	"10110";
-	elsif 	input_code = "01110" then output_code <=	"11000";
-	elsif 	input_code = "01111" then output_code <=	"00111";
-	elsif 	input_code = "10000" then output_code <=	"10111";
-	elsif 	input_code = "10001" then output_code <=	"10100";
-	elsif 	input_code = "10010" then output_code <=	"10010";
-	elsif 	input_code = "10011" then output_code <=	"01111";
-	elsif 	input_code = "10100" then output_code <=	"00000";
-	elsif 	input_code = "10101" then output_code <=	"01000";
-	elsif 	input_code = "10110" then output_code <=	"00001";
-	elsif 	input_code = "10111" then output_code <=	"10001";
-	elsif 	input_code = "11000" then output_code <=	"00010";
-	elsif 	input_code = "11001" then output_code <=	"01001";
-	end if;
--- Inverted value:
-	if input_code = "00100" then inv_output_code <= "00000";
-	elsif input_code = "01010" then inv_output_code <= "00001";
-	elsif input_code = "01100" then inv_output_code <= "00010";
-	elsif input_code = "00101" then inv_output_code <= "00011";
-	elsif input_code = "01011" then inv_output_code <= "00100";
-	elsif input_code = "00110" then inv_output_code <= "00101";
-	elsif input_code = "00011" then inv_output_code <= "00110";
-	elsif input_code = "10000" then inv_output_code <= "00111";
-	elsif input_code = "10101" then inv_output_code <= "01000";
-	elsif input_code = "11001" then inv_output_code <= "01001";
-	elsif input_code = "01101" then inv_output_code <= "01010";
-	elsif input_code = "10011" then inv_output_code <= "01011";
-	elsif input_code = "01110" then inv_output_code <= "01100";
-	elsif input_code = "10110" then inv_output_code <= "01101";
-	elsif input_code = "11000" then inv_output_code <= "01110";
-	elsif input_code = "00111" then inv_output_code <= "01111";
-	elsif input_code = "10111" then inv_output_code <= "10000";
-	elsif input_code = "10100" then inv_output_code <= "10001";
-	elsif input_code = "10010" then inv_output_code <= "10010";
-	elsif input_code = "01111" then inv_output_code <= "10011";
-	elsif input_code = "00000" then inv_output_code <= "10100";
-	elsif input_code = "01000" then inv_output_code <= "10101";
-	elsif input_code = "00001" then inv_output_code <= "10110";
-	elsif input_code = "10001" then inv_output_code <= "10111";
-	elsif input_code = "00010" then inv_output_code <= "11000";
-	elsif input_code = "01001" then inv_output_code <= "11001";
-	end if;
-
-elsif rotor_type = "01" then
-	if 		input_code = "00000" then output_code <=	"00000"; --when input_code="00000" else --E
-	elsif 	input_code = "00001" then output_code <=	"01001";
-	elsif 	input_code = "00010" then output_code <=	"00011";
-	elsif 	input_code = "00011" then output_code <=	"01010";
-	elsif 	input_code = "00100" then output_code <=	"10010";
-	elsif 	input_code = "00101" then output_code <=	"01000";
-	elsif 	input_code = "00110" then output_code <=	"10001";
-	elsif 	input_code = "00111" then output_code <=	"10100";
-	elsif 	input_code = "01000" then output_code <=	"10111";
-	elsif 	input_code = "01001" then output_code <=	"00001";
-	elsif 	input_code = "01010" then output_code <=	"01011";
-	elsif 	input_code = "01011" then output_code <=	"00111";
-	elsif 	input_code = "01100" then output_code <=	"10110";
-	elsif 	input_code = "01101" then output_code <=	"10011";
-	elsif 	input_code = "01110" then output_code <=	"01100";
-	elsif 	input_code = "01111" then output_code <=	"00010";
-	elsif 	input_code = "10000" then output_code <=	"10000";
-	elsif 	input_code = "10001" then output_code <=	"00110";
-	elsif 	input_code = "10010" then output_code <=	"11001";
-	elsif 	input_code = "10011" then output_code <=	"01101";
-	elsif 	input_code = "10100" then output_code <=	"01111";
-	elsif 	input_code = "10101" then output_code <=	"11000";
-	elsif 	input_code = "10110" then output_code <=	"00101";
-	elsif 	input_code = "10111" then output_code <=	"10101";
-	elsif 	input_code = "11000" then output_code <=	"01110";
-	elsif 	input_code = "11001" then output_code <=	"00100";
-	end if;
--- Inverted value:
-	if input_code = "00000" then inv_output_code <= "00000";
-	elsif input_code = "01001" then inv_output_code <= "00001";
-	elsif input_code = "00011" then inv_output_code <= "00010";
-	elsif input_code = "01010" then inv_output_code <= "00011";
-	elsif input_code = "10010" then inv_output_code <= "00100";
-	elsif input_code = "01000" then inv_output_code <= "00101";
-	elsif input_code = "10001" then inv_output_code <= "00110";
-	elsif input_code = "10100" then inv_output_code <= "00111";
-	elsif input_code = "10111" then inv_output_code <= "01000";
-	elsif input_code = "00001" then inv_output_code <= "01001";
-	elsif input_code = "01011" then inv_output_code <= "01010";
-	elsif input_code = "00111" then inv_output_code <= "01011";
-	elsif input_code = "10110" then inv_output_code <= "01100";
-	elsif input_code = "10011" then inv_output_code <= "01101";
-	elsif input_code = "01100" then inv_output_code <= "01110";
-	elsif input_code = "00010" then inv_output_code <= "01111";
-	elsif input_code = "10000" then inv_output_code <= "10000";
-	elsif input_code = "00110" then inv_output_code <= "10001";
-	elsif input_code = "11001" then inv_output_code <= "10010";
-	elsif input_code = "01101" then inv_output_code <= "10011";
-	elsif input_code = "01111" then inv_output_code <= "10100";
-	elsif input_code = "11000" then inv_output_code <= "10101";
-	elsif input_code = "00101" then inv_output_code <= "10110";
-	elsif input_code = "10101" then inv_output_code <= "10111";
-	elsif input_code = "01110" then inv_output_code <= "11000";
-	elsif input_code = "00100" then inv_output_code <= "11001";
-	end if;
-
-
-elsif rotor_type = "10" then
-	if 		input_code = "00000" then output_code <=	"00001"; --when input_code="00000" else --E
-	elsif 	input_code = "00001" then output_code <=	"00011";
-	elsif 	input_code = "00010" then output_code <=	"00101";
-	elsif 	input_code = "00011" then output_code <=	"00111";
-	elsif 	input_code = "00100" then output_code <=	"01001";
-	elsif 	input_code = "00101" then output_code <=	"01011";
-	elsif 	input_code = "00110" then output_code <=	"00010";
-	elsif 	input_code = "00111" then output_code <=	"01111";
-	elsif 	input_code = "01000" then output_code <=	"10001";
-	elsif 	input_code = "01001" then output_code <=	"10011";
-	elsif 	input_code = "01010" then output_code <=	"10111";
-	elsif 	input_code = "01011" then output_code <=	"10101";
-	elsif 	input_code = "01100" then output_code <=	"11001";
-	elsif 	input_code = "01101" then output_code <=	"01101";
-	elsif 	input_code = "01110" then output_code <=	"11000";
-	elsif 	input_code = "01111" then output_code <=	"00100";
-	elsif 	input_code = "10000" then output_code <=	"01000";
-	elsif 	input_code = "10001" then output_code <=	"10110";
-	elsif 	input_code = "10010" then output_code <=	"00110";
-	elsif 	input_code = "10011" then output_code <=	"00000";
-	elsif 	input_code = "10100" then output_code <=	"01010";
-	elsif 	input_code = "10101" then output_code <=	"01100";
-	elsif 	input_code = "10110" then output_code <=	"10100";
-	elsif 	input_code = "10111" then output_code <=	"10010";
-	elsif 	input_code = "11000" then output_code <=	"10000";
-	elsif 	input_code = "11001" then output_code <=	"01110";
-	end if;
--- Inverted value:
-	if input_code = "00001" then inv_output_code <= "00000";
-	elsif input_code = "00011" then inv_output_code <= "00001";
-	elsif input_code = "00101" then inv_output_code <= "00010";
-	elsif input_code = "00111" then inv_output_code <= "00011";
-	elsif input_code = "01001" then inv_output_code <= "00100";
-	elsif input_code = "01011" then inv_output_code <= "00101";
-	elsif input_code = "00010" then inv_output_code <= "00110";
-	elsif input_code = "01111" then inv_output_code <= "00111";
-	elsif input_code = "10001" then inv_output_code <= "01000";
-	elsif input_code = "10011" then inv_output_code <= "01001";
-	elsif input_code = "10111" then inv_output_code <= "01010";
-	elsif input_code = "10101" then inv_output_code <= "01011";
-	elsif input_code = "11001" then inv_output_code <= "01100";
-	elsif input_code = "01101" then inv_output_code <= "01101";
-	elsif input_code = "11000" then inv_output_code <= "01110";
-	elsif input_code = "00100" then inv_output_code <= "01111";
-	elsif input_code = "01000" then inv_output_code <= "10000";
-	elsif input_code = "10110" then inv_output_code <= "10001";
-	elsif input_code = "00110" then inv_output_code <= "10010";
-	elsif input_code = "00000" then inv_output_code <= "10011";
-	elsif input_code = "01010" then inv_output_code <= "10100";
-	elsif input_code = "01100" then inv_output_code <= "10101";
-	elsif input_code = "10100" then inv_output_code <= "10110";
-	elsif input_code = "10010" then inv_output_code <= "10111";
-	elsif input_code = "10000" then inv_output_code <= "11000";
-	elsif input_code = "01110" then inv_output_code <= "11001";
-	end if;
-
-elsif rotor_type = "11" then
-	if 		input_code = "00000" then output_code <=	"00100"; --when input_code="00000" else --E
-	elsif 	input_code = "00001" then output_code <=	"10010";
-	elsif 	input_code = "00010" then output_code <=	"01110";
-	elsif 	input_code = "00011" then output_code <=	"10101";
-	elsif 	input_code = "00100" then output_code <=	"01111";
-	elsif 	input_code = "00101" then output_code <=	"11001";
-	elsif 	input_code = "00110" then output_code <=	"01001";
-	elsif 	input_code = "00111" then output_code <=	"00000";
-	elsif 	input_code = "01000" then output_code <=	"11000";
-	elsif 	input_code = "01001" then output_code <=	"10000";
-	elsif 	input_code = "01010" then output_code <=	"10100";
-	elsif 	input_code = "01011" then output_code <=	"01000";
-	elsif 	input_code = "01100" then output_code <=	"10001";
-	elsif 	input_code = "01101" then output_code <=	"00111";
-	elsif 	input_code = "01110" then output_code <=	"11001";
-	elsif 	input_code = "01111" then output_code <=	"01011";
-	elsif 	input_code = "10000" then output_code <=	"01101";
-	elsif 	input_code = "10001" then output_code <=	"00101";
-	elsif 	input_code = "10010" then output_code <=	"10011";
-	elsif 	input_code = "10011" then output_code <=	"00110";
-	elsif 	input_code = "10100" then output_code <=	"01010";
-	elsif 	input_code = "10101" then output_code <=	"00011";
-	elsif 	input_code = "10110" then output_code <=	"00010";
-	elsif 	input_code = "10111" then output_code <=	"01100";
-	elsif 	input_code = "11000" then output_code <=	"10110";
-	elsif 	input_code = "11001" then output_code <=	"00001";
-	end if;
--- Inverted value:
-	if input_code = "00100" then inv_output_code <= "00000";
-	elsif input_code = "10010" then inv_output_code <= "00001";
-	elsif input_code = "01110" then inv_output_code <= "00010";
-	elsif input_code = "10101" then inv_output_code <= "00011";
-	elsif input_code = "01111" then inv_output_code <= "00100";
-	elsif input_code = "11001" then inv_output_code <= "00101";
-	elsif input_code = "01001" then inv_output_code <= "00110";
-	elsif input_code = "00000" then inv_output_code <= "00111";
-	elsif input_code = "11000" then inv_output_code <= "01000";
-	elsif input_code = "10000" then inv_output_code <= "01001";
-	elsif input_code = "10100" then inv_output_code <= "01010";
-	elsif input_code = "01000" then inv_output_code <= "01011";
-	elsif input_code = "10001" then inv_output_code <= "01100";
-	elsif input_code = "00111" then inv_output_code <= "01101";
-	elsif input_code = "11001" then inv_output_code <= "01110";
-	elsif input_code = "01011" then inv_output_code <= "01111";
-	elsif input_code = "01101" then inv_output_code <= "10000";
-	elsif input_code = "00101" then inv_output_code <= "10001";
-	elsif input_code = "10011" then inv_output_code <= "10010";
-	elsif input_code = "00110" then inv_output_code <= "10011";
-	elsif input_code = "01010" then inv_output_code <= "10100";
-	elsif input_code = "00011" then inv_output_code <= "10101";
-	elsif input_code = "00010" then inv_output_code <= "10110";
-	elsif input_code = "01100" then inv_output_code <= "10111";
-	elsif input_code = "10110" then inv_output_code <= "11000";
-	elsif input_code = "00001" then inv_output_code <= "11001";
-	end if;
-
-else
- 	inv_output_code <= "11111";--ERROR
- 	output_code <= "11111";
-end if;
-
-end process ; -- permutation
-
-end architecture ; -- permutatio
+  PERMUTATION : process( rotor_type, input_code )
+  begin
+    case( rotor_type ) is
+      when "00" =>
+        case( input_code ) is
+          when "00000" => -- A: e, u
+            output_code <= LETTER_E;
+            inv_output_code <= LETTER_U;
+          when "00001" => -- B: k, w
+            output_code <= LETTER_K;
+            inv_output_code <= LETTER_W;
+          when "00010" => -- C: m, y
+            output_code <= LETTER_M;
+            inv_output_code <= LETTER_Y;
+          when "00011" => -- D: f, g
+            output_code <= LETTER_F;
+            inv_output_code <= LETTER_G;
+          when "00100" => -- E: l, a
+            output_code <= LETTER_L;
+            inv_output_code <= LETTER_A;
+          when "00101" => -- F: g, d
+            output_code <= LETTER_G;
+            inv_output_code <= LETTER_D;
+          when "00110" => -- G: d, f
+            output_code <= LETTER_D;
+            inv_output_code <= LETTER_F;
+          when "00111" => -- H: q, p
+            output_code <= LETTER_Q;
+            inv_output_code <= LETTER_P;
+          when "01000" => -- I: v, v
+            output_code <= LETTER_V;
+            inv_output_code <= LETTER_V;
+          when "01001" => -- J: z, z
+            output_code <= LETTER_Z;
+            inv_output_code <= LETTER_Z;
+          when "01010" => -- K: n, b
+            output_code <= LETTER_N;
+            inv_output_code <= LETTER_B;
+          when "01011" => -- L: t, e
+            output_code <= LETTER_T;
+            inv_output_code <= LETTER_E;
+          when "01100" => -- M: o, c
+            output_code <= LETTER_O;
+            inv_output_code <= LETTER_C;
+          when "01101" => -- N: w, k
+            output_code <= LETTER_W;
+            inv_output_code <= LETTER_K;
+          when "01110" => -- O: y, m
+            output_code <= LETTER_Y;
+            inv_output_code <= LETTER_M;
+          when "01111" => -- P: h, t
+            output_code <= LETTER_H;
+            inv_output_code <= LETTER_T;
+          when "10000" => -- Q: x, h
+            output_code <= LETTER_X;
+            inv_output_code <= LETTER_H;
+          when "10001" => -- R: u, x
+            output_code <= LETTER_U;
+            inv_output_code <= LETTER_X;
+          when "10010" => -- S: s, s
+            output_code <= LETTER_S;
+            inv_output_code <= LETTER_S;
+          when "10011" => -- T: p, l
+            output_code <= LETTER_P;
+            inv_output_code <= LETTER_L;
+          when "10100" => -- U: a, r
+            output_code <= LETTER_A;
+            inv_output_code <= LETTER_R;
+          when "10101" => -- V: i, i
+            output_code <= LETTER_I;
+            inv_output_code <= LETTER_I;
+          when "10110" => -- W: b, n
+            output_code <= LETTER_B;
+            inv_output_code <= LETTER_N;
+          when "10111" => -- X: r, q
+            output_code <= LETTER_R;
+            inv_output_code <= LETTER_Q;
+          when "11000" => -- Y: c, o
+            output_code <= LETTER_C;
+            inv_output_code <= LETTER_O;
+          when "11001" => -- Z: j, j
+            output_code <= LETTER_J;
+            inv_output_code <= LETTER_J;
+          when others  =>
+            output_code <= LETTER_ERROR;
+            inv_output_code <= LETTER_ERROR;
+        end case ;
+      when "01" =>
+        case( input_code ) is
+          when "00000" => -- A: a, a
+            output_code <= LETTER_A;
+            inv_output_code <= LETTER_A;
+          when "00001" => -- B: j, j
+            output_code <= LETTER_J;
+            inv_output_code <= LETTER_J;
+          when "00010" => -- C: d, p
+            output_code <= LETTER_D;
+            inv_output_code <= LETTER_P;
+          when "00011" => -- D: k, c
+            output_code <= LETTER_K;
+            inv_output_code <= LETTER_C;
+          when "00100" => -- E: s, z
+            output_code <= LETTER_S;
+            inv_output_code <= LETTER_Z;
+          when "00101" => -- F: i, w
+            output_code <= LETTER_I;
+            inv_output_code <= LETTER_W;
+          when "00110" => -- G: r, r
+            output_code <= LETTER_R;
+            inv_output_code <= LETTER_R;
+          when "00111" => -- H: u, l
+            output_code <= LETTER_U;
+            inv_output_code <= LETTER_L;
+          when "01000" => -- I: x, f
+            output_code <= LETTER_X;
+            inv_output_code <= LETTER_F;
+          when "01001" => -- J: b, b
+            output_code <= LETTER_B;
+            inv_output_code <= LETTER_B;
+          when "01010" => -- K: l, d
+            output_code <= LETTER_L;
+            inv_output_code <= LETTER_D;
+          when "01011" => -- L: h, k
+            output_code <= LETTER_H;
+            inv_output_code <= LETTER_K;
+          when "01100" => -- M: w, o
+            output_code <= LETTER_W;
+            inv_output_code <= LETTER_O;
+          when "01101" => -- N: t, t
+            output_code <= LETTER_T;
+            inv_output_code <= LETTER_T;
+          when "01110" => -- O: m, y
+            output_code <= LETTER_M;
+            inv_output_code <= LETTER_Y;
+          when "01111" => -- P: c, u
+            output_code <= LETTER_C;
+            inv_output_code <= LETTER_U;
+          when "10000" => -- Q: q, q
+            output_code <= LETTER_Q;
+            inv_output_code <= LETTER_Q;
+          when "10001" => -- R: g, g
+            output_code <= LETTER_G;
+            inv_output_code <= LETTER_G;
+          when "10010" => -- S: z, e
+            output_code <= LETTER_Z;
+            inv_output_code <= LETTER_E;
+          when "10011" => -- T: n, n
+            output_code <= LETTER_N;
+            inv_output_code <= LETTER_N;
+          when "10100" => -- U: p, h
+            output_code <= LETTER_P;
+            inv_output_code <= LETTER_H;
+          when "10101" => -- V: y, x
+            output_code <= LETTER_Y;
+            inv_output_code <= LETTER_X;
+          when "10110" => -- W: f, m
+            output_code <= LETTER_F;
+            inv_output_code <= LETTER_M;
+          when "10111" => -- X: v, i
+            output_code <= LETTER_V;
+            inv_output_code <= LETTER_I;
+          when "11000" => -- Y: o, v
+            output_code <= LETTER_O;
+            inv_output_code <= LETTER_V;
+          when "11001" => -- Z: e, s
+            output_code <= LETTER_E;
+            inv_output_code <= LETTER_S;
+          when others  =>
+            output_code <= LETTER_ERROR;
+            inv_output_code <= LETTER_ERROR;
+        end case ;
+      when "10" =>
+        case( input_code ) is
+          when "00000" => -- A: b, t
+            output_code <= LETTER_B;
+            inv_output_code <= LETTER_T;
+          when "00001" => -- B: d, a
+            output_code <= LETTER_D;
+            inv_output_code <= LETTER_A;
+          when "00010" => -- C: f, g
+            output_code <= LETTER_F;
+            inv_output_code <= LETTER_G;
+          when "00011" => -- D: h, b
+            output_code <= LETTER_H;
+            inv_output_code <= LETTER_B;
+          when "00100" => -- E: j, p
+            output_code <= LETTER_J;
+            inv_output_code <= LETTER_P;
+          when "00101" => -- F: l, c
+            output_code <= LETTER_L;
+            inv_output_code <= LETTER_C;
+          when "00110" => -- G: c, s
+            output_code <= LETTER_C;
+            inv_output_code <= LETTER_S;
+          when "00111" => -- H: p, d
+            output_code <= LETTER_P;
+            inv_output_code <= LETTER_D;
+          when "01000" => -- I: r, q
+            output_code <= LETTER_R;
+            inv_output_code <= LETTER_Q;
+          when "01001" => -- J: t, e
+            output_code <= LETTER_T;
+            inv_output_code <= LETTER_E;
+          when "01010" => -- K: x, u
+            output_code <= LETTER_X;
+            inv_output_code <= LETTER_U;
+          when "01011" => -- L: v, f
+            output_code <= LETTER_V;
+            inv_output_code <= LETTER_F;
+          when "01100" => -- M: z, v
+            output_code <= LETTER_Z;
+            inv_output_code <= LETTER_V;
+          when "01101" => -- N: n, n
+            output_code <= LETTER_N;
+            inv_output_code <= LETTER_N;
+          when "01110" => -- O: y, z
+            output_code <= LETTER_Y;
+            inv_output_code <= LETTER_Z;
+          when "01111" => -- P: e, h
+            output_code <= LETTER_E;
+            inv_output_code <= LETTER_H;
+          when "10000" => -- Q: i, y
+            output_code <= LETTER_I;
+            inv_output_code <= LETTER_Y;
+          when "10001" => -- R: w, i
+            output_code <= LETTER_W;
+            inv_output_code <= LETTER_I;
+          when "10010" => -- S: g, x
+            output_code <= LETTER_G;
+            inv_output_code <= LETTER_X;
+          when "10011" => -- T: a, j
+            output_code <= LETTER_A;
+            inv_output_code <= LETTER_J;
+          when "10100" => -- U: k, w
+            output_code <= LETTER_K;
+            inv_output_code <= LETTER_W;
+          when "10101" => -- V: m, l
+            output_code <= LETTER_M;
+            inv_output_code <= LETTER_L;
+          when "10110" => -- W: u, r
+            output_code <= LETTER_U;
+            inv_output_code <= LETTER_R;
+          when "10111" => -- X: s, k
+            output_code <= LETTER_S;
+            inv_output_code <= LETTER_K;
+          when "11000" => -- Y: q, o
+            output_code <= LETTER_Q;
+            inv_output_code <= LETTER_O;
+          when "11001" => -- Z: o, m
+            output_code <= LETTER_O;
+            inv_output_code <= LETTER_M;
+          when others  =>
+            output_code <= LETTER_ERROR;
+            inv_output_code <= LETTER_ERROR;
+        end case ;
+      when "11" =>
+        case( input_code ) is
+          when "00000" => -- A: e, h
+            output_code <= LETTER_E;
+            inv_output_code <= LETTER_H;
+          when "00001" => -- B: s, z
+            output_code <= LETTER_S;
+            inv_output_code <= LETTER_Z;
+          when "00010" => -- C: o, w
+            output_code <= LETTER_O;
+            inv_output_code <= LETTER_W;
+          when "00011" => -- D: v, v
+            output_code <= LETTER_V;
+            inv_output_code <= LETTER_V;
+          when "00100" => -- E: p, a
+            output_code <= LETTER_P;
+            inv_output_code <= LETTER_A;
+          when "00101" => -- F: z, r
+            output_code <= LETTER_Z;
+            inv_output_code <= LETTER_R;
+          when "00110" => -- G: j, t
+            output_code <= LETTER_J;
+            inv_output_code <= LETTER_T;
+          when "00111" => -- H: a, w
+            output_code <= LETTER_A;
+            inv_output_code <= LETTER_W;
+          when "01000" => -- I: y, l
+            output_code <= LETTER_Y;
+            inv_output_code <= LETTER_L;
+          when "01001" => -- J: q, g
+            output_code <= LETTER_Q;
+            inv_output_code <= LETTER_G;
+          when "01010" => -- K: u, u
+            output_code <= LETTER_U;
+            inv_output_code <= LETTER_U;
+          when "01011" => -- L: i, p
+            output_code <= LETTER_I;
+            inv_output_code <= LETTER_P;
+          when "01100" => -- M: r, x
+            output_code <= LETTER_R;
+            inv_output_code <= LETTER_X;
+          when "01101" => -- N: h, q
+            output_code <= LETTER_H;
+            inv_output_code <= LETTER_Q;
+          when "01110" => -- O: x, c
+            output_code <= LETTER_X;
+            inv_output_code <= LETTER_C;
+          when "01111" => -- P: l, e
+            output_code <= LETTER_L;
+            inv_output_code <= LETTER_E;
+          when "10000" => -- Q: n, j
+            output_code <= LETTER_N;
+            inv_output_code <= LETTER_J;
+          when "10001" => -- R: f, m
+            output_code <= LETTER_F;
+            inv_output_code <= LETTER_M;
+          when "10010" => -- S: t, b
+            output_code <= LETTER_T;
+            inv_output_code <= LETTER_B;
+          when "10011" => -- T: g, s
+            output_code <= LETTER_G;
+            inv_output_code <= LETTER_S;
+          when "10100" => -- U: k, k
+            output_code <= LETTER_K;
+            inv_output_code <= LETTER_K;
+          when "10101" => -- V: d, d
+            output_code <= LETTER_D;
+            inv_output_code <= LETTER_D;
+          when "10110" => -- W: c, y
+            output_code <= LETTER_C;
+            inv_output_code <= LETTER_Y;
+          when "10111" => -- X: m, o
+            output_code <= LETTER_M;
+            inv_output_code <= LETTER_O;
+          when "11000" => -- Y: w, i
+            output_code <= LETTER_W;
+            inv_output_code <= LETTER_I;
+          when "11001" => -- Z: b, f
+            output_code <= LETTER_B;
+            inv_output_code <= LETTER_F;
+          when others  =>
+            output_code <= LETTER_ERROR;
+            inv_output_code <= LETTER_ERROR;
+        end case ;
+      when others =>
+        output_code <= LETTER_ERROR;
+        inv_output_code <= LETTER_ERROR;
+    end case ;
+  end process ; -- PERMUTATION
+end architecture ; -- arch

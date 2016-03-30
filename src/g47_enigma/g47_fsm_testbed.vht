@@ -72,18 +72,18 @@ always : PROCESS
 BEGIN
   -- init
   clock <= '0';
-  init <= '0';
-  reset <= '0';
-  wait for 10 ns;
-  clock <= '1';
   init <= '1';
+  reset <= '1';
+  wait for 10 ns;
+  clock <= '1';
+  init <= '0';
   wait for 10 ns;
   clock <= '0';
-  init <= '0';
   wait for 10 ns;
   clock <= '1';
   wait for 10 ns;
   clock <= '0';
+  init <= '1';
   wait for 10 ns;
   -- test sequence
   for i in 0 to 5000 loop

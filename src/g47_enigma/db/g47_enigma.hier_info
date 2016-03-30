@@ -1,14 +1,28 @@
-|g47_5_comp
-A[0] => Equal0.IN4
-A[1] => Equal0.IN3
-A[2] => Equal0.IN2
-A[3] => Equal0.IN1
-A[4] => Equal0.IN0
-B[0] => Equal0.IN9
-B[1] => Equal0.IN8
-B[2] => Equal0.IN7
-B[3] => Equal0.IN6
-B[4] => Equal0.IN5
-Eq <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+|g47_stecker
+input_code[0] => Mux4.IN36
+input_code[1] => Mux0.IN19
+input_code[1] => Mux1.IN10
+input_code[1] => Mux2.IN19
+input_code[1] => Mux3.IN19
+input_code[1] => Mux4.IN35
+input_code[2] => Mux0.IN18
+input_code[2] => Mux1.IN9
+input_code[2] => Mux2.IN18
+input_code[2] => Mux3.IN18
+input_code[2] => Mux4.IN34
+input_code[3] => Mux0.IN17
+input_code[3] => Mux1.IN8
+input_code[3] => Mux2.IN17
+input_code[3] => Mux3.IN17
+input_code[3] => Mux4.IN33
+input_code[4] => Mux0.IN16
+input_code[4] => Mux2.IN16
+input_code[4] => Mux3.IN16
+input_code[4] => Mux4.IN32
+output_code[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output_code[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output_code[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output_code[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output_code[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

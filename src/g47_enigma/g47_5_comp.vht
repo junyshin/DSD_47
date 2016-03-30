@@ -33,13 +33,13 @@ END g47_5_comp_vhd_tst;
 ARCHITECTURE g47_5_comp_arch OF g47_5_comp_vhd_tst IS
 -- constants
 -- signals
-SIGNAL A : unsigned(4 DOWNTO 0);
-SIGNAL B : unsigned(4 DOWNTO 0);
+SIGNAL A : std_logic_vector(4 DOWNTO 0);
+SIGNAL B : std_logic_vector(4 DOWNTO 0);
 SIGNAL Eq : STD_LOGIC;
 COMPONENT g47_5_comp
 	PORT (
-	A : IN unsigned(4 DOWNTO 0);
-	B : IN unsigned(4 DOWNTO 0);
+	A : IN std_logic_vector(4 DOWNTO 0);
+	B : IN std_logic_vector(4 DOWNTO 0);
 	Eq : OUT STD_LOGIC
 	);
 END COMPONENT;

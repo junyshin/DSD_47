@@ -25,7 +25,7 @@ begin
     --   key release -> state D -> check -> state E -> state B
     --if rising_edge(clock) then
       -- check state
-      if init = '1' then -- A
+      if init = '0' then -- A
         state <= "00";
         en_l <= '0';
         en_m <= '0';
@@ -68,7 +68,10 @@ begin
         if rising_edge(clock) then
           if hold = '1' then
             hold <= '0';
-          else
+          end if ;
+        end if ;
+        if falling_edge(clock) then
+          if hold = '0' then
             state <= "00";
             en_l <= '0';
             en_m <= '0';

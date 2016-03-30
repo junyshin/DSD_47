@@ -5,7 +5,7 @@ entity g47_fsm_testbed is
   port (
     clock: in std_logic;
     reset: in std_logic;
-    init: in std_logic := '0';
+    init: in std_logic;
     segments_l: out std_logic_vector(6 downto 0);
     segments_m: out std_logic_vector(6 downto 0);
     segments_r: out std_logic_vector(6 downto 0)
@@ -60,15 +60,15 @@ architecture arch of g47_fsm_testbed is
   -- Constants
   type ROTOR_TYPE is array (0 to 3) of std_logic_vector(4 downto 0);
   constant ROTOR_TYPE_NOTCH : ROTOR_TYPE :=
-    ("10000",
-     "00100",
-     "10101",
-     "01001");
+    ("10000",-- q
+     "00100",-- e
+     "10101",-- v
+     "01001");-- j
   constant KNOCK_LETTER_M : std_logic_vector(4 downto 0) := ROTOR_TYPE_NOTCH(0);
   constant KNOCK_LETTER_R : std_logic_vector(4 downto 0) := ROTOR_TYPE_NOTCH(0);
-  constant LOAD_VALUE_L : std_logic_vector(4 downto 0) := "00000";
-  constant LOAD_VALUE_M : std_logic_vector(4 downto 0) := "00001";
-  constant LOAD_VALUE_R : std_logic_vector(4 downto 0) := "00010";
+  constant LOAD_VALUE_L : std_logic_vector(4 downto 0) := "01100";
+  constant LOAD_VALUE_M : std_logic_vector(4 downto 0) := "01101";
+  constant LOAD_VALUE_R : std_logic_vector(4 downto 0) := "01110";
 
   -- Variables
   signal keypress, knock_m, knock_r, en_l, en_m, en_r, load: std_logic;
