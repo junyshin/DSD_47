@@ -24,10 +24,10 @@ architecture arch of g47_fsm_testbed is
     port (
       clock: in std_logic;
       reset: in std_logic;
-      count_enable: in std_logic;
+      enable: in std_logic;
       count: out std_logic_vector(4 downto 0);
       load: in std_logic;
-      load_value: in std_logic_vector(4 downto 0)
+      data: in std_logic_vector(4 downto 0)
     ) ;
   end component;
   component g47_5_comp
@@ -78,18 +78,18 @@ begin
     port map(clock => clock, epulse => keypress);
 
   ROTOR_l : g47_0_25_counter
-    port map(clock => clock, reset => reset, count_enable => en_l,
-             load => load, load_value => LOAD_VALUE_L,
+    port map(clock => clock, reset => reset, enable => en_l,
+             load => load, data => LOAD_VALUE_L,
              count => letter_l);
 
   ROTOR_m : g47_0_25_counter
-    port map(clock => clock, reset => reset, count_enable => en_m,
-             load => load, load_value => LOAD_VALUE_M,
+    port map(clock => clock, reset => reset, enable => en_m,
+             load => load, data => LOAD_VALUE_M,
              count => letter_m);
 
   ROTOR_r : g47_0_25_counter
-    port map(clock => clock, reset => reset, count_enable => en_r,
-             load => load, load_value => LOAD_VALUE_R,
+    port map(clock => clock, reset => reset, enable => en_r,
+             load => load, data => LOAD_VALUE_R,
              count => letter_r);
 
   COMP_m : g47_5_comp
