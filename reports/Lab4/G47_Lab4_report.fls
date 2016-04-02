@@ -142,6 +142,15 @@ INPUT ./perm_5.png
 INPUT ./perm_5.png
 INPUT ./perm_5.png
 INPUT /usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./state_diagram.png
+INPUT ./state_diagram.png
+INPUT ./state_diagram.png
+INPUT ./FSM.png
+INPUT ./FSM.png
+INPUT ./FSM.png
+INPUT ./fsm_test.png
+INPUT ./fsm_test.png
+INPUT ./fsm_test.png
 INPUT G47_Lab4_report.aux
 INPUT ./G47_Lab4_report.out
 INPUT ./G47_Lab4_report.out

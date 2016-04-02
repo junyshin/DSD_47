@@ -9,13 +9,13 @@
 \newgeometry{margin=2cm}
 
 \title{ECSE 323 --- Group 47 Lab 4 Report Permutation}
-\author{Junyoung Shin id. 260499663\\ Timothee Flichy id. 260557686}
+\author{Jun Young Shin id. 260499663\\ Timothee Flichy id. 260557686}
 \date{\today}
 
 \begin{document}
 \maketitle
 \section{Permutation}
-The permutation is used to both encode and decode the input letter. To do so, we were given a table which depicts the character encryption list given in the figure \ref{fig:permuation}. We were told to implement the first 4 rotor types. To make the permutation circuit, we need 2 input and 2 outputs. The inputs will receive a 2 bit rotor\_type and the second input is a 5-bit input\_code (letter) that must be encrypted. The outputs are a 5 bit output\_code which outputs the encripted version of the input bits determined by the rotor position and the second input is the inv\_output\_code giving the inverted or decripted 5 bit code. This is given by the figure \ref{fig:permuation_sym}.
+The permutation is used to both encode and decode the input letter. To do so, we were given a table which depicts the character encryption list given in the figure \ref{fig:permuation}. We were told to implement the first 4 rotor types. To make the permutation circuit, we need 2 input and 2 outputs. The inputs will receive a 2 bit rotor\_type and the second input is a 5-bit input\_code (letter) that must be encrypted. The outputs are a 5 bit output\_code which outputs the encrypted version of the input bits determined by the rotor position and the second input is the inv\_output\_code giving the inverted or decrypted 5 bit code. This is given by the figure \ref{fig:permuation_sym}.
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.5\textwidth]{./permutation.png}
@@ -61,9 +61,30 @@ We tested out vhdl code on the ModelSim and got what we were expected to get fro
 \end{figure}
 
 \section{fsm}
+For the FSM also known as Finite State Machine, we had build a circuit that work at a specific sequence mentioned on the lab sheet. The states are as following shown in the figure \ref{fig:state_diagram}.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./state_diagram.png}
+    \caption{State Diagram.}
+    \label{fig:state_diagram}
+\end{figure}
+To make this work, we wrote a FSM where we have 5 inputs and 4 outputs as shown in the figure \ref{fig:FSM}.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./FSM.png}
+    \caption{FSM symbol.}
+    \label{fig:FSM}
+\end{figure}
+Circuit goes as follows. The circuit check for the INIT to go high. When INIT is high, the LOAD will go high. After this, it waits for the KEYPRESS to go low in the case of the Altera board is active high. Next it checks the KNOCK\_M and KNOCK\_R. When both KNOCK are low, then only the EN\_R is set high. When only KNOCK\_R is high, then the EN\_R and EN\_M is set high. When only KNOCK\_M is high, the all EN is go high. When both KNOCK's are high, is will go to the state where all EN are high. After the states where EN are set, it will return to state 1 and start over again. At this, point, the INIT does not need to be checked. The figure \ref{fig:fsm_test} shows the circuit in a simulated environment.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=1\textwidth]{./fsm_test.png}
+    \caption{FSM symbol.}
+    \label{fig:fsm_test}
+\end{figure}
+
 
 \section{fsm\_testbed}
-
 
 
 \end{document}
