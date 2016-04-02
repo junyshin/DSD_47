@@ -151,6 +151,9 @@ INPUT ./FSM.png
 INPUT ./fsm_test.png
 INPUT ./fsm_test.png
 INPUT ./fsm_test.png
+INPUT ./fsm_testbed.png
+INPUT ./fsm_testbed.png
+INPUT ./fsm_testbed.png
 INPUT G47_Lab4_report.aux
 INPUT ./G47_Lab4_report.out
 INPUT ./G47_Lab4_report.out
