@@ -14,6 +14,9 @@
 
 \begin{document}
 \maketitle
+\section{On-Chip Testing using the SignalTap II Logic Analyzer}
+During our on-chip testing of the enigma, when everything was well setup, the test output of the test bed when the reset key was pressed, we where only getting one portion of the entire cycle of the counter. The TA could not explain what was going on even though the VHDL code was working perfectly on the Altera board when we uploaded the code to it.
+
 \section{Permutation}
 The permutation is used to both encode and decode the input letter. To do so, we were given a table which depicts the character encryption list given in the figure \ref{fig:permuation}. We were told to implement the first 4 rotor types. To make the permutation circuit, we need 2 input and 2 outputs. The inputs will receive a 2 bit rotor\_type and the second input is a 5-bit input\_code (letter) that must be encrypted. The outputs are a 5 bit output\_code which outputs the encrypted version of the input bits determined by the rotor position and the second input is the inv\_output\_code giving the inverted or decrypted 5 bit code. This is given by the figure \ref{fig:permuation_sym}.
 \begin{figure}[!htb]
@@ -82,9 +85,7 @@ Circuit goes as follows. The circuit checks for the INIT to go high. When INIT i
     \caption{FSM symbol.}
     \label{fig:fsm_test}
 \end{figure}
-
-
-\section{fsm\_testbed}
+To the run the circuit, we have found in the slow model that Fmax=75.04MHz, Setup slack to be 3.337 ns, and hold time of 0.445 ns. In the fast model, setup time is 7.848 ns and hold time to be 0.215 ns. 
 
 
 \end{document}

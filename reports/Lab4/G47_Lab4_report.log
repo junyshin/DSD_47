@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 APR 2016 23:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 APR 2016 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,94 +437,94 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <./permutation.png, id=18, 713.66624pt x 158.5925pt>
 File: ./permutation.png Graphic file (type png)
  <use ./permutation.png>
-Package pdftex.def Info: ./permutation.png used on input line 21.
+Package pdftex.def Info: ./permutation.png used on input line 24.
 (pdftex.def)             Requested size: 250.24199pt x 55.60983pt.
 
 <./permutation_circuit.png, id=20, 817.0525pt x 399.4925pt>
 File: ./permutation_circuit.png Graphic file (type png)
 
 <use ./permutation_circuit.png>
-Package pdftex.def Info: ./permutation_circuit.png used on input line 27.
+Package pdftex.def Info: ./permutation_circuit.png used on input line 30.
 (pdftex.def)             Requested size: 250.24199pt x 122.35402pt.
  <./perm_1.png, id=26, 1164.35pt x 97.36375pt>
 File: ./perm_1.png Graphic file (type png)
 
 <use ./perm_1.png>
-Package pdftex.def Info: ./perm_1.png used on input line 34.
+Package pdftex.def Info: ./perm_1.png used on input line 37.
 (pdftex.def)             Requested size: 500.484pt x 41.85072pt.
  <./perm_2.png, id=27, 1128.215pt x 106.3975pt>
 File: ./perm_2.png Graphic file (type png)
 
 <use ./perm_2.png>
-Package pdftex.def Info: ./perm_2.png used on input line 40.
+Package pdftex.def Info: ./perm_2.png used on input line 43.
 (pdftex.def)             Requested size: 500.484pt x 47.19818pt.
  <./perm_3.png, id=28, 1193.45876pt x 114.4275pt>
 File: ./perm_3.png Graphic file (type png)
 
 <use ./perm_3.png>
-Package pdftex.def Info: ./perm_3.png used on input line 46.
+Package pdftex.def Info: ./perm_3.png used on input line 49.
 (pdftex.def)             Requested size: 500.484pt x 47.98589pt.
  <./perm_4.png, id=29, 1165.35374pt x 118.4425pt>
 File: ./perm_4.png Graphic file (type png)
 
 <use ./perm_4.png>
-Package pdftex.def Info: ./perm_4.png used on input line 52.
+Package pdftex.def Info: ./perm_4.png used on input line 55.
 (pdftex.def)             Requested size: 500.484pt x 50.86601pt.
  <./perm_5.png, id=30, 1221.56375pt x 101.37875pt>
 File: ./perm_5.png Graphic file (type png)
 
 <use ./perm_5.png>
-Package pdftex.def Info: ./perm_5.png used on input line 58.
+Package pdftex.def Info: ./perm_5.png used on input line 61.
 (pdftex.def)             Requested size: 500.484pt x 41.53615pt.
  [1
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./permu
-tation.png> <./permutation_circuit.png> <./perm_1.png>]
-<./state_diagram.png, id=51, 748.7975pt x 495.8525pt>
+tation.png> <./permutation_circuit.png>]
+<./state_diagram.png, id=50, 748.7975pt x 495.8525pt>
 File: ./state_diagram.png Graphic file (type png)
 
 <use ./state_diagram.png>
-Package pdftex.def Info: ./state_diagram.png used on input line 67.
+Package pdftex.def Info: ./state_diagram.png used on input line 70.
 (pdftex.def)             Requested size: 250.24199pt x 165.7125pt.
- <./FSM.png, id=53, 523.9575pt x 259.97125pt>
+ <./FSM.png, id=52, 523.9575pt x 259.97125pt>
 File: ./FSM.png Graphic file (type png)
 
 <use ./FSM.png>
-Package pdftex.def Info: ./FSM.png used on input line 74.
+Package pdftex.def Info: ./FSM.png used on input line 77.
 (pdftex.def)             Requested size: 250.24199pt x 124.16199pt.
- <./fsm_test.png, id=55, 1348.03625pt x 193.72375pt>
+ <./fsm_test.png, id=54, 1348.03625pt x 193.72375pt>
 File: ./fsm_test.png Graphic file (type png)
 
 <use ./fsm_test.png>
-Package pdftex.def Info: ./fsm_test.png used on input line 81.
+Package pdftex.def Info: ./fsm_test.png used on input line 84.
 (pdftex.def)             Requested size: 500.484pt x 71.922pt.
- [2 <./perm_2.png> <./perm_3.png> <./perm_4.png> <./perm_5.png> <./state_diagra
-m.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
+ [2 <./perm_1.png> <./perm_2.png> <./perm_3.png> <./perm_4.png> <./perm_5.png> 
+<./state_diagram.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
  [3 <./FSM.png> <./fsm_test.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
 
 (./G47_Lab4_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 91.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 91.
 Package rerunfilecheck Info: File `G47_Lab4_report.out' has not changed.
-(rerunfilecheck)             Checksum: DF4A2522C6113035F52AF07990057825;133.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
+(rerunfilecheck)             Checksum: 55248836337416C2C7830B5B97CAAD74;172.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 91.
  ) 
 Here is how much of TeX's memory you used:
  7076 strings out of 493089
  103732 string characters out of 6134842
- 197035 words of memory out of 5000000
+ 198036 words of memory out of 5000000
  10465 multiletter control sequences out of 15000+600000
  9189 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,6n,32p,751b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,6n,32p,761b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on G47_Lab4_report.pdf (3 pages, 190331 bytes).
+Output written on G47_Lab4_report.pdf (3 pages, 193845 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
