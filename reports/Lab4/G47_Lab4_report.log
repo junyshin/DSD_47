@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 APR 2016 21:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 APR 2016 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -434,80 +434,81 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./permutation.png, id=10, 713.66624pt x 158.5925pt>
+<./permutation.png, id=18, 713.66624pt x 158.5925pt>
 File: ./permutation.png Graphic file (type png)
  <use ./permutation.png>
 Package pdftex.def Info: ./permutation.png used on input line 21.
 (pdftex.def)             Requested size: 250.24199pt x 55.60983pt.
 
-<./permutation_circuit.png, id=12, 817.0525pt x 399.4925pt>
+<./permutation_circuit.png, id=20, 817.0525pt x 399.4925pt>
 File: ./permutation_circuit.png Graphic file (type png)
 
 <use ./permutation_circuit.png>
 Package pdftex.def Info: ./permutation_circuit.png used on input line 27.
 (pdftex.def)             Requested size: 250.24199pt x 122.35402pt.
- <./perm_1.png, id=18, 1164.35pt x 97.36375pt>
+ <./perm_1.png, id=26, 1164.35pt x 97.36375pt>
 File: ./perm_1.png Graphic file (type png)
 
 <use ./perm_1.png>
 Package pdftex.def Info: ./perm_1.png used on input line 34.
-(pdftex.def)             Requested size: 250.24199pt x 20.92535pt.
- <./perm_2.png, id=19, 1128.215pt x 106.3975pt>
+(pdftex.def)             Requested size: 500.484pt x 41.85072pt.
+ <./perm_2.png, id=27, 1128.215pt x 106.3975pt>
 File: ./perm_2.png Graphic file (type png)
 
 <use ./perm_2.png>
 Package pdftex.def Info: ./perm_2.png used on input line 40.
-(pdftex.def)             Requested size: 250.24199pt x 23.59909pt.
- <./perm_3.png, id=20, 1193.45876pt x 114.4275pt>
+(pdftex.def)             Requested size: 500.484pt x 47.19818pt.
+ <./perm_3.png, id=28, 1193.45876pt x 114.4275pt>
 File: ./perm_3.png Graphic file (type png)
 
 <use ./perm_3.png>
 Package pdftex.def Info: ./perm_3.png used on input line 46.
-(pdftex.def)             Requested size: 250.24199pt x 23.99207pt.
- <./perm_4.png, id=21, 1165.35374pt x 118.4425pt>
+(pdftex.def)             Requested size: 500.484pt x 47.98589pt.
+ <./perm_4.png, id=29, 1165.35374pt x 118.4425pt>
 File: ./perm_4.png Graphic file (type png)
 
 <use ./perm_4.png>
 Package pdftex.def Info: ./perm_4.png used on input line 52.
-(pdftex.def)             Requested size: 250.24199pt x 25.4321pt.
- <./perm_5.png, id=22, 1229.59375pt x 93.34875pt>
+(pdftex.def)             Requested size: 500.484pt x 50.86601pt.
+ <./perm_5.png, id=30, 1229.59375pt x 93.34875pt>
 File: ./perm_5.png Graphic file (type png)
 
 <use ./perm_5.png>
 Package pdftex.def Info: ./perm_5.png used on input line 58.
-(pdftex.def)             Requested size: 250.24199pt x 18.99702pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
+(pdftex.def)             Requested size: 500.484pt x 37.99547pt.
  [1
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./permu
-tation.png> <./permutation_circuit.png> <./perm_1.png> <./perm_2.png>] [2 <./pe
-rm_3.png> <./perm_4.png> <./perm_5.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+tation.png> <./permutation_circuit.png> <./perm_1.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
+
+[2 <./perm_2.png> <./perm_3.png> <./perm_4.png> <./perm_5.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
 
 (./G47_Lab4_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `G47_Lab4_report.out' has not changed.
-(rerunfilecheck)             Checksum: 11BED94F40036CA7C86A681B599CD223;46.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
+(rerunfilecheck)             Checksum: DF4A2522C6113035F52AF07990057825;133.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 7050 strings out of 493089
- 103358 string characters out of 6134842
- 196932 words of memory out of 5000000
- 10448 multiletter control sequences out of 15000+600000
+ 7054 strings out of 493089
+ 103398 string characters out of 6134842
+ 196933 words of memory out of 5000000
+ 10450 multiletter control sequences out of 15000+600000
  9189 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,6n,32p,782b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,6n,32p,782b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on G47_Lab4_report.pdf (2 pages, 138625 bytes).
+Output written on G47_Lab4_report.pdf (2 pages, 139942 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 44 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 60 words of extra memory for PDF output out of 10000 (max. 10000000)
 

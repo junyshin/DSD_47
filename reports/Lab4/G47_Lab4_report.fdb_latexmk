@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1459561978 "G47_Lab4_report.tex" "G47_Lab4_report.pdf" "G47_Lab4_report" 1459561979
-  "./G47_Lab4_report.out" 1459561979 46 11bed94f40036ca7c86a681b599cd223 ""
+["pdflatex"] 1459562358 "G47_Lab4_report.tex" "G47_Lab4_report.pdf" "G47_Lab4_report" 1459562359
+  "./G47_Lab4_report.out" 1459562359 133 df4a2522c6113035f52af07990057825 ""
   "./perm_1.png" 1459556781 19664 328de921bb4f9371f0d1fb73d0e93656 ""
   "./perm_2.png" 1459556794 24007 652db61661f92b0f08bf65987d19516c ""
   "./perm_3.png" 1459556804 24921 00783ba48b359f708b3291abf0c7a630 ""
@@ -76,9 +76,9 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "G47_Lab4_report.aux" 1459561979 1905 2457623ec925ebae4b6056a8ed83306c ""
-  "G47_Lab4_report.out" 1459561979 46 11bed94f40036ca7c86a681b599cd223 ""
-  "G47_Lab4_report.tex" 1459561976 2562 aae037b2104944d267ab909bfa577fdf ""
+  "G47_Lab4_report.aux" 1459562359 2066 60c55bf12c0f2003ef0d962e921a7bf4 ""
+  "G47_Lab4_report.out" 1459562359 133 df4a2522c6113035f52af07990057825 ""
+  "G47_Lab4_report.tex" 1459562358 2593 3aed2838ffbada8eb06dd445ec8de9b0 ""
   "perm_1.png" 1459556781 19664 328de921bb4f9371f0d1fb73d0e93656 ""
   "perm_2.png" 1459556794 24007 652db61661f92b0f08bf65987d19516c ""
   "perm_3.png" 1459556804 24921 00783ba48b359f708b3291abf0c7a630 ""
@@ -87,7 +87,7 @@
   "permutation.png" 1459561865 50700 538292cddcce9590a494480c420e5a95 ""
   "permutation_circuit.png" 1459561636 21137 eb34946666794506079d2157f2242cc7 ""
   (generated)
-  "G47_Lab4_report.out"
   "G47_Lab4_report.pdf"
   "G47_Lab4_report.log"
+  "G47_Lab4_report.out"
   "G47_Lab4_report.aux"
