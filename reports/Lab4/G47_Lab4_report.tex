@@ -56,12 +56,12 @@ We tested out vhdl code on the ModelSim and got what we were expected to get fro
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1\textwidth]{./perm_5.png}
-    \caption{With rotor V.}
+    \caption{With rotor IV.}
     \label{fig:perm_5}
 \end{figure}
 
 \section{fsm}
-For the FSM also known as Finite State Machine, we had build a circuit that work at a specific sequence mentioned on the lab sheet. The states are as following shown in the figure \ref{fig:state_diagram}.
+For the Finite State Machine circuit (FSM), we built a circuit that performed the requirements mentioned on the lab sheet. The states are as following shown in the figure \ref{fig:state_diagram}.
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.5\textwidth]{./state_diagram.png}
@@ -75,7 +75,7 @@ To make this work, we wrote a FSM where we have 5 inputs and 4 outputs as shown 
     \caption{FSM symbol.}
     \label{fig:FSM}
 \end{figure}
-Circuit goes as follows. The circuit check for the INIT to go high. When INIT is high, the LOAD will go high. After this, it waits for the KEYPRESS to go low in the case of the Altera board is active high. Next it checks the KNOCK\_M and KNOCK\_R. When both KNOCK are low, then only the EN\_R is set high. When only KNOCK\_R is high, then the EN\_R and EN\_M is set high. When only KNOCK\_M is high, the all EN is go high. When both KNOCK's are high, is will go to the state where all EN are high. After the states where EN are set, it will return to state 1 and start over again. At this, point, the INIT does not need to be checked. The figure \ref{fig:fsm_test} shows the circuit in a simulated environment.
+Circuit goes as follows. The circuit checks for the INIT to go high. When INIT is high, the LOAD will go high. After this, it waits for the KEYPRESS to go low (the Altera board is active high). Next it checks the KNOCK\_M and KNOCK\_R. When both KNOCK values are low, then only the EN\_R is set high. When only KNOCK\_R is high, then the EN\_R and EN\_M is set high. When only KNOCK\_M is high, the all EN is go high. When both KNOCK's are high, is will go to the state where all EN are high. After the states where EN are set, it will return to state 1 (where it waits) and start over again. At this, point, the INIT does not need to be checked. The figure \ref{fig:fsm_test} shows the circuit in a simulated environment.
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1\textwidth]{./fsm_test.png}
