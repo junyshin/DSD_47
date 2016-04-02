@@ -15,7 +15,7 @@
 \begin{document}
 \maketitle
 \section{Permutation}
-The permutation is used encript and revert to the original message. To do so, we were given a table which depics the character encription list given in the figure \ref{fig:permuation}. There are 4 configuration we are given to be made. To make the permutation circuit, we need 2 input and 2 outputs. The inputs will receive a 2 bit rotor\_type giving which type of encription that must be done and the second input inputs a 5 bit input\_code that must be encripted. The outputs are a 5 bit output\_code which outputs the encripted version of the input bits determined by the rotery position and the second input is the inv\_output\_code giving out the inverted or decripted 5 bit code. This is given by the figure \ref{fig:permuation_sym}.
+The permutation is used to both encode and decode the input letter. To do so, we were given a table which depicts the character encryption list given in the figure \ref{fig:permuation}. We were told to implement the first 4 rotor types. To make the permutation circuit, we need 2 input and 2 outputs. The inputs will receive a 2 bit rotor\_type and the second input is a 5-bit input\_code (letter) that must be encrypted. The outputs are a 5 bit output\_code which outputs the encripted version of the input bits determined by the rotor position and the second input is the inv\_output\_code giving the inverted or decripted 5 bit code. This is given by the figure \ref{fig:permuation_sym}.
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.5\textwidth]{./permutation.png}
