@@ -1,5 +1,5 @@
 EDA Netlist Writer report for g47_enigma
-Wed Mar 30 15:38:54 2016
+Tue Apr 05 16:55:48 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -34,9 +34,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Mar 30 15:38:54 2016 ;
+; EDA Netlist Writer Status ; Successful - Tue Apr 05 16:55:48 2016 ;
 ; Revision Name             ; g47_enigma                            ;
-; Top-level Entity Name     ; g47_stecker                           ;
+; Top-level Entity Name     ; g47_enigma                            ;
 ; Family                    ; Cyclone II                            ;
 +---------------------------+---------------------------------------+
 
@@ -47,12 +47,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 30 15:38:53 2016
+    Info: Processing started: Tue Apr 05 16:55:47 2016
 Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off g47_enigma -c g47_enigma --gen_testbench
-Info (201002): Generated VHDL Test Bench File Y:/DSD/src/g47_enigma/simulation/modelsim/g47_stecker.vht for simulation
+Info (201002): Generated VHDL Test Bench File Y:/DSD/src/g47_enigma/simulation/modelsim/g47_enigma.vht for simulation
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 417 megabytes
-    Info: Processing ended: Wed Mar 30 15:38:54 2016
+    Info: Peak virtual memory: 448 megabytes
+    Info: Processing ended: Tue Apr 05 16:55:48 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
