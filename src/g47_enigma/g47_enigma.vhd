@@ -179,6 +179,6 @@ begin
       state <= "00";
       prev_output_code <= stecker_output_code;
     end if ;
-    --output_code <= prev_output_code;
+    output_code <= prev_output_code;
   end process ; -- KEYPRESS_ENABLE
 end architecture ; -- arch
