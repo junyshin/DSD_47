@@ -1,4 +1,525 @@
-|g47_enigma
+|g47_ui
+clock => g47_enigma:ENIGMA.clock
+clock => hold.CLK
+clock => led_error[4]~reg0.CLK
+clock => reflector_type.CLK
+clock => right_ring_shift[0].CLK
+clock => right_ring_shift[1].CLK
+clock => right_ring_shift[2].CLK
+clock => right_ring_shift[3].CLK
+clock => right_ring_shift[4].CLK
+clock => right_rotor_type[0].CLK
+clock => right_rotor_type[1].CLK
+clock => right_data[0].CLK
+clock => right_data[1].CLK
+clock => right_data[2].CLK
+clock => right_data[3].CLK
+clock => right_data[4].CLK
+clock => middle_ring_shift[0].CLK
+clock => middle_ring_shift[1].CLK
+clock => middle_ring_shift[2].CLK
+clock => middle_ring_shift[3].CLK
+clock => middle_ring_shift[4].CLK
+clock => middle_rotor_type[0].CLK
+clock => middle_rotor_type[1].CLK
+clock => middle_data[0].CLK
+clock => middle_data[1].CLK
+clock => middle_data[2].CLK
+clock => middle_data[3].CLK
+clock => middle_data[4].CLK
+clock => left_ring_shift[0].CLK
+clock => left_ring_shift[1].CLK
+clock => left_ring_shift[2].CLK
+clock => left_ring_shift[3].CLK
+clock => left_ring_shift[4].CLK
+clock => left_rotor_type[0].CLK
+clock => left_rotor_type[1].CLK
+clock => display_m_in[0].CLK
+clock => display_m_in[1].CLK
+clock => display_m_in[2].CLK
+clock => display_m_in[3].CLK
+clock => display_m_in[4].CLK
+clock => display_m_type.CLK
+clock => display_l_in[0].CLK
+clock => display_l_in[1].CLK
+clock => display_l_in[2].CLK
+clock => display_l_in[3].CLK
+clock => display_l_in[4].CLK
+clock => display_l_type.CLK
+clock => display_i_in[0].CLK
+clock => display_i_in[1].CLK
+clock => display_i_in[2].CLK
+clock => display_i_in[3].CLK
+clock => display_i_in[4].CLK
+clock => display_i_type.CLK
+clock => input_error.CLK
+clock => display_r_in[0].CLK
+clock => display_r_in[1].CLK
+clock => display_r_in[2].CLK
+clock => display_r_in[3].CLK
+clock => display_r_in[4].CLK
+clock => display_r_type.CLK
+clock => left_data[0].CLK
+clock => left_data[1].CLK
+clock => left_data[2].CLK
+clock => left_data[3].CLK
+clock => left_data[4].CLK
+clock => keypress_enable.CLK
+clock => input_enable.CLK
+clock => state[0].CLK
+clock => state[1].CLK
+reset => g47_enigma:ENIGMA.reset
+keypress => state.OUTPUTSELECT
+keypress => state.OUTPUTSELECT
+keypress => g47_enigma:ENIGMA.keypress
+keypress => state.OUTPUTSELECT
+keypress => state.OUTPUTSELECT
+setting_init => display_r_type.OUTPUTSELECT
+setting_init => display_r_in.OUTPUTSELECT
+setting_init => display_r_in.OUTPUTSELECT
+setting_init => display_r_in.OUTPUTSELECT
+setting_init => display_r_in.OUTPUTSELECT
+setting_init => display_r_in.OUTPUTSELECT
+setting_init => input_error.OUTPUTSELECT
+setting_init => display_i_type.OUTPUTSELECT
+setting_init => display_i_in.OUTPUTSELECT
+setting_init => display_i_in.OUTPUTSELECT
+setting_init => display_i_in.OUTPUTSELECT
+setting_init => display_l_type.OUTPUTSELECT
+setting_init => display_l_in.OUTPUTSELECT
+setting_init => display_l_in.OUTPUTSELECT
+setting_init => display_l_in.OUTPUTSELECT
+setting_init => display_l_in.OUTPUTSELECT
+setting_init => display_l_in.OUTPUTSELECT
+setting_init => display_m_type.OUTPUTSELECT
+setting_init => display_m_in.OUTPUTSELECT
+setting_init => display_m_in.OUTPUTSELECT
+setting_init => display_m_in.OUTPUTSELECT
+setting_init => g47_enigma:ENIGMA.init
+setting_init => reflector_type.ENA
+setting_init => right_ring_shift[0].ENA
+setting_init => right_ring_shift[1].ENA
+setting_init => right_ring_shift[2].ENA
+setting_init => right_ring_shift[3].ENA
+setting_init => right_ring_shift[4].ENA
+setting_init => right_rotor_type[0].ENA
+setting_init => right_rotor_type[1].ENA
+setting_init => right_data[0].ENA
+setting_init => right_data[1].ENA
+setting_init => right_data[2].ENA
+setting_init => right_data[3].ENA
+setting_init => right_data[4].ENA
+setting_init => middle_ring_shift[0].ENA
+setting_init => middle_ring_shift[1].ENA
+setting_init => middle_ring_shift[2].ENA
+setting_init => middle_ring_shift[3].ENA
+setting_init => middle_ring_shift[4].ENA
+setting_init => middle_rotor_type[0].ENA
+setting_init => middle_rotor_type[1].ENA
+setting_init => middle_data[0].ENA
+setting_init => middle_data[1].ENA
+setting_init => middle_data[2].ENA
+setting_init => middle_data[3].ENA
+setting_init => middle_data[4].ENA
+setting_init => left_ring_shift[0].ENA
+setting_init => left_ring_shift[1].ENA
+setting_init => left_ring_shift[2].ENA
+setting_init => left_ring_shift[3].ENA
+setting_init => left_ring_shift[4].ENA
+setting_init => left_rotor_type[0].ENA
+setting_init => left_rotor_type[1].ENA
+setting_init => left_data[0].ENA
+setting_init => left_data[1].ENA
+setting_init => left_data[2].ENA
+setting_init => left_data[3].ENA
+setting_init => left_data[4].ENA
+setting_rotor[0] => Mux75.IN2
+setting_rotor[0] => Mux76.IN2
+setting_rotor[0] => Mux77.IN2
+setting_rotor[0] => Mux78.IN2
+setting_rotor[0] => Mux79.IN2
+setting_rotor[0] => Mux80.IN5
+setting_rotor[0] => Mux81.IN5
+setting_rotor[0] => Mux82.IN5
+setting_rotor[0] => Mux83.IN5
+setting_rotor[0] => Mux84.IN5
+setting_rotor[0] => Mux85.IN4
+setting_rotor[0] => Mux86.IN5
+setting_rotor[0] => Mux87.IN5
+setting_rotor[0] => Mux88.IN5
+setting_rotor[0] => Mux89.IN5
+setting_rotor[0] => Mux90.IN5
+setting_rotor[0] => Mux91.IN5
+setting_rotor[0] => Mux92.IN5
+setting_rotor[0] => Mux93.IN5
+setting_rotor[0] => Mux94.IN5
+setting_rotor[0] => Mux95.IN5
+setting_rotor[0] => Mux96.IN4
+setting_rotor[0] => Mux97.IN5
+setting_rotor[0] => Mux98.IN5
+setting_rotor[0] => Mux99.IN5
+setting_rotor[0] => Mux100.IN5
+setting_rotor[0] => Mux101.IN2
+setting_rotor[0] => Mux102.IN2
+setting_rotor[0] => Mux103.IN2
+setting_rotor[0] => Mux104.IN2
+setting_rotor[0] => Mux105.IN2
+setting_rotor[0] => Mux106.IN2
+setting_rotor[0] => Mux107.IN2
+setting_rotor[0] => Mux108.IN2
+setting_rotor[0] => Mux109.IN2
+setting_rotor[0] => Mux110.IN2
+setting_rotor[0] => Mux111.IN2
+setting_rotor[0] => Mux112.IN2
+setting_rotor[0] => Mux113.IN2
+setting_rotor[0] => Mux114.IN2
+setting_rotor[0] => Mux115.IN2
+setting_rotor[0] => Mux116.IN2
+setting_rotor[0] => Mux117.IN2
+setting_rotor[0] => Mux118.IN2
+setting_rotor[0] => Mux119.IN2
+setting_rotor[0] => Mux120.IN2
+setting_rotor[0] => Mux121.IN2
+setting_rotor[0] => Mux122.IN2
+setting_rotor[0] => Mux123.IN2
+setting_rotor[0] => Mux124.IN2
+setting_rotor[0] => Mux125.IN2
+setting_rotor[0] => Mux126.IN2
+setting_rotor[0] => Mux127.IN2
+setting_rotor[0] => Mux128.IN2
+setting_rotor[0] => Mux129.IN2
+setting_rotor[0] => Mux130.IN2
+setting_rotor[0] => Mux131.IN2
+setting_rotor[0] => Mux132.IN2
+setting_rotor[1] => Mux75.IN1
+setting_rotor[1] => Mux76.IN1
+setting_rotor[1] => Mux77.IN1
+setting_rotor[1] => Mux78.IN1
+setting_rotor[1] => Mux79.IN1
+setting_rotor[1] => Mux80.IN4
+setting_rotor[1] => Mux81.IN4
+setting_rotor[1] => Mux82.IN4
+setting_rotor[1] => Mux83.IN4
+setting_rotor[1] => Mux84.IN4
+setting_rotor[1] => Mux85.IN3
+setting_rotor[1] => Mux86.IN4
+setting_rotor[1] => Mux87.IN4
+setting_rotor[1] => Mux88.IN4
+setting_rotor[1] => Mux89.IN4
+setting_rotor[1] => Mux90.IN4
+setting_rotor[1] => Mux91.IN4
+setting_rotor[1] => Mux92.IN4
+setting_rotor[1] => Mux93.IN4
+setting_rotor[1] => Mux94.IN4
+setting_rotor[1] => Mux95.IN4
+setting_rotor[1] => Mux96.IN3
+setting_rotor[1] => Mux97.IN4
+setting_rotor[1] => Mux98.IN4
+setting_rotor[1] => Mux99.IN4
+setting_rotor[1] => Mux100.IN4
+setting_rotor[1] => Mux101.IN1
+setting_rotor[1] => Mux102.IN1
+setting_rotor[1] => Mux103.IN1
+setting_rotor[1] => Mux104.IN1
+setting_rotor[1] => Mux105.IN1
+setting_rotor[1] => Mux106.IN1
+setting_rotor[1] => Mux107.IN1
+setting_rotor[1] => Mux108.IN1
+setting_rotor[1] => Mux109.IN1
+setting_rotor[1] => Mux110.IN1
+setting_rotor[1] => Mux111.IN1
+setting_rotor[1] => Mux112.IN1
+setting_rotor[1] => Mux113.IN1
+setting_rotor[1] => Mux114.IN1
+setting_rotor[1] => Mux115.IN1
+setting_rotor[1] => Mux116.IN1
+setting_rotor[1] => Mux117.IN1
+setting_rotor[1] => Mux118.IN1
+setting_rotor[1] => Mux119.IN1
+setting_rotor[1] => Mux120.IN1
+setting_rotor[1] => Mux121.IN1
+setting_rotor[1] => Mux122.IN1
+setting_rotor[1] => Mux123.IN1
+setting_rotor[1] => Mux124.IN1
+setting_rotor[1] => Mux125.IN1
+setting_rotor[1] => Mux126.IN1
+setting_rotor[1] => Mux127.IN1
+setting_rotor[1] => Mux128.IN1
+setting_rotor[1] => Mux129.IN1
+setting_rotor[1] => Mux130.IN1
+setting_rotor[1] => Mux131.IN1
+setting_rotor[1] => Mux132.IN1
+setting_mode[0] => Mux0.IN2
+setting_mode[0] => Mux1.IN2
+setting_mode[0] => Mux2.IN2
+setting_mode[0] => Mux3.IN2
+setting_mode[0] => Mux4.IN2
+setting_mode[0] => Mux5.IN5
+setting_mode[0] => Mux6.IN5
+setting_mode[0] => Mux7.IN5
+setting_mode[0] => Mux8.IN5
+setting_mode[0] => Mux9.IN4
+setting_mode[0] => Mux10.IN4
+setting_mode[0] => Mux11.IN4
+setting_mode[0] => Mux12.IN3
+setting_mode[0] => Mux13.IN2
+setting_mode[0] => Mux14.IN2
+setting_mode[0] => Mux15.IN2
+setting_mode[0] => Mux16.IN2
+setting_mode[0] => Mux17.IN2
+setting_mode[0] => Mux18.IN2
+setting_mode[0] => Mux19.IN2
+setting_mode[0] => Mux20.IN2
+setting_mode[0] => Mux21.IN2
+setting_mode[0] => Mux22.IN2
+setting_mode[0] => Mux23.IN2
+setting_mode[0] => Mux24.IN2
+setting_mode[0] => Mux25.IN2
+setting_mode[0] => Mux26.IN5
+setting_mode[0] => Mux27.IN5
+setting_mode[0] => Mux28.IN5
+setting_mode[0] => Mux29.IN5
+setting_mode[0] => Mux30.IN4
+setting_mode[0] => Mux31.IN4
+setting_mode[0] => Mux32.IN4
+setting_mode[0] => Mux33.IN3
+setting_mode[0] => Mux34.IN3
+setting_mode[0] => Mux35.IN2
+setting_mode[0] => Mux36.IN2
+setting_mode[0] => Mux37.IN2
+setting_mode[0] => Mux38.IN2
+setting_mode[0] => Mux39.IN2
+setting_mode[0] => Mux40.IN2
+setting_mode[0] => Mux41.IN2
+setting_mode[0] => Mux42.IN2
+setting_mode[0] => Mux43.IN2
+setting_mode[0] => Mux44.IN2
+setting_mode[0] => Mux45.IN2
+setting_mode[0] => Mux46.IN2
+setting_mode[0] => Mux47.IN5
+setting_mode[0] => Mux48.IN5
+setting_mode[0] => Mux49.IN5
+setting_mode[0] => Mux50.IN5
+setting_mode[0] => Mux51.IN5
+setting_mode[0] => Mux52.IN5
+setting_mode[0] => Mux53.IN4
+setting_mode[0] => Mux54.IN5
+setting_mode[0] => Mux55.IN5
+setting_mode[0] => Mux56.IN5
+setting_mode[0] => Mux57.IN5
+setting_mode[0] => Mux58.IN5
+setting_mode[0] => Mux59.IN4
+setting_mode[0] => Mux60.IN4
+setting_mode[0] => Mux61.IN4
+setting_mode[0] => Mux62.IN3
+setting_mode[0] => Mux63.IN3
+setting_mode[0] => Mux64.IN5
+setting_mode[0] => Mux65.IN5
+setting_mode[0] => Mux66.IN5
+setting_mode[0] => Mux67.IN5
+setting_mode[0] => Mux68.IN2
+setting_mode[0] => Mux69.IN2
+setting_mode[0] => Mux70.IN2
+setting_mode[0] => Mux71.IN2
+setting_mode[0] => Mux72.IN2
+setting_mode[0] => Mux73.IN2
+setting_mode[0] => Mux74.IN2
+setting_mode[1] => Mux0.IN1
+setting_mode[1] => Mux1.IN1
+setting_mode[1] => Mux2.IN1
+setting_mode[1] => Mux3.IN1
+setting_mode[1] => Mux4.IN1
+setting_mode[1] => Mux5.IN4
+setting_mode[1] => Mux6.IN4
+setting_mode[1] => Mux7.IN4
+setting_mode[1] => Mux8.IN4
+setting_mode[1] => Mux9.IN3
+setting_mode[1] => Mux10.IN3
+setting_mode[1] => Mux11.IN3
+setting_mode[1] => Mux12.IN2
+setting_mode[1] => Mux13.IN1
+setting_mode[1] => Mux14.IN1
+setting_mode[1] => Mux15.IN1
+setting_mode[1] => Mux16.IN1
+setting_mode[1] => Mux17.IN1
+setting_mode[1] => Mux18.IN1
+setting_mode[1] => Mux19.IN1
+setting_mode[1] => Mux20.IN1
+setting_mode[1] => Mux21.IN1
+setting_mode[1] => Mux22.IN1
+setting_mode[1] => Mux23.IN1
+setting_mode[1] => Mux24.IN1
+setting_mode[1] => Mux25.IN1
+setting_mode[1] => Mux26.IN4
+setting_mode[1] => Mux27.IN4
+setting_mode[1] => Mux28.IN4
+setting_mode[1] => Mux29.IN4
+setting_mode[1] => Mux30.IN3
+setting_mode[1] => Mux31.IN3
+setting_mode[1] => Mux32.IN3
+setting_mode[1] => Mux33.IN2
+setting_mode[1] => Mux34.IN2
+setting_mode[1] => Mux35.IN1
+setting_mode[1] => Mux36.IN1
+setting_mode[1] => Mux37.IN1
+setting_mode[1] => Mux38.IN1
+setting_mode[1] => Mux39.IN1
+setting_mode[1] => Mux40.IN1
+setting_mode[1] => Mux41.IN1
+setting_mode[1] => Mux42.IN1
+setting_mode[1] => Mux43.IN1
+setting_mode[1] => Mux44.IN1
+setting_mode[1] => Mux45.IN1
+setting_mode[1] => Mux46.IN1
+setting_mode[1] => Mux47.IN4
+setting_mode[1] => Mux48.IN4
+setting_mode[1] => Mux49.IN4
+setting_mode[1] => Mux50.IN4
+setting_mode[1] => Mux51.IN4
+setting_mode[1] => Mux52.IN4
+setting_mode[1] => Mux53.IN3
+setting_mode[1] => Mux54.IN4
+setting_mode[1] => Mux55.IN4
+setting_mode[1] => Mux56.IN4
+setting_mode[1] => Mux57.IN4
+setting_mode[1] => Mux58.IN4
+setting_mode[1] => Mux59.IN3
+setting_mode[1] => Mux60.IN3
+setting_mode[1] => Mux61.IN3
+setting_mode[1] => Mux62.IN2
+setting_mode[1] => Mux63.IN2
+setting_mode[1] => Mux64.IN4
+setting_mode[1] => Mux65.IN4
+setting_mode[1] => Mux66.IN4
+setting_mode[1] => Mux67.IN4
+setting_mode[1] => Mux68.IN1
+setting_mode[1] => Mux69.IN1
+setting_mode[1] => Mux70.IN1
+setting_mode[1] => Mux71.IN1
+setting_mode[1] => Mux72.IN1
+setting_mode[1] => Mux73.IN1
+setting_mode[1] => Mux74.IN1
+input_code[0] => left_data.DATAB
+input_code[0] => left_rotor_type.DATAB
+input_code[0] => left_ring_shift.DATAB
+input_code[0] => middle_data.DATAB
+input_code[0] => middle_rotor_type.DATAB
+input_code[0] => middle_ring_shift.DATAB
+input_code[0] => right_data.DATAB
+input_code[0] => LessThan4.IN10
+input_code[0] => right_rotor_type.DATAB
+input_code[0] => Add4.IN10
+input_code[0] => LessThan5.IN10
+input_code[0] => right_ring_shift.DATAB
+input_code[0] => LessThan6.IN10
+input_code[0] => LessThan7.IN10
+input_code[0] => reflector_type.DATAB
+input_code[0] => Mux85.IN5
+input_code[0] => display_r_in.DATAB
+input_code[0] => g47_enigma:ENIGMA.input_code[0]
+input_code[1] => left_data.DATAB
+input_code[1] => left_rotor_type.DATAB
+input_code[1] => left_ring_shift.DATAB
+input_code[1] => middle_data.DATAB
+input_code[1] => middle_rotor_type.DATAB
+input_code[1] => middle_ring_shift.DATAB
+input_code[1] => right_data.DATAB
+input_code[1] => LessThan4.IN9
+input_code[1] => right_rotor_type.DATAB
+input_code[1] => Add4.IN9
+input_code[1] => LessThan5.IN9
+input_code[1] => right_ring_shift.DATAB
+input_code[1] => LessThan6.IN9
+input_code[1] => LessThan7.IN9
+input_code[1] => Add5.IN8
+input_code[1] => display_r_in.DATAA
+input_code[1] => display_r_in.DATAB
+input_code[1] => display_r_in.DATAB
+input_code[1] => g47_enigma:ENIGMA.input_code[1]
+input_code[2] => left_data.DATAB
+input_code[2] => left_ring_shift.DATAB
+input_code[2] => middle_data.DATAB
+input_code[2] => middle_ring_shift.DATAB
+input_code[2] => right_data.DATAB
+input_code[2] => LessThan4.IN8
+input_code[2] => Add4.IN8
+input_code[2] => LessThan5.IN8
+input_code[2] => right_ring_shift.DATAB
+input_code[2] => LessThan6.IN8
+input_code[2] => LessThan7.IN8
+input_code[2] => Add5.IN7
+input_code[2] => Add6.IN6
+input_code[2] => display_r_in.DATAB
+input_code[2] => display_r_in.DATAB
+input_code[2] => g47_enigma:ENIGMA.input_code[2]
+input_code[3] => left_data.DATAB
+input_code[3] => left_ring_shift.DATAB
+input_code[3] => middle_data.DATAB
+input_code[3] => middle_ring_shift.DATAB
+input_code[3] => right_data.DATAB
+input_code[3] => LessThan4.IN7
+input_code[3] => Add4.IN7
+input_code[3] => LessThan5.IN7
+input_code[3] => right_ring_shift.DATAB
+input_code[3] => LessThan6.IN7
+input_code[3] => LessThan7.IN7
+input_code[3] => Add5.IN6
+input_code[3] => Add6.IN5
+input_code[3] => display_r_in.DATAB
+input_code[3] => display_r_in.DATAB
+input_code[3] => g47_enigma:ENIGMA.input_code[3]
+input_code[4] => left_data.DATAB
+input_code[4] => left_ring_shift.DATAB
+input_code[4] => middle_data.DATAB
+input_code[4] => middle_ring_shift.DATAB
+input_code[4] => right_data.DATAB
+input_code[4] => LessThan4.IN6
+input_code[4] => Add4.IN6
+input_code[4] => LessThan5.IN6
+input_code[4] => right_ring_shift.DATAB
+input_code[4] => LessThan6.IN6
+input_code[4] => LessThan7.IN6
+input_code[4] => Add5.IN5
+input_code[4] => Add6.IN4
+input_code[4] => display_r_in.DATAB
+input_code[4] => display_r_in.DATAB
+input_code[4] => g47_enigma:ENIGMA.input_code[4]
+segments_i[0] <= g47_7_segmentdecoder:DISPLAY_I.segments[0]
+segments_i[1] <= g47_7_segmentdecoder:DISPLAY_I.segments[1]
+segments_i[2] <= g47_7_segmentdecoder:DISPLAY_I.segments[2]
+segments_i[3] <= g47_7_segmentdecoder:DISPLAY_I.segments[3]
+segments_i[4] <= g47_7_segmentdecoder:DISPLAY_I.segments[4]
+segments_i[5] <= g47_7_segmentdecoder:DISPLAY_I.segments[5]
+segments_i[6] <= g47_7_segmentdecoder:DISPLAY_I.segments[6]
+segments_l[0] <= g47_7_segmentdecoder:DISPLAY_L.segments[0]
+segments_l[1] <= g47_7_segmentdecoder:DISPLAY_L.segments[1]
+segments_l[2] <= g47_7_segmentdecoder:DISPLAY_L.segments[2]
+segments_l[3] <= g47_7_segmentdecoder:DISPLAY_L.segments[3]
+segments_l[4] <= g47_7_segmentdecoder:DISPLAY_L.segments[4]
+segments_l[5] <= g47_7_segmentdecoder:DISPLAY_L.segments[5]
+segments_l[6] <= g47_7_segmentdecoder:DISPLAY_L.segments[6]
+segments_m[0] <= g47_7_segmentdecoder:DISPLAY_M.segments[0]
+segments_m[1] <= g47_7_segmentdecoder:DISPLAY_M.segments[1]
+segments_m[2] <= g47_7_segmentdecoder:DISPLAY_M.segments[2]
+segments_m[3] <= g47_7_segmentdecoder:DISPLAY_M.segments[3]
+segments_m[4] <= g47_7_segmentdecoder:DISPLAY_M.segments[4]
+segments_m[5] <= g47_7_segmentdecoder:DISPLAY_M.segments[5]
+segments_m[6] <= g47_7_segmentdecoder:DISPLAY_M.segments[6]
+segments_r[0] <= g47_7_segmentdecoder:DISPLAY_R.segments[0]
+segments_r[1] <= g47_7_segmentdecoder:DISPLAY_R.segments[1]
+segments_r[2] <= g47_7_segmentdecoder:DISPLAY_R.segments[2]
+segments_r[3] <= g47_7_segmentdecoder:DISPLAY_R.segments[3]
+segments_r[4] <= g47_7_segmentdecoder:DISPLAY_R.segments[4]
+segments_r[5] <= g47_7_segmentdecoder:DISPLAY_R.segments[5]
+segments_r[6] <= g47_7_segmentdecoder:DISPLAY_R.segments[6]
+led_error[0] <= keypress_enable.DB_MAX_OUTPUT_PORT_TYPE
+led_error[1] <= keypress_up.DB_MAX_OUTPUT_PORT_TYPE
+led_error[2] <= keypress_down.DB_MAX_OUTPUT_PORT_TYPE
+led_error[3] <= <GND>
+led_error[4] <= led_error[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g47_ui|g47_enigma:ENIGMA
 clock => g47_fsm:FSM.clock
 clock => g47_rotor:ROTOR_LEFT.clock
 clock => g47_rotor:ROTOR_MIDDLE.clock
@@ -41,18 +562,13 @@ middle_rotor_type[0] => g47_rotor:ROTOR_MIDDLE.rotor_type[0]
 middle_rotor_type[0] => g47_5_comp:COMP_MIDDLE.B[4]
 middle_rotor_type[1] => Mux0.IN4
 middle_rotor_type[1] => Mux1.IN4
-middle_rotor_type[1] => g47_5_comp:COMP_MIDDLE.B[0]
 middle_rotor_type[1] => g47_rotor:ROTOR_MIDDLE.rotor_type[1]
+middle_rotor_type[1] => g47_5_comp:COMP_MIDDLE.B[0]
 middle_ring_shift[0] => g47_rotor:ROTOR_MIDDLE.ring_shift[0]
-middle_ring_shift[0] => g47_rotor:ROTOR_RIGHT.ring_shift[0]
 middle_ring_shift[1] => g47_rotor:ROTOR_MIDDLE.ring_shift[1]
-middle_ring_shift[1] => g47_rotor:ROTOR_RIGHT.ring_shift[1]
 middle_ring_shift[2] => g47_rotor:ROTOR_MIDDLE.ring_shift[2]
-middle_ring_shift[2] => g47_rotor:ROTOR_RIGHT.ring_shift[2]
 middle_ring_shift[3] => g47_rotor:ROTOR_MIDDLE.ring_shift[3]
-middle_ring_shift[3] => g47_rotor:ROTOR_RIGHT.ring_shift[3]
 middle_ring_shift[4] => g47_rotor:ROTOR_MIDDLE.ring_shift[4]
-middle_ring_shift[4] => g47_rotor:ROTOR_RIGHT.ring_shift[4]
 right_data[0] => g47_rotor:ROTOR_RIGHT.data[0]
 right_data[1] => g47_rotor:ROTOR_RIGHT.data[1]
 right_data[2] => g47_rotor:ROTOR_RIGHT.data[2]
@@ -64,17 +580,17 @@ right_rotor_type[0] => g47_rotor:ROTOR_RIGHT.rotor_type[0]
 right_rotor_type[0] => g47_5_comp:COMP_RIGHT.B[4]
 right_rotor_type[1] => Mux2.IN4
 right_rotor_type[1] => Mux3.IN4
-right_rotor_type[1] => g47_5_comp:COMP_RIGHT.B[0]
 right_rotor_type[1] => g47_rotor:ROTOR_RIGHT.rotor_type[1]
-right_ring_shift[0] => ~NO_FANOUT~
-right_ring_shift[1] => ~NO_FANOUT~
-right_ring_shift[2] => ~NO_FANOUT~
-right_ring_shift[3] => ~NO_FANOUT~
-right_ring_shift[4] => ~NO_FANOUT~
+right_rotor_type[1] => g47_5_comp:COMP_RIGHT.B[0]
+right_ring_shift[0] => g47_rotor:ROTOR_RIGHT.ring_shift[0]
+right_ring_shift[1] => g47_rotor:ROTOR_RIGHT.ring_shift[1]
+right_ring_shift[2] => g47_rotor:ROTOR_RIGHT.ring_shift[2]
+right_ring_shift[3] => g47_rotor:ROTOR_RIGHT.ring_shift[3]
+right_ring_shift[4] => g47_rotor:ROTOR_RIGHT.ring_shift[4]
 reflector_type => g47_reflector:REFLECTOR.reflector_type
 
 
-|g47_enigma|g47_5_comp:COMP_MIDDLE
+|g47_ui|g47_enigma:ENIGMA|g47_5_comp:COMP_MIDDLE
 A[0] => Equal0.IN4
 A[1] => Equal0.IN3
 A[2] => Equal0.IN2
@@ -88,7 +604,7 @@ B[4] => Equal0.IN5
 Eq <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_5_comp:COMP_RIGHT
+|g47_ui|g47_enigma:ENIGMA|g47_5_comp:COMP_RIGHT
 A[0] => Equal0.IN4
 A[1] => Equal0.IN3
 A[2] => Equal0.IN2
@@ -102,7 +618,7 @@ B[4] => Equal0.IN5
 Eq <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_fsm:FSM
+|g47_ui|g47_enigma:ENIGMA|g47_fsm:FSM
 clock => hold.CLK
 clock => load~reg0.CLK
 clock => en_r~reg0.CLK
@@ -117,13 +633,13 @@ keypress => state.OUTPUTSELECT
 knock_m => en_m.OUTPUTSELECT
 knock_m => en_l~reg0.ADATA
 knock_r => en_m.DATAA
-init => load.IN1
-init => en_l.IN1
-init => state[1].IN1
 init => load~reg0.PRESET
 init => en_l.IN1
 init => state[0].ACLR
 init => state[1].ACLR
+init => en_l.IN1
+init => load.IN1
+init => state[1].IN1
 init => hold.ENA
 en_l <= en_l~reg0.DB_MAX_OUTPUT_PORT_TYPE
 en_m <= en_m~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -131,7 +647,7 @@ en_r <= en_r~reg0.DB_MAX_OUTPUT_PORT_TYPE
 load <= load~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_reflector:REFLECTOR
+|g47_ui|g47_enigma:ENIGMA|g47_reflector:REFLECTOR
 reflector_type => output_code.OUTPUTSELECT
 reflector_type => output_code.OUTPUTSELECT
 reflector_type => output_code.OUTPUTSELECT
@@ -194,7 +710,7 @@ output_code[3] <= output_code.DB_MAX_OUTPUT_PORT_TYPE
 output_code[4] <= output_code.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT
 clock => g47_0_25_counter:ROTOR_SHIFT_COUNTER.clock
 reset => g47_0_25_counter:ROTOR_SHIFT_COUNTER.reset
 enable => g47_0_25_counter:ROTOR_SHIFT_COUNTER.enable
@@ -255,7 +771,7 @@ ltr_output_code[3] <= g47_26_5_encoder:LTR_OUT_VALUE.index[3]
 ltr_output_code[4] <= g47_26_5_encoder:LTR_OUT_VALUE.index[4]
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_0_25_counter:ROTOR_SHIFT_COUNTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_0_25_counter:ROTOR_SHIFT_COUNTER
 clock => count_previous[0].CLK
 clock => count_previous[1].CLK
 clock => count_previous[2].CLK
@@ -288,7 +804,7 @@ data[3] => count_previous.DATAB
 data[4] => count_previous.DATAB
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_IN_LETTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_IN_LETTER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -374,7 +890,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -2041,7 +2557,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -3708,7 +4224,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_IN_ENCODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_IN_ENCODER
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -3833,7 +4349,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_permutation:RTL_PERMUTATION
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:RTL_PERMUTATION
 rotor_type[0] => Mux40.IN5
 rotor_type[0] => Mux41.IN5
 rotor_type[0] => Mux42.IN5
@@ -4066,7 +4582,7 @@ inv_output_code[3] <= Mux46.DB_MAX_OUTPUT_PORT_TYPE
 inv_output_code[4] <= Mux45.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_OUT_DECODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_OUT_DECODER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -4152,7 +4668,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -5819,7 +6335,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -7486,7 +8002,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_OUT_VALUE
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_OUT_VALUE
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -7611,7 +8127,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_IN_LETTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_IN_LETTER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -7697,7 +8213,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -9364,7 +9880,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -11031,7 +11547,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_IN_ENCODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_IN_ENCODER
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -11156,7 +11672,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_permutation:LTR_PERMUTATION
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:LTR_PERMUTATION
 rotor_type[0] => Mux40.IN5
 rotor_type[0] => Mux41.IN5
 rotor_type[0] => Mux42.IN5
@@ -11389,7 +11905,7 @@ inv_output_code[3] <= Mux46.DB_MAX_OUTPUT_PORT_TYPE
 inv_output_code[4] <= Mux45.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_OUT_DECODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_OUT_DECODER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -11475,7 +11991,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -13142,7 +13658,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -14809,7 +15325,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_OUT_VALUE
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_OUT_VALUE
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -14934,7 +15450,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE
 clock => g47_0_25_counter:ROTOR_SHIFT_COUNTER.clock
 reset => g47_0_25_counter:ROTOR_SHIFT_COUNTER.reset
 enable => g47_0_25_counter:ROTOR_SHIFT_COUNTER.enable
@@ -14995,7 +15511,7 @@ ltr_output_code[3] <= g47_26_5_encoder:LTR_OUT_VALUE.index[3]
 ltr_output_code[4] <= g47_26_5_encoder:LTR_OUT_VALUE.index[4]
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_0_25_counter:ROTOR_SHIFT_COUNTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_0_25_counter:ROTOR_SHIFT_COUNTER
 clock => count_previous[0].CLK
 clock => count_previous[1].CLK
 clock => count_previous[2].CLK
@@ -15028,7 +15544,7 @@ data[3] => count_previous.DATAB
 data[4] => count_previous.DATAB
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:RTL_IN_LETTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:RTL_IN_LETTER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -15114,7 +15630,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_IN_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_IN_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -16781,7 +17297,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_IN_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_IN_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -18448,7 +18964,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_IN_ENCODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_IN_ENCODER
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -18573,7 +19089,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_permutation:RTL_PERMUTATION
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_permutation:RTL_PERMUTATION
 rotor_type[0] => Mux40.IN5
 rotor_type[0] => Mux41.IN5
 rotor_type[0] => Mux42.IN5
@@ -18806,7 +19322,7 @@ inv_output_code[3] <= Mux46.DB_MAX_OUTPUT_PORT_TYPE
 inv_output_code[4] <= Mux45.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:RTL_OUT_DECODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:RTL_OUT_DECODER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -18892,7 +19408,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -20559,7 +21075,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -22226,7 +22742,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_OUT_VALUE
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_OUT_VALUE
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -22351,7 +22867,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:LTR_IN_LETTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:LTR_IN_LETTER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -22437,7 +22953,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -24104,7 +24620,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -25771,7 +26287,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:LTR_IN_ENCODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:LTR_IN_ENCODER
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -25896,7 +26412,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_permutation:LTR_PERMUTATION
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_permutation:LTR_PERMUTATION
 rotor_type[0] => Mux40.IN5
 rotor_type[0] => Mux41.IN5
 rotor_type[0] => Mux42.IN5
@@ -26129,7 +26645,7 @@ inv_output_code[3] <= Mux46.DB_MAX_OUTPUT_PORT_TYPE
 inv_output_code[4] <= Mux45.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:LTR_OUT_DECODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:LTR_OUT_DECODER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -26215,7 +26731,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_OUT_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_OUT_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -27882,7 +28398,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_OUT_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_OUT_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -29549,7 +30065,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:LTR_OUT_VALUE
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:LTR_OUT_VALUE
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -29674,7 +30190,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT
 clock => g47_0_25_counter:ROTOR_SHIFT_COUNTER.clock
 reset => g47_0_25_counter:ROTOR_SHIFT_COUNTER.reset
 enable => g47_0_25_counter:ROTOR_SHIFT_COUNTER.enable
@@ -29735,7 +30251,7 @@ ltr_output_code[3] <= g47_26_5_encoder:LTR_OUT_VALUE.index[3]
 ltr_output_code[4] <= g47_26_5_encoder:LTR_OUT_VALUE.index[4]
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_0_25_counter:ROTOR_SHIFT_COUNTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_0_25_counter:ROTOR_SHIFT_COUNTER
 clock => count_previous[0].CLK
 clock => count_previous[1].CLK
 clock => count_previous[2].CLK
@@ -29768,7 +30284,7 @@ data[3] => count_previous.DATAB
 data[4] => count_previous.DATAB
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:RTL_IN_LETTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:RTL_IN_LETTER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -29854,7 +30370,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -31521,7 +32037,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -33188,7 +33704,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_IN_ENCODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_IN_ENCODER
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -33313,7 +33829,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_permutation:RTL_PERMUTATION
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_permutation:RTL_PERMUTATION
 rotor_type[0] => Mux40.IN5
 rotor_type[0] => Mux41.IN5
 rotor_type[0] => Mux42.IN5
@@ -33546,7 +34062,7 @@ inv_output_code[3] <= Mux46.DB_MAX_OUTPUT_PORT_TYPE
 inv_output_code[4] <= Mux45.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:RTL_OUT_DECODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:RTL_OUT_DECODER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -33632,7 +34148,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_OUT_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_OUT_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -35299,7 +35815,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_OUT_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_OUT_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -36966,7 +37482,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_OUT_VALUE
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_OUT_VALUE
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -37091,7 +37607,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:LTR_IN_LETTER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:LTR_IN_LETTER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -37177,7 +37693,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -38844,7 +39360,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -40511,7 +41027,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_IN_ENCODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_IN_ENCODER
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -40636,7 +41152,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_permutation:LTR_PERMUTATION
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_permutation:LTR_PERMUTATION
 rotor_type[0] => Mux40.IN5
 rotor_type[0] => Mux41.IN5
 rotor_type[0] => Mux42.IN5
@@ -40869,7 +41385,7 @@ inv_output_code[3] <= Mux46.DB_MAX_OUTPUT_PORT_TYPE
 inv_output_code[4] <= Mux45.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:LTR_OUT_DECODER
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:LTR_OUT_DECODER
 index[0] => letter.IN1
 index[0] => letter.IN1
 index[0] => letter.IN1
@@ -40955,7 +41471,7 @@ letter[25] <= letter.DB_MAX_OUTPUT_PORT_TYPE
 error <= error.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_RING
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_RING
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -42622,7 +43138,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_ROTOR
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_ROTOR
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
 direction => Y.OUTPUTSELECT
@@ -44289,7 +44805,7 @@ Y[24] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[25] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_OUT_VALUE
+|g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_OUT_VALUE
 letter[0] => tmp.DATAA
 letter[0] => tmp.DATAA
 letter[1] => tmp.OUTPUTSELECT
@@ -44414,7 +44930,7 @@ index[4] <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 error <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_stecker:STECKER_IN
+|g47_ui|g47_enigma:ENIGMA|g47_stecker:STECKER_IN
 input_code[0] => Mux4.IN36
 input_code[1] => Mux0.IN19
 input_code[1] => Mux1.IN10
@@ -44442,7 +44958,7 @@ output_code[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 output_code[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g47_enigma|g47_stecker:STECKER_OUT
+|g47_ui|g47_enigma:ENIGMA|g47_stecker:STECKER_OUT
 input_code[0] => Mux4.IN36
 input_code[1] => Mux0.IN19
 input_code[1] => Mux1.IN10
@@ -44468,5 +44984,353 @@ output_code[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 output_code[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 output_code[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 output_code[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g47_ui|g47_7_segmentdecoder:DISPLAY_I
+segment_type => tmp[6].OUTPUTSELECT
+segment_type => tmp[5].OUTPUTSELECT
+segment_type => tmp[4].OUTPUTSELECT
+segment_type => tmp[3].OUTPUTSELECT
+segment_type => tmp[2].OUTPUTSELECT
+segment_type => tmp[1].OUTPUTSELECT
+segment_type => tmp[0].OUTPUTSELECT
+index[0] => Mux0.IN36
+index[0] => Mux1.IN36
+index[0] => Mux2.IN36
+index[0] => Mux3.IN36
+index[0] => Mux4.IN36
+index[0] => Mux5.IN36
+index[0] => Mux6.IN36
+index[0] => Mux7.IN36
+index[0] => Mux8.IN36
+index[0] => Mux9.IN36
+index[0] => Mux10.IN36
+index[0] => Mux11.IN36
+index[0] => Mux12.IN36
+index[0] => Mux13.IN36
+index[1] => Mux0.IN35
+index[1] => Mux1.IN35
+index[1] => Mux2.IN35
+index[1] => Mux3.IN35
+index[1] => Mux4.IN35
+index[1] => Mux5.IN35
+index[1] => Mux6.IN35
+index[1] => Mux7.IN35
+index[1] => Mux8.IN35
+index[1] => Mux9.IN35
+index[1] => Mux10.IN35
+index[1] => Mux11.IN35
+index[1] => Mux12.IN35
+index[1] => Mux13.IN35
+index[2] => Mux0.IN34
+index[2] => Mux1.IN34
+index[2] => Mux2.IN34
+index[2] => Mux3.IN34
+index[2] => Mux4.IN34
+index[2] => Mux5.IN34
+index[2] => Mux6.IN34
+index[2] => Mux7.IN34
+index[2] => Mux8.IN34
+index[2] => Mux9.IN34
+index[2] => Mux10.IN34
+index[2] => Mux11.IN34
+index[2] => Mux12.IN34
+index[2] => Mux13.IN34
+index[3] => Mux0.IN33
+index[3] => Mux1.IN33
+index[3] => Mux2.IN33
+index[3] => Mux3.IN33
+index[3] => Mux4.IN33
+index[3] => Mux5.IN33
+index[3] => Mux6.IN33
+index[3] => Mux7.IN33
+index[3] => Mux8.IN33
+index[3] => Mux9.IN33
+index[3] => Mux10.IN33
+index[3] => Mux11.IN33
+index[3] => Mux12.IN33
+index[3] => Mux13.IN33
+index[4] => Mux0.IN32
+index[4] => Mux1.IN32
+index[4] => Mux2.IN32
+index[4] => Mux3.IN32
+index[4] => Mux4.IN32
+index[4] => Mux5.IN32
+index[4] => Mux6.IN32
+index[4] => Mux7.IN32
+index[4] => Mux8.IN32
+index[4] => Mux9.IN32
+index[4] => Mux10.IN32
+index[4] => Mux11.IN32
+index[4] => Mux12.IN32
+index[4] => Mux13.IN32
+segments[0] <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= tmp[4].DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= tmp[5].DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= tmp[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g47_ui|g47_7_segmentdecoder:DISPLAY_L
+segment_type => tmp[6].OUTPUTSELECT
+segment_type => tmp[5].OUTPUTSELECT
+segment_type => tmp[4].OUTPUTSELECT
+segment_type => tmp[3].OUTPUTSELECT
+segment_type => tmp[2].OUTPUTSELECT
+segment_type => tmp[1].OUTPUTSELECT
+segment_type => tmp[0].OUTPUTSELECT
+index[0] => Mux0.IN36
+index[0] => Mux1.IN36
+index[0] => Mux2.IN36
+index[0] => Mux3.IN36
+index[0] => Mux4.IN36
+index[0] => Mux5.IN36
+index[0] => Mux6.IN36
+index[0] => Mux7.IN36
+index[0] => Mux8.IN36
+index[0] => Mux9.IN36
+index[0] => Mux10.IN36
+index[0] => Mux11.IN36
+index[0] => Mux12.IN36
+index[0] => Mux13.IN36
+index[1] => Mux0.IN35
+index[1] => Mux1.IN35
+index[1] => Mux2.IN35
+index[1] => Mux3.IN35
+index[1] => Mux4.IN35
+index[1] => Mux5.IN35
+index[1] => Mux6.IN35
+index[1] => Mux7.IN35
+index[1] => Mux8.IN35
+index[1] => Mux9.IN35
+index[1] => Mux10.IN35
+index[1] => Mux11.IN35
+index[1] => Mux12.IN35
+index[1] => Mux13.IN35
+index[2] => Mux0.IN34
+index[2] => Mux1.IN34
+index[2] => Mux2.IN34
+index[2] => Mux3.IN34
+index[2] => Mux4.IN34
+index[2] => Mux5.IN34
+index[2] => Mux6.IN34
+index[2] => Mux7.IN34
+index[2] => Mux8.IN34
+index[2] => Mux9.IN34
+index[2] => Mux10.IN34
+index[2] => Mux11.IN34
+index[2] => Mux12.IN34
+index[2] => Mux13.IN34
+index[3] => Mux0.IN33
+index[3] => Mux1.IN33
+index[3] => Mux2.IN33
+index[3] => Mux3.IN33
+index[3] => Mux4.IN33
+index[3] => Mux5.IN33
+index[3] => Mux6.IN33
+index[3] => Mux7.IN33
+index[3] => Mux8.IN33
+index[3] => Mux9.IN33
+index[3] => Mux10.IN33
+index[3] => Mux11.IN33
+index[3] => Mux12.IN33
+index[3] => Mux13.IN33
+index[4] => Mux0.IN32
+index[4] => Mux1.IN32
+index[4] => Mux2.IN32
+index[4] => Mux3.IN32
+index[4] => Mux4.IN32
+index[4] => Mux5.IN32
+index[4] => Mux6.IN32
+index[4] => Mux7.IN32
+index[4] => Mux8.IN32
+index[4] => Mux9.IN32
+index[4] => Mux10.IN32
+index[4] => Mux11.IN32
+index[4] => Mux12.IN32
+index[4] => Mux13.IN32
+segments[0] <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= tmp[4].DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= tmp[5].DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= tmp[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g47_ui|g47_7_segmentdecoder:DISPLAY_M
+segment_type => tmp[6].OUTPUTSELECT
+segment_type => tmp[5].OUTPUTSELECT
+segment_type => tmp[4].OUTPUTSELECT
+segment_type => tmp[3].OUTPUTSELECT
+segment_type => tmp[2].OUTPUTSELECT
+segment_type => tmp[1].OUTPUTSELECT
+segment_type => tmp[0].OUTPUTSELECT
+index[0] => Mux0.IN36
+index[0] => Mux1.IN36
+index[0] => Mux2.IN36
+index[0] => Mux3.IN36
+index[0] => Mux4.IN36
+index[0] => Mux5.IN36
+index[0] => Mux6.IN36
+index[0] => Mux7.IN36
+index[0] => Mux8.IN36
+index[0] => Mux9.IN36
+index[0] => Mux10.IN36
+index[0] => Mux11.IN36
+index[0] => Mux12.IN36
+index[0] => Mux13.IN36
+index[1] => Mux0.IN35
+index[1] => Mux1.IN35
+index[1] => Mux2.IN35
+index[1] => Mux3.IN35
+index[1] => Mux4.IN35
+index[1] => Mux5.IN35
+index[1] => Mux6.IN35
+index[1] => Mux7.IN35
+index[1] => Mux8.IN35
+index[1] => Mux9.IN35
+index[1] => Mux10.IN35
+index[1] => Mux11.IN35
+index[1] => Mux12.IN35
+index[1] => Mux13.IN35
+index[2] => Mux0.IN34
+index[2] => Mux1.IN34
+index[2] => Mux2.IN34
+index[2] => Mux3.IN34
+index[2] => Mux4.IN34
+index[2] => Mux5.IN34
+index[2] => Mux6.IN34
+index[2] => Mux7.IN34
+index[2] => Mux8.IN34
+index[2] => Mux9.IN34
+index[2] => Mux10.IN34
+index[2] => Mux11.IN34
+index[2] => Mux12.IN34
+index[2] => Mux13.IN34
+index[3] => Mux0.IN33
+index[3] => Mux1.IN33
+index[3] => Mux2.IN33
+index[3] => Mux3.IN33
+index[3] => Mux4.IN33
+index[3] => Mux5.IN33
+index[3] => Mux6.IN33
+index[3] => Mux7.IN33
+index[3] => Mux8.IN33
+index[3] => Mux9.IN33
+index[3] => Mux10.IN33
+index[3] => Mux11.IN33
+index[3] => Mux12.IN33
+index[3] => Mux13.IN33
+index[4] => Mux0.IN32
+index[4] => Mux1.IN32
+index[4] => Mux2.IN32
+index[4] => Mux3.IN32
+index[4] => Mux4.IN32
+index[4] => Mux5.IN32
+index[4] => Mux6.IN32
+index[4] => Mux7.IN32
+index[4] => Mux8.IN32
+index[4] => Mux9.IN32
+index[4] => Mux10.IN32
+index[4] => Mux11.IN32
+index[4] => Mux12.IN32
+index[4] => Mux13.IN32
+segments[0] <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= tmp[4].DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= tmp[5].DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= tmp[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g47_ui|g47_7_segmentdecoder:DISPLAY_R
+segment_type => tmp[6].OUTPUTSELECT
+segment_type => tmp[5].OUTPUTSELECT
+segment_type => tmp[4].OUTPUTSELECT
+segment_type => tmp[3].OUTPUTSELECT
+segment_type => tmp[2].OUTPUTSELECT
+segment_type => tmp[1].OUTPUTSELECT
+segment_type => tmp[0].OUTPUTSELECT
+index[0] => Mux0.IN36
+index[0] => Mux1.IN36
+index[0] => Mux2.IN36
+index[0] => Mux3.IN36
+index[0] => Mux4.IN36
+index[0] => Mux5.IN36
+index[0] => Mux6.IN36
+index[0] => Mux7.IN36
+index[0] => Mux8.IN36
+index[0] => Mux9.IN36
+index[0] => Mux10.IN36
+index[0] => Mux11.IN36
+index[0] => Mux12.IN36
+index[0] => Mux13.IN36
+index[1] => Mux0.IN35
+index[1] => Mux1.IN35
+index[1] => Mux2.IN35
+index[1] => Mux3.IN35
+index[1] => Mux4.IN35
+index[1] => Mux5.IN35
+index[1] => Mux6.IN35
+index[1] => Mux7.IN35
+index[1] => Mux8.IN35
+index[1] => Mux9.IN35
+index[1] => Mux10.IN35
+index[1] => Mux11.IN35
+index[1] => Mux12.IN35
+index[1] => Mux13.IN35
+index[2] => Mux0.IN34
+index[2] => Mux1.IN34
+index[2] => Mux2.IN34
+index[2] => Mux3.IN34
+index[2] => Mux4.IN34
+index[2] => Mux5.IN34
+index[2] => Mux6.IN34
+index[2] => Mux7.IN34
+index[2] => Mux8.IN34
+index[2] => Mux9.IN34
+index[2] => Mux10.IN34
+index[2] => Mux11.IN34
+index[2] => Mux12.IN34
+index[2] => Mux13.IN34
+index[3] => Mux0.IN33
+index[3] => Mux1.IN33
+index[3] => Mux2.IN33
+index[3] => Mux3.IN33
+index[3] => Mux4.IN33
+index[3] => Mux5.IN33
+index[3] => Mux6.IN33
+index[3] => Mux7.IN33
+index[3] => Mux8.IN33
+index[3] => Mux9.IN33
+index[3] => Mux10.IN33
+index[3] => Mux11.IN33
+index[3] => Mux12.IN33
+index[3] => Mux13.IN33
+index[4] => Mux0.IN32
+index[4] => Mux1.IN32
+index[4] => Mux2.IN32
+index[4] => Mux3.IN32
+index[4] => Mux4.IN32
+index[4] => Mux5.IN32
+index[4] => Mux6.IN32
+index[4] => Mux7.IN32
+index[4] => Mux8.IN32
+index[4] => Mux9.IN32
+index[4] => Mux10.IN32
+index[4] => Mux11.IN32
+index[4] => Mux12.IN32
+index[4] => Mux13.IN32
+segments[0] <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= tmp[4].DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= tmp[5].DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= tmp[6].DB_MAX_OUTPUT_PORT_TYPE
 
 

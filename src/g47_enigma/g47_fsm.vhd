@@ -25,7 +25,7 @@ begin
     --   key release -> state D -> check -> state E -> state B
     --if rising_edge(clock) then
       -- check state
-      if init = '0' then -- A
+      if init = '1' then -- A
         state <= "00";
         en_l <= '0';
         en_m <= '0';

@@ -93,7 +93,8 @@ architecture arch of g47_enigma is
 
   -- Variables
   signal knock_m, knock_r, en_l, en_m, en_r, load: std_logic;
-  signal stecker_code, reflector_code,
+  signal state: std_logic_vector(1 downto 0) := "00";
+  signal stecker_code, stecker_output_code, prev_output_code, reflector_code,
          left_rtl_code,   left_ltr_code,
          middle_rtl_code, middle_ltr_code,
          right_rtl_code,  right_ltr_code,
@@ -159,4 +160,25 @@ begin
 
   STECKER_OUT : g47_stecker
     port map(input_code => right_ltr_code, output_code => output_code);
+
+  KEYPRESS_ENABLE : process( clock, init, keypress, stecker_output_code, prev_output_code)
+  begin
+    if init = '1' then
+      prev_output_code <= "11111"
+    elsif state = "00" then
+      if keypress = '0' then
+        state <= "01";
+      end if ;
+    elsif state = "01" then
+      if keypress = '1' then
+        state <= "10";
+      end if ;
+    elsif state = "10" then
+      state <= "11";
+    else
+      state <= "00";
+      prev_output_code <= stecker_output_code;
+    end if ;
+    --output_code <= prev_output_code;
+  end process ; -- KEYPRESS_ENABLE
 end architecture ; -- arch

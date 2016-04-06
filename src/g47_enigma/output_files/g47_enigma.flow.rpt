@@ -1,5 +1,5 @@
 Flow report for g47_enigma
-Tue Apr 05 16:55:48 2016
+Wed Apr 06 17:39:21 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 05 16:55:48 2016           ;
+; Flow Status                        ; Successful - Wed Apr 06 17:39:21 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; g47_enigma                                      ;
-; Top-level Entity Name              ; g47_enigma                                      ;
+; Top-level Entity Name              ; g47_ui                                          ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 6,043 / 18,752 ( 32 % )                         ;
-;     Total combinational functions  ; 5,890 / 18,752 ( 31 % )                         ;
-;     Dedicated logic registers      ; 369 / 18,752 ( 2 % )                            ;
-; Total registers                    ; 369                                             ;
-; Total pins                         ; 51 / 315 ( 16 % )                               ;
+; Total logic elements               ; 6,264 / 18,752 ( 33 % )                         ;
+;     Total combinational functions  ; 6,092 / 18,752 ( 32 % )                         ;
+;     Dedicated logic registers      ; 431 / 18,752 ( 2 % )                            ;
+; Total registers                    ; 431                                             ;
+; Total pins                         ; 46 / 315 ( 15 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 896 / 239,616 ( < 1 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/05/2016 16:52:51 ;
+; Start date & time ; 04/06/2016 17:35:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g47_enigma          ;
 +-------------------+---------------------+
@@ -75,15 +75,15 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                            ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+----------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 121379134774.145988957104528                                                     ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 121379134774.145997853906620                                                     ; --            ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                                             ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                                           ; <None>        ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                               ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                               ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                ; --            ; --          ; --               ;
-; PARTITION_COLOR                     ; 16764057                                                                         ; --            ; --          ; Top              ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                            ; --            ; --          ; Top              ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                                           ; --            ; --          ; Top              ;
+; PARTITION_COLOR                     ; 16764057                                                                         ; --            ; g47_ui      ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                            ; --            ; g47_ui      ; Top              ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                           ; --            ; g47_ui      ; Top              ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                              ; --            ; --          ; --               ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                            ; --            ; --          ; --               ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                     ; --            ; --          ; --               ;
@@ -112,6 +112,7 @@ applicable agreement for further details.
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=0                                                           ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=0                                                     ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=42340                                                        ; --            ; --          ; auto_signaltap_0 ;
+; TOP_LEVEL_ENTITY                    ; g47_ui                                                                           ; g47_enigma    ; --          ; --               ;
 ; USE_SIGNALTAP_FILE                  ; g47_testbed.stp                                                                  ; --            ; --          ; --               ;
 +-------------------------------------+----------------------------------------------------------------------------------+---------------+-------------+------------------+
 
@@ -121,13 +122,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:51     ; 1.0                     ; 556 MB              ; 00:01:48                           ;
-; Fitter                    ; 00:00:18     ; 1.2                     ; 913 MB              ; 00:00:20                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 465 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 556 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 472 MB              ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 443 MB              ; 00:00:01                           ;
-; Total                     ; 00:02:22     ; --                      ; --                  ; 00:02:18                           ;
+; Analysis & Synthesis      ; 00:01:53     ; 1.0                     ; 556 MB              ; 00:01:49                           ;
+; Fitter                    ; 00:01:22     ; 1.2                     ; 880 MB              ; 00:01:35                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 464 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:12     ; 1.0                     ; 610 MB              ; 00:00:11                           ;
+; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 472 MB              ; 00:00:05                           ;
+; Total                     ; 00:03:35     ; --                      ; --                  ; 00:03:42                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -141,7 +141,6 @@ applicable agreement for further details.
 ; Assembler                 ; TIMFLICHYF410    ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; TIMFLICHYF410    ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; TIMFLICHYF410    ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TIMFLICHYF410    ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -153,7 +152,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off g47_enigma -c g
 quartus_asm --read_settings_files=off --write_settings_files=off g47_enigma -c g47_enigma
 quartus_sta g47_enigma -c g47_enigma
 quartus_eda --read_settings_files=off --write_settings_files=off g47_enigma -c g47_enigma
-quartus_eda --read_settings_files=on --write_settings_files=off g47_enigma -c g47_enigma --gen_testbench
 
 
 
