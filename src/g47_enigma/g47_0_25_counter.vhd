@@ -17,7 +17,7 @@ end entity ; -- g47_0_25_counter
 architecture arch of g47_0_25_counter is
   signal count_previous: unsigned(4 downto 0):= "00000";
 begin
-  counter_process : process(clock, reset, enable)
+  counter_process : process(clock, reset, enable, count_previous)
   begin
     if reset = '0' then
       count_previous <= "00000";

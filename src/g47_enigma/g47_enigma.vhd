@@ -161,7 +161,7 @@ begin
   STECKER_OUT : g47_stecker
     port map(input_code => right_ltr_code, output_code => stecker_output_code);
 
-  KEYPRESS_ENABLE : process( clock, init, keypress, stecker_output_code, prev_output_code)
+  KEYPRESS_ENABLE : process( clock, init, keypress, stecker_output_code, prev_output_code, state)
   begin
     if init = '1' then
       prev_output_code <= "11111";

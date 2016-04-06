@@ -286,7 +286,7 @@ begin
                   display_i_type <= '0';
                   display_i_in <= ERROR_LETTER;
                   display_l_type <= '1';
-                  display_l_in <= left_ring_shift;
+                  display_l_in <= middle_ring_shift;
                 elsif unsigned(middle_ring_shift) < 20 then
                   display_i_type <= '1';
                   display_i_in <= "00001";
@@ -381,7 +381,7 @@ begin
                   display_i_type <= '0';
                   display_i_in <= ERROR_LETTER;
                   display_l_type <= '1';
-                  display_l_in <= left_ring_shift;
+                  display_l_in <= right_ring_shift;
                 elsif unsigned(right_ring_shift) < 20 then
                   display_i_type <= '1';
                   display_i_in <= "00001";
@@ -449,7 +449,7 @@ begin
     end if ;
   end process ; -- UI
 
-  RISING_KEYPRESS : process( clock, keypress )
+  RISING_KEYPRESS : process( clock, keypress, state, keypress_up, keypress_down )
   begin
     if state = "00" then
       if keypress = '0' then
@@ -488,8 +488,8 @@ begin
         end if ;
       end if ;
     end if ;
-    led_error(2) <= keypress_down;
-    led_error(1) <= keypress_up;
+    led_error(3) <= keypress_down;
+    led_error(2) <= keypress_up;
     led_error(0) <= keypress_enable;
   end process ; -- KEYPRESS
 end architecture ; -- arch

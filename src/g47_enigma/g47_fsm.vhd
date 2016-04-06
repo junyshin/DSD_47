@@ -19,7 +19,7 @@ architecture arch of g47_fsm is
   signal state: std_logic_vector(1 downto 0) := "00";
   signal hold: std_logic := '0';
 begin
-  STATE_MACHINE : process( clock, keypress, knock_m, knock_r, init )
+  STATE_MACHINE : process( clock, keypress, knock_m, knock_r, init, state )
   begin
     -- init -> state A -> state B -> keypress -> state C ->
     --   key release -> state D -> check -> state E -> state B

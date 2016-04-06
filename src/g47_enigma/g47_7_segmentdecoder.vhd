@@ -12,7 +12,7 @@ end entity ; -- g47_7_segmentdecoder
 architecture arch of g47_7_segmentdecoder is
   signal tmp: std_logic_vector(6 downto 0);
 begin
-  DISPLAY : process( segment_type, index )
+  DISPLAY : process( segment_type, index, tmp )
   begin
     case( segment_type ) is
       when '0' => -- Letters
