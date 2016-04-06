@@ -112,7 +112,7 @@ begin
   DISPLAY_R : g47_7_segmentdecoder
     port map(segment_type => display_r_type, index => display_r_in, segments => segments_r);
 
-  UI : process( clock, setting_init, setting_rotor, setting_mode, input_code , enigma_output )
+  UI : process( clock, setting_init, setting_rotor, setting_mode, input_code , enigma_output, input_enable )
   begin
     if rising_edge(clock) then
       if setting_init = '1' then
