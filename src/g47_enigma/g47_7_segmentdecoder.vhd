@@ -47,16 +47,16 @@ begin
         end case ;
       when '1' => -- Digits
         case( index ) is
-          when "00000" => tmp <= ; -- 0
-          when "00001" => tmp <= ; -- 1
-          when "00010" => tmp <= ; -- 2
-          when "00011" => tmp <= ; -- 3
-          when "00100" => tmp <= ; -- 4
-          when "00101" => tmp <= ; -- 5
-          when "00110" => tmp <= ; -- 6
-          when "00111" => tmp <= ; -- 7
-          when "01000" => tmp <= ; -- 8
-          when "01001" => tmp <= ; -- 9
+          when "00000" => tmp <= "1111110"; -- 0
+          when "00001" => tmp <= "0110000"; -- 1
+          when "00010" => tmp <= "1101101"; -- 2
+          when "00011" => tmp <= "1111001"; -- 3
+          when "00100" => tmp <= "0110011"; -- 4
+          when "00101" => tmp <= "1011011"; -- 5
+          when "00110" => tmp <= "1011111"; -- 6
+          when "00111" => tmp <= "1110000"; -- 7
+          when "01000" => tmp <= "1111111"; -- 8
+          when "01001" => tmp <= "1110011"; -- 9
           when others  => tmp <= "0000000";
         end case ;
       when others => tmp <= "0000000";
