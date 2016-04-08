@@ -6,6 +6,7 @@ entity g47_ui is
   port (
     clock : in std_logic;
     -- pushbuttons
+    hard_reset : in std_logic;
     reset : in std_logic;
     keypress: in std_logic;
     -- switches
@@ -62,10 +63,10 @@ architecture arch of g47_ui is
   constant ERROR_LETTER : std_logic_vector(4 downto 0) := "11111";
 
   -- Keypress Variables
-  signal input_enable: std_logic;
+  signal input_enable: std_logic := '0';
   signal hold: std_logic := '0';
   signal state: std_logic_vector(1 downto 0) := "00";
-  signal keypress_up, keypress_down, keypress_enable: std_logic;
+  signal keypress_up, keypress_down, keypress_enable: std_logic := '0';
 
   -- UI Variables
   signal reflector_type, input_error : std_logic;
@@ -449,7 +450,7 @@ begin
     end if ;
   end process ; -- UI
 
-  RISING_KEYPRESS : process( clock, keypress, state, keypress_up, keypress_down )
+  RISING_KEYPRESS : process( clock, keypress, state, keypress_up, keypress_down, keypress_enable )
   begin
     if state = "00" then
       if keypress = '0' then
@@ -475,6 +476,8 @@ begin
       keypress_down <= '0';
       keypress_enable <= '1';
     else
+      keypress_up <= '1';
+      keypress_down <= '0';
       if rising_edge(clock) then
         if hold = '1' then
           hold <= '0';

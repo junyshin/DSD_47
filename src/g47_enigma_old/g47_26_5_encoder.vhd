@@ -1,0 +1,44 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity g47_26_5_encoder is
+  port (
+    letter: in std_logic_vector(25 downto 0);
+    index: out std_logic_vector(4 downto 0);
+    error: out std_logic
+  ) ;
+end entity ; -- g47_26_5_encoder
+
+architecture arch of g47_26_5_encoder is
+  signal tmp: std_logic_vector(4 downto 0);
+begin
+  tmp <= "11001" when letter(25) = '1' else -- z
+         "11000" when letter(24) = '1' else -- y
+         "10111" when letter(23) = '1' else -- x
+         "10110" when letter(22) = '1' else -- w
+         "10101" when letter(21) = '1' else -- v
+         "10100" when letter(20) = '1' else -- u
+         "10011" when letter(19) = '1' else -- t
+         "10010" when letter(18) = '1' else -- s
+         "10001" when letter(17) = '1' else -- r
+         "10000" when letter(16) = '1' else -- q
+         "01111" when letter(15) = '1' else -- p
+         "01110" when letter(14) = '1' else -- o
+         "01101" when letter(13) = '1' else -- n
+         "01100" when letter(12) = '1' else -- m
+         "01011" when letter(11) = '1' else -- l
+         "01010" when letter(10) = '1' else -- k
+         "01001" when letter(9)  = '1' else -- j
+         "01000" when letter(8)  = '1' else -- i
+         "00111" when letter(7)  = '1' else -- h
+         "00110" when letter(6)  = '1' else -- g
+         "00101" when letter(5)  = '1' else -- f
+         "00100" when letter(4)  = '1' else -- e
+         "00011" when letter(3)  = '1' else -- d
+         "00010" when letter(2)  = '1' else -- c
+         "00001" when letter(1)  = '1' else -- b
+         "00000" when letter(0)  = '1' else -- a
+         "11111"; -- error
+  index <= tmp;
+  error <= '1' when tmp = "11111" else '0';
+end architecture ; -- arch

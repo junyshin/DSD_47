@@ -1,0 +1,164 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 17:47:03  March 09, 2016
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		g47_enigma_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20F484C7
+set_global_assignment -name TOP_LEVEL_ENTITY g47_ui
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:47:03  MARCH 09, 2016"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_L1 -to clock
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE g47_testbed.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clock -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "g47_0_25_counter:COUNTER|count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "g47_0_25_counter:COUNTER|count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "g47_0_25_counter:COUNTER|count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "g47_0_25_counter:COUNTER|count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "g47_0_25_counter:COUNTER|count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "g47_0_25_counter:COUNTER|count_enable" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "g47_0_25_counter:COUNTER|reset" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "g47_0_25_counter:COUNTER|count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "g47_0_25_counter:COUNTER|count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "g47_0_25_counter:COUNTER|count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "g47_0_25_counter:COUNTER|count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "g47_0_25_counter:COUNTER|count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "g47_0_25_counter:COUNTER|count_enable" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "g47_0_25_counter:COUNTER|reset" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=7" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=7" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=128" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=26573" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=128" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=32" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=2" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_MGR_ENTITY=sld_reserved_g47_enigma_auto_signaltap_0_flow_mgr_c90c" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=42340" -section_id auto_signaltap_0
+set_global_assignment -name VHDL_FILE g47_pulse_generator.vhd
+set_global_assignment -name VHDL_FILE g47_permutation.vhd
+set_global_assignment -name VHDL_FILE g47_testbed.vhd
+set_global_assignment -name VHDL_FILE g47_26_barrelshift.vhd
+set_global_assignment -name VHDL_FILE g47_26_5_encoder.vhd
+set_global_assignment -name VHDL_FILE g47_7_segmentdecoder.vhd
+set_global_assignment -name VHDL_FILE g47_5_26_decoder.vhd
+set_global_assignment -name VHDL_FILE g47_0_25_counter.vhd
+set_global_assignment -name SDC_FILE g47_testbed.sdc
+set_global_assignment -name SIGNALTAP_FILE g47_testbed.stp
+set_global_assignment -name SOURCE_FILE db/g47_enigma.cmp.rdb
+set_global_assignment -name VHDL_FILE g47_fsm.vhd
+set_global_assignment -name VHDL_FILE g47_fsm_testbed.vhd
+set_global_assignment -name VHDL_FILE g47_5_comp.vhd
+set_location_assignment PIN_T21 -to reset
+set_location_assignment PIN_G5 -to segments_l[0]
+set_location_assignment PIN_G6 -to segments_l[1]
+set_location_assignment PIN_C2 -to segments_l[2]
+set_location_assignment PIN_C1 -to segments_l[3]
+set_location_assignment PIN_E3 -to segments_l[4]
+set_location_assignment PIN_J2 -to segments_r[0]
+set_location_assignment PIN_J1 -to segments_r[1]
+set_location_assignment PIN_H2 -to segments_r[2]
+set_location_assignment PIN_H1 -to segments_r[3]
+set_location_assignment PIN_F2 -to segments_r[4]
+set_location_assignment PIN_F1 -to segments_r[5]
+set_location_assignment PIN_E2 -to segments_r[6]
+set_location_assignment PIN_E1 -to segments_m[0]
+set_location_assignment PIN_H6 -to segments_m[1]
+set_location_assignment PIN_H5 -to segments_m[2]
+set_location_assignment PIN_H4 -to segments_m[3]
+set_location_assignment PIN_G3 -to segments_m[4]
+set_location_assignment PIN_D2 -to segments_m[5]
+set_location_assignment PIN_D1 -to segments_m[6]
+set_location_assignment PIN_E4 -to segments_l[5]
+set_location_assignment PIN_D3 -to segments_l[6]
+set_global_assignment -name VHDL_FILE g47_reflector.vhd
+set_global_assignment -name VHDL_FILE g47_stecker.vhd
+set_global_assignment -name VHDL_FILE g47_enigma.vhd
+set_global_assignment -name VHDL_FILE g47_rotor.vhd
+set_global_assignment -name VHDL_FILE g47_ui.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_F4 -to segments_i[0]
+set_location_assignment PIN_D5 -to segments_i[1]
+set_location_assignment PIN_D6 -to segments_i[2]
+set_location_assignment PIN_J4 -to segments_i[3]
+set_location_assignment PIN_L8 -to segments_i[4]
+set_location_assignment PIN_F3 -to segments_i[5]
+set_location_assignment PIN_D4 -to segments_i[6]
+set_location_assignment PIN_L2 -to setting_init
+set_location_assignment PIN_U12 -to setting_mode[0]
+set_location_assignment PIN_R22 -to keypress
+set_location_assignment PIN_V19 -to led_error[0]
+set_location_assignment PIN_M2 -to setting_rotor[0]
+set_location_assignment PIN_M1 -to setting_rotor[1]
+set_location_assignment PIN_U11 -to setting_mode[1]
+set_location_assignment PIN_L22 -to input_code[0]
+set_location_assignment PIN_L21 -to input_code[1]
+set_location_assignment PIN_M22 -to input_code[2]
+set_location_assignment PIN_V12 -to input_code[3]
+set_location_assignment PIN_W12 -to input_code[4]
+set_location_assignment PIN_Y18 -to led_error[1]
+set_location_assignment PIN_U18 -to led_error[2]
+set_location_assignment PIN_R18 -to led_error[3]
+set_location_assignment PIN_R17 -to led_error[4]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE "Y:/DSD/src/g47_enigma_old/g47_testbed_auto_stripped.stp"

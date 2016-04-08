@@ -98,7 +98,7 @@ architecture arch of g47_enigma is
          left_rtl_code,   left_ltr_code,
          middle_rtl_code, middle_ltr_code,
          right_rtl_code,  right_ltr_code,
-         left_rotor_shift, middle_rotor_shift, right_rotor_shift,
+         middle_rotor_shift, right_rotor_shift,
          middle_notch, right_notch
     : std_logic_vector(4 downto 0);
 begin
@@ -130,7 +130,7 @@ begin
              reset => reset, enable => en_l,
              load => load, data => left_data,
              rotor_type => left_rotor_type,
-             ring_shift => left_ring_shift, rotor_shift => left_rotor_shift,
+             ring_shift => left_ring_shift,
              rtl_input_code => middle_rtl_code, rtl_output_code => left_rtl_code,
              ltr_input_code => reflector_code, ltr_output_code => left_ltr_code
             );

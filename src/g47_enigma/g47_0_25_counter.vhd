@@ -6,18 +6,17 @@ entity g47_0_25_counter is
   port (
     clock: in std_logic;
     reset: in std_logic;
-    enable: in std_logic;
-    count: out std_logic_vector(4 downto 0);
-    --
     load: in std_logic;
-    data: in std_logic_vector(4 downto 0)
+    data: in std_logic_vector(4 downto 0);
+    enable: in std_logic;
+    count: out std_logic_vector(4 downto 0)
   ) ;
 end entity ; -- g47_0_25_counter
 
 architecture arch of g47_0_25_counter is
   signal count_previous: unsigned(4 downto 0):= "00000";
 begin
-  counter_process : process(clock, reset, enable, count_previous)
+  counter_process : process(clock, reset, load, data, enable, count_previous)
   begin
     if reset = '0' then
       count_previous <= "00000";
