@@ -1,0 +1,6 @@
+
+State Machine - |g47_ui_pushbutton|keypress_state
+Name keypress_state.C keypress_state.B keypress_state.A 
+keypress_state.A 0 0 0 
+keypress_state.B 0 1 1 
+keypress_state.C 1 0 1 

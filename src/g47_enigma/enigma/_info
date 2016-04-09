@@ -1,0 +1,503 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0sp1
+Eg47_0_25_counter
+Z0 w1460051168
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dY:\DSD\src\g47_enigma
+Z5 8Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd
+Z6 FY:/DSD/src/g47_enigma/g47_0_25_counter.vhd
+l0
+L5
+VbDC[jWD^JC0hF4`@62=e00
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1460136069.193000
+Z9 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd|
+Z10 !s107 Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd|
+Z11 o-work enigma -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 z6`1HA_;hgj3M1mSPLj=d3
+!i10b 1
+Aarch
+R1
+R2
+R3
+DEx4 work 16 g47_0_25_counter 0 22 bDC[jWD^JC0hF4`@62=e00
+l18
+L16
+V>Uf__7WjNM;c6X7Y=Kc[b0
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 J@eAU`ojJh2GAzU]m?kk?2
+!i10b 1
+Eg47_26_5_encoder
+Z13 w1459369900
+R2
+R3
+R4
+Z14 8Y:/DSD/src/g47_enigma/g47_26_5_encoder.vhd
+Z15 FY:/DSD/src/g47_enigma/g47_26_5_encoder.vhd
+l0
+L4
+Ve`8Y3b1fF5D33Y@7G]Bn21
+R7
+32
+Z16 !s108 1460136071.427000
+Z17 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_26_5_encoder.vhd|
+Z18 !s107 Y:/DSD/src/g47_enigma/g47_26_5_encoder.vhd|
+R11
+R12
+!s100 7XQKUJG05R9cbVWQ^IG5o2
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 16 g47_26_5_encoder 0 22 e`8Y3b1fF5D33Y@7G]Bn21
+l14
+L12
+VRSkehVCim5A3<zJ95VQPo0
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!s100 onmFVlJAIhA9AGY^jRMeL2
+!i10b 1
+Eg47_26_barrelshift
+Z19 w1459897218
+R2
+R3
+R4
+Z20 8Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd
+Z21 FY:/DSD/src/g47_enigma/g47_26_barrelshift.vhd
+l0
+L4
+VWDmC<=7L0VzM?]5k@E<J21
+R7
+32
+Z22 !s108 1460136071.802000
+Z23 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd|
+Z24 !s107 Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd|
+R11
+R12
+!s100 4j=]9cmR7kKDFB`VaXK`K1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 18 g47_26_barrelshift 0 22 WDmC<=7L0VzM?]5k@E<J21
+l14
+L13
+V3:R34^JoeK6RTMIz_jUQ51
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 WaWBMlK6gce53k17Of>B>1
+!i10b 1
+Eg47_5_26_decoder
+Z25 w1457660190
+R2
+R3
+R4
+Z26 8Y:/DSD/src/g47_enigma/g47_5_26_decoder.vhd
+Z27 FY:/DSD/src/g47_enigma/g47_5_26_decoder.vhd
+l0
+L4
+Vc<h;TkF5:L>^mUd>nLJhT0
+R7
+32
+Z28 !s108 1460136069.786000
+Z29 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_5_26_decoder.vhd|
+Z30 !s107 Y:/DSD/src/g47_enigma/g47_5_26_decoder.vhd|
+R11
+R12
+!s100 <TQX^_41eahSb5BQ3Zaja2
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 16 g47_5_26_decoder 0 22 c<h;TkF5:L>^mUd>nLJhT0
+l14
+L12
+Va?>B@o2EclS2gTbV]I:a61
+R7
+32
+R28
+R29
+R30
+R11
+R12
+!s100 ]HO<8[F694?l]YMOP_Wco1
+!i10b 1
+Eg47_5_comp
+Z31 w1459362312
+R2
+R3
+R4
+Z32 8Y:/DSD/src/g47_enigma/g47_5_comp.vhd
+Z33 FY:/DSD/src/g47_enigma/g47_5_comp.vhd
+l0
+L5
+VGS1=:jQez:A2e[DEi4P_92
+R7
+32
+Z34 !s108 1460136070.083000
+Z35 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_5_comp.vhd|
+Z36 !s107 Y:/DSD/src/g47_enigma/g47_5_comp.vhd|
+R11
+R12
+!s100 ZEdKhh8`jhJUlaCQAYI4j0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 10 g47_5_comp 0 22 GS1=:jQez:A2e[DEi4P_92
+l14
+L13
+V4zz;gCI@gH5EXSWh7TaPo1
+R7
+32
+R34
+R35
+R36
+R11
+R12
+!s100 J<N]7VAn=2`eGPD`Bz@ED2
+!i10b 1
+Eg47_7_segmentdecoder
+Z37 w1459983060
+R2
+R3
+R4
+Z38 8Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd
+Z39 FY:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd
+l0
+L4
+VRefjPj2f4IBDkWY87z?9M0
+R7
+32
+Z40 !s108 1460136070.755000
+Z41 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd|
+Z42 !s107 Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd|
+R11
+R12
+!s100 cgBT^jcUL[liED8S3h3DT1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 20 g47_7_segmentdecoder 0 22 RefjPj2f4IBDkWY87z?9M0
+l14
+L12
+V7b61enD]F>PE2inj?A]`e1
+R7
+32
+R40
+R41
+R42
+R11
+R12
+!s100 K]hoiKT1Pb967IULUM3BV2
+!i10b 1
+Eg47_enigma
+Z43 w1460053283
+R1
+R2
+R3
+R4
+Z44 8Y:/DSD/src/g47_enigma/g47_enigma.vhd
+Z45 FY:/DSD/src/g47_enigma/g47_enigma.vhd
+l0
+L5
+VAP6ZJC4anP=4^kFDMjLzG2
+R7
+32
+Z46 !s108 1460136071.958000
+Z47 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_enigma.vhd|
+Z48 !s107 Y:/DSD/src/g47_enigma/g47_enigma.vhd|
+R11
+R12
+!s100 33?FmB=b@Bl1mj`:zX=JL2
+!i10b 1
+Aarch
+R1
+R2
+R3
+DEx4 work 10 g47_enigma 0 22 AP6ZJC4anP=4^kFDMjLzG2
+l104
+L31
+Vl_TZcL?mJkIM54Ba<Qb]h2
+R7
+32
+R46
+R47
+R48
+R11
+R12
+!s100 gkojaE7[mng9GYTd7OOc00
+!i10b 1
+Eg47_enigma_vhd_tst
+R19
+R1
+R2
+R3
+R4
+Z49 8Y:/DSD/src/g47_enigma/g47_enigma.vht
+Z50 FY:/DSD/src/g47_enigma/g47_enigma.vht
+l0
+L31
+VECQCIDBdh70cG;m^JANzj1
+R7
+32
+Z51 !s108 1460136072.146000
+Z52 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_enigma.vht|
+Z53 !s107 Y:/DSD/src/g47_enigma/g47_enigma.vht|
+R11
+R12
+!s100 [V60MdaY[JT4Sj^e^X0><1
+!i10b 1
+Ag47_enigma_arch
+R1
+R2
+R3
+DEx4 work 18 g47_enigma_vhd_tst 0 22 ECQCIDBdh70cG;m^JANzj1
+l72
+L33
+V4VGARfbnkbH[kKDH:Q:Ka1
+R7
+32
+R51
+R52
+R53
+R11
+R12
+!s100 <hHCKml_RnEY98IiTPdK23
+!i10b 1
+Eg47_fsm
+Z54 w1459983025
+R2
+R3
+R4
+Z55 8Y:/DSD/src/g47_enigma/g47_fsm.vhd
+Z56 FY:/DSD/src/g47_enigma/g47_fsm.vhd
+l0
+L4
+VYR`^1Z`mJ=ai^PTae3UMA0
+R7
+32
+Z57 !s108 1460136072.333000
+Z58 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_fsm.vhd|
+Z59 !s107 Y:/DSD/src/g47_enigma/g47_fsm.vhd|
+R11
+R12
+!s100 E3HA;@cTC>=Qdj4z?aB7n2
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 7 g47_fsm 0 22 YR`^1Z`mJ=ai^PTae3UMA0
+l21
+L18
+VRnNfDLMYIC?WF>?B9]a_E3
+R7
+32
+R57
+R58
+R59
+R11
+R12
+!s100 RdEWim<1bQPbJXc5d^_Wh1
+!i10b 1
+Eg47_permutation
+Z60 w1459365589
+R2
+R3
+R4
+Z61 8Y:/DSD/src/g47_enigma/g47_permutation.vhd
+Z62 FY:/DSD/src/g47_enigma/g47_permutation.vhd
+l0
+L4
+VB3B1dgNZbY`fQSbdDo7BP0
+R7
+32
+Z63 !s108 1460136073.068000
+Z64 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_permutation.vhd|
+Z65 !s107 Y:/DSD/src/g47_enigma/g47_permutation.vhd|
+R11
+R12
+!s100 NWICaEU5bQY]TWoi9RPeP2
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 15 g47_permutation 0 22 B3B1dgNZbY`fQSbdDo7BP0
+l41
+L13
+V1e?E;mVXbQfHR8OlWQOWh2
+R7
+32
+R63
+R64
+R65
+R11
+R12
+!s100 1EZGBbca?DFVz2[KBhdmn2
+!i10b 1
+Eg47_reflector
+Z66 w1459365222
+R2
+R3
+R4
+Z67 8Y:/DSD/src/g47_enigma/g47_reflector.vhd
+Z68 FY:/DSD/src/g47_enigma/g47_reflector.vhd
+l0
+L4
+VfQUF[zUIW;YZENbFG]_dh3
+R7
+32
+Z69 !s108 1460136073.989000
+Z70 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_reflector.vhd|
+Z71 !s107 Y:/DSD/src/g47_enigma/g47_reflector.vhd|
+R11
+R12
+!s100 :B=omNg_O[>C;oCk?_EC`3
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 13 g47_reflector 0 22 fQUF[zUIW;YZENbFG]_dh3
+l40
+L12
+VD_E4P^:lY534zAIY39IH50
+R7
+32
+R69
+R70
+R71
+R11
+R12
+!s100 ggLj?aJ=g2n@9dT@mJ`F[0
+!i10b 1
+Eg47_rotor
+R19
+R2
+R3
+R4
+Z72 8Y:/DSD/src/g47_enigma/g47_rotor.vhd
+Z73 FY:/DSD/src/g47_enigma/g47_rotor.vhd
+l0
+L4
+V96Oia?ILKINMGe00EEaKo2
+R7
+32
+Z74 !s108 1460136074.677000
+Z75 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_rotor.vhd|
+Z76 !s107 Y:/DSD/src/g47_enigma/g47_rotor.vhd|
+R11
+R12
+!s100 EeXDkz>hfTI1b3SBbNePB0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 9 g47_rotor 0 22 96Oia?ILKINMGe00EEaKo2
+l84
+L24
+VJng=_;[`eKmA0DgmXSALW1
+R7
+32
+R74
+R75
+R76
+R11
+R12
+!s100 Vk_iLF?SULTEgd>`V5FQK1
+!i10b 1
+Eg47_stecker
+Z77 w1459366909
+R2
+R3
+R4
+Z78 8Y:/DSD/src/g47_enigma/g47_stecker.vhd
+Z79 FY:/DSD/src/g47_enigma/g47_stecker.vhd
+l0
+L4
+V3_WTAOa@D5V@VXDd2IZUW2
+R7
+32
+Z80 !s108 1460136075.443000
+Z81 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_stecker.vhd|
+Z82 !s107 Y:/DSD/src/g47_enigma/g47_stecker.vhd|
+R11
+R12
+!s100 @IJ^HCOKD1[HHH^J7H=JY1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 11 g47_stecker 0 22 3_WTAOa@D5V@VXDd2IZUW2
+l39
+L11
+V1]E9Rbf31Eg1TgYKbW5Cl2
+R7
+32
+R80
+R81
+R82
+R11
+R12
+!s100 8Tk:A>a_c4GND:TSU5RjK1
+!i10b 1
+Eg47_ui
+Z83 w1460135788
+R1
+R2
+R3
+R4
+Z84 8Y:/DSD/src/g47_enigma/g47_ui.vhd
+Z85 FY:/DSD/src/g47_enigma/g47_ui.vhd
+l0
+L5
+VhcOPXGEQ[HhjMN@76XgD50
+!s100 ;@Q0E@7i:aOYFQ;Y^gLLm2
+R7
+32
+!i10b 1
+Z86 !s108 1460136076.224000
+Z87 !s90 -reportprogress|300|-work|enigma|-2002|-explicit|Y:/DSD/src/g47_enigma/g47_ui.vhd|
+Z88 !s107 Y:/DSD/src/g47_enigma/g47_ui.vhd|
+R11
+R12
+Aarch
+R1
+R2
+R3
+DEx4 work 6 g47_ui 0 22 hcOPXGEQ[HhjMN@76XgD50
+l79
+L27
+V[DKi_g7?EfXIaM_^aN8Og1
+!s100 dzEjAcT5;g4k]CCX@nA2J0
+R7
+32
+!i10b 1
+R86
+R87
+R88
+R11
+R12

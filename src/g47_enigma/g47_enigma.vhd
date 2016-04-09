@@ -6,7 +6,7 @@ entity g47_enigma is
   port (
     clock: in std_logic;
     input_code: in std_logic_vector(4 downto 0);
-    output_code: out std_logic_vector(4 downto 0);
+    output_code: out std_logic_vector(4 downto 0) := "11111";
     -- fsm
     reset: in std_logic;
     init: in std_logic;
@@ -93,14 +93,18 @@ architecture arch of g47_enigma is
 
   -- Variables
   signal knock_m, knock_r, en_l, en_m, en_r, load: std_logic;
-  signal state: std_logic_vector(1 downto 0) := "00";
-  signal stecker_code, stecker_output_code, prev_output_code, reflector_code,
-         left_rtl_code,   left_ltr_code,
+  signal stecker_code, stecker_output_code, reflector_code,
+         left_rtl_code, left_ltr_code,
          middle_rtl_code, middle_ltr_code,
          right_rtl_code,  right_ltr_code,
          middle_rotor_shift, right_rotor_shift,
          middle_notch, right_notch
     : std_logic_vector(4 downto 0);
+  --signal prev_output_code : std_logic_vector(4 downto 0) := "11111";
+
+  -- keypress
+  type state_type is ( A, B, C );
+  signal state : state_type := A;
 begin
 
   middle_notch <= ROTOR_TYPE_NOTCH(to_integer(unsigned(middle_rotor_type)));
@@ -161,24 +165,45 @@ begin
   STECKER_OUT : g47_stecker
     port map(input_code => right_ltr_code, output_code => stecker_output_code);
 
-  KEYPRESS_ENABLE : process( clock, init, keypress, stecker_output_code, prev_output_code, state)
+  --output_code <= prev_output_code;
+
+  STATE_MACHINE : process( clock, init, keypress )
   begin
     if init = '1' then
-      prev_output_code <= "11111";
-    elsif state = "00" then
-      if keypress = '0' then
-        state <= "01";
-      end if ;
-    elsif state = "01" then
-      if keypress = '1' then
-        state <= "10";
-      end if ;
-    elsif state = "10" then
-      state <= "11";
-    else
-      state <= "00";
-      prev_output_code <= stecker_output_code;
+      state <= A;
+    elsif rising_edge(clock) then
+      case( state ) is
+        when A =>
+          if keypress = '0' then
+            state <= B;
+          else
+            state <= A;
+          end if ;
+        when B =>
+          if keypress = '1' then
+            state <= C;
+          else
+            state <= B;
+          end if ;
+        when C =>
+          state <= A;
+      end case ;
     end if ;
-    output_code <= prev_output_code;
-  end process ; -- KEYPRESS_ENABLE
+  end process ; -- STATE_MACHINE
+
+  UPDATE_OUTPUT : process( init, state )
+  begin
+    if init = '1' then
+      output_code <= "11111";
+    else
+      case( state ) is
+        when A =>
+          -- do nothing
+        when B =>
+          -- do nothing
+        when C =>
+          output_code <= stecker_output_code;
+      end case ;
+    end if ;
+  end process ; -- UPDATE_OUTPUT
 end architecture ; -- arch

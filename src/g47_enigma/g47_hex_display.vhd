@@ -1,21 +1,21 @@
-library ieee;
-use ieee.std_logic_1164.all;
+library ieee ;
+use ieee.std_logic_1164.all ;
 
-entity g47_7_segmentdecoder is
+entity g47_hex_display is
   port (
-    segment_type: in std_logic;
+    display_type: in std_logic;
     index: in std_logic_vector(4 downto 0);
     segments: out std_logic_vector(6 downto 0)
   ) ;
-end entity ; -- g47_7_segmentdecoder
+end entity ; -- g47_hex_display
 
-architecture arch of g47_7_segmentdecoder is
+architecture arch of g47_hex_display is
   signal tmp: std_logic_vector(6 downto 0);
 begin
-  DISPLAY : process( segment_type, index, tmp )
+  DISPLAY : process( display_type, index, tmp )
   begin
-    case( segment_type ) is
-      when '0' => -- Letters
+    case( display_type ) is
+      when '0' => -- LETTER
         case( index ) is
           when "00000" => tmp <= "1110111"; -- A
           when "00001" => tmp <= "1111100"; -- B
@@ -43,9 +43,9 @@ begin
           when "10111" => tmp <= "1110110"; -- X
           when "11000" => tmp <= "1101110"; -- Y
           when "11001" => tmp <= "1011011"; -- Z
-          when others  => tmp <= "0000000";
+          when others  => tmp <= "0000000"; -- all off
         end case ;
-      when '1' => -- Digits
+      when '1' => -- NUMBER
         case( index ) is
           when "00000" => tmp <= "0111111"; -- 0
           when "00001" => tmp <= "0000110"; -- 1
@@ -57,9 +57,9 @@ begin
           when "00111" => tmp <= "0000111"; -- 7
           when "01000" => tmp <= "1111111"; -- 8
           when "01001" => tmp <= "1100111"; -- 9
-          when others  => tmp <= "0000000";
+          when others  => tmp <= "0000000"; -- all off
         end case ;
-      when others => tmp <= "0000000";
+      when others => tmp <= "0000000"; -- all off
     end case ;
     segments <= not tmp;
   end process ; -- DISPLAY

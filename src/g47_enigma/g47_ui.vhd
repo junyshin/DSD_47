@@ -6,21 +6,22 @@ entity g47_ui is
   port (
     clock : in std_logic;
     -- pushbuttons
-    hard_reset : in std_logic;
     reset : in std_logic;
-    keypress: in std_logic;
+    reset_counter : in std_logic;
+    keypress : in std_logic;
     -- switches
     setting_init : in std_logic;
     setting_rotor : in std_logic_vector(1 downto 0);
     setting_mode : in std_logic_vector(1 downto 0);
     input_code : in std_logic_vector(4 downto 0);
+    -- led
+    led_error : out std_logic_vector(4 downto 0);
+    led_count : out std_logic_vector(4 downto 0);
     -- displays
-    segments_i : out std_logic_vector(6 downto 0); -- Information
-    segments_l : out std_logic_vector(6 downto 0);
-    segments_m : out std_logic_vector(6 downto 0); -- Current setting or output
-    segments_r : out std_logic_vector(6 downto 0);  -- Current letter or input
-    -- LED
-    led_error : out std_logic_vector(4 downto 0) := "00000"
+    segments_3 : out std_logic_vector(6 downto 0);
+    segments_2 : out std_logic_vector(6 downto 0);
+    segments_1 : out std_logic_vector(6 downto 0);
+    segments_0 : out std_logic_vector(6 downto 0)
   ) ;
 end entity ; -- g47_ui
 
@@ -51,31 +52,58 @@ architecture arch of g47_ui is
       reflector_type: in std_logic
     ) ;
   end component;
-  component g47_7_segmentdecoder
+  component g47_hex_display
     port (
-      segment_type: in std_logic;
+      display_type: in std_logic;
       index: in std_logic_vector(4 downto 0);
       segments: out std_logic_vector(6 downto 0)
     ) ;
   end component;
+  component g47_0_25_counter
+    port (
+      clock: in std_logic;
+      reset: in std_logic;
+      enable: in std_logic;
+      count: out std_logic_vector(4 downto 0);
+      --
+      load: in std_logic;
+      data: in std_logic_vector(4 downto 0)
+    ) ;
+  end component;
 
-  -- Constants
-  constant ERROR_LETTER : std_logic_vector(4 downto 0) := "11111";
+  -- Counter Variables
+  signal load : std_logic := '0';
+  constant DATA : std_logic_vector(4 downto 0) := "00000";
 
   -- Keypress Variables
-  signal input_enable: std_logic := '0';
-  signal hold: std_logic := '0';
-  signal state: std_logic_vector(1 downto 0) := "00";
-  signal keypress_up, keypress_down, keypress_enable: std_logic := '0';
+  type keypress_state_type is (A, B, C);
+  signal keypress_state: keypress_state_type := A;
+  signal input_enable : std_logic := '0';
 
-  -- UI Variables
-  signal reflector_type, input_error : std_logic;
+  -- Display Variables
+  signal display_type_3 : std_logic := '0';
+  signal display_input_3 : std_logic_vector(4 downto 0) := "11111";
+  signal display_type_2 : std_logic := '0';
+  signal display_input_2 : std_logic_vector(4 downto 0) := "11111";
+  signal display_type_1 : std_logic := '0';
+  signal display_input_1 : std_logic_vector(4 downto 0) := "11111";
+  signal display_type_0 : std_logic := '0';
+  signal display_input_0 : std_logic_vector(4 downto 0) := "11111";
+
+  -- UI Input Variables
+  constant ERROR_CODE : std_logic_vector(4 downto 0) := "11111";
+  signal input_clear : std_logic_vector(3 downto 0) := "0000";
+  signal input_3 : std_logic_vector(5 downto 0) := "111111";
+  signal input_2 : std_logic_vector(5 downto 0) := "111111";
+  signal input_1 : std_logic_vector(5 downto 0) := "111111";
+  signal input_0 : std_logic_vector(5 downto 0) := "111111";
+
+  -- Enigma Variables
+  signal reflector_type : std_logic;
   signal left_data, middle_data, right_data : std_logic_vector(4 downto 0);
   signal left_rotor_type, middle_rotor_type, right_rotor_type : std_logic_vector(1 downto 0);
   signal left_ring_shift, middle_ring_shift, right_ring_shift : std_logic_vector(4 downto 0);
   signal enigma_output : std_logic_vector(4 downto 0);
-  signal display_i_type, display_l_type, display_m_type, display_r_type : std_logic := '0';
-  signal display_i_in, display_l_in, display_m_in, display_r_in : std_logic_vector(4 downto 0) := "11111";
 begin
   ENIGMA : g47_enigma
     port map(clock => clock,
@@ -101,398 +129,322 @@ begin
              output_code => enigma_output
              );
 
-  DISPLAY_I : g47_7_segmentdecoder
-    port map(segment_type => display_i_type, index => display_i_in, segments => segments_i);
+  -- Debugging counter
+  COUNTER : g47_0_25_counter
+    port map(clock => clock, reset => reset_counter, enable => input_enable,
+             load => load, data => DATA,
+             count => led_count);
 
-  DISPLAY_L : g47_7_segmentdecoder
-    port map(segment_type => display_l_type, index => display_l_in, segments => segments_l);
+  -- DISPLAYS
+  HEX_3 : g47_hex_display
+    port map(display_type => display_type_3,
+             index => display_input_3,
+             segments => segments_3);
 
-  DISPLAY_M : g47_7_segmentdecoder
-    port map(segment_type => display_m_type, index => display_m_in, segments => segments_m);
+  HEX_2 : g47_hex_display
+    port map(display_type => display_type_2,
+             index => display_input_2,
+             segments => segments_2);
 
-  DISPLAY_R : g47_7_segmentdecoder
-    port map(segment_type => display_r_type, index => display_r_in, segments => segments_r);
+  HEX_1 : g47_hex_display
+    port map(display_type => display_type_1,
+             index => display_input_1,
+             segments => segments_1);
 
-  UI : process( clock, setting_init, setting_rotor, setting_mode, input_code , enigma_output, input_enable )
+  HEX_0 : g47_hex_display
+    port map(display_type => display_type_0,
+             index => display_input_0,
+             segments => segments_0);
+
+  -- UI PROCESSES
+
+  UI_INPUT : process( clock, input_enable, setting_init, setting_rotor, setting_mode, input_code )
   begin
     if rising_edge(clock) then
       if setting_init = '1' then
-        -- perform initialization
         case( setting_rotor ) is
-          when "00" => -- Left
+          when "00" => -- Right
             case( setting_mode ) is
               when "00" => -- data
                 if unsigned(input_code) < 26 then
                   if input_enable = '1' then
-                    left_data <= input_code;
+                     right_data <= input_code;
                   end if ;
-                  display_r_type <= '0';
-                  display_r_in <= input_code;
-                  input_error <= '0';
+                  input_clear(0) <= '0';
+                  input_0 <= '0' & input_code;
                 else
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(0) <= '1'; -- Error
                 end if ;
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '0';
-                display_l_in <= left_data;
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
+                input_clear(2) <= '0';
+                input_2 <= '0' & right_data;
+                input_clear(3) <= '1'; -- clear display 3
+                input_clear(1) <= '1'; -- clear display 1
               when "01" => -- type
                 if unsigned(input_code) < 4 then
                   if input_enable = '1' then
-                    left_rotor_type <= input_code(1 downto 0);
+                    right_rotor_type <= input_code(1 downto 0);
                   end if ;
-                  display_r_type <= '1';
-                  display_r_in <= std_logic_vector(unsigned(input_code)+1);
-                  input_error <= '0';
+                  input_clear(0) <= '0';
+                  input_0 <= '1' & std_logic_vector(unsigned(input_code)+1);
                 else
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(0) <= '1'; -- Error
                 end if ;
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '1';
-                display_l_in <= std_logic_vector(unsigned("000" & left_rotor_type)+1);
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
+                input_clear(2) <= '0';
+                input_2 <= '1' & std_logic_vector(unsigned("000" & right_rotor_type)+1);
+                input_clear(3) <= '1'; -- clear display 3
+                input_clear(1) <= '1'; -- clear display 1
               when "10" => -- shift
                 if unsigned(input_code) < 26 then
                   if input_enable = '1' then
-                    left_ring_shift <= input_code;
+                     right_ring_shift <= input_code;
                   end if ;
                   if unsigned(input_code) < 10 then
-                    display_m_type <= '0';
-                    display_m_in <= ERROR_LETTER;
-                    display_r_type <= '1';
-                    display_r_in <= input_code;
+                    input_clear(1 downto 0) <= "10";
+                    input_0 <= '1' & input_code;
                   elsif unsigned(input_code) < 20 then
-                    display_m_type <= '1';
-                    display_m_in <= "00001";
-                    display_r_type <= '1';
-                    display_r_in <= std_logic_vector(unsigned(input_code) - 10);
+                    input_clear(1 downto 0) <= "00";
+                    input_1 <= "100001";
+                    input_0 <= '1' & (std_logic_vector(unsigned(input_code) - 10));
                   else
-                    display_m_type <= '1';
-                    display_m_in <= "00010";
-                    display_r_type <= '1';
-                    display_r_in <= std_logic_vector(unsigned(input_code) - 20);
+                    input_clear(1 downto 0) <= "00";
+                    input_1 <= "100010";
+                    input_0 <= '1' & (std_logic_vector(unsigned(input_code) - 20));
                   end if ;
-                  input_error <= '0';
                 else
-                  display_m_type <= '0';
-                  display_m_in <= ERROR_LETTER;
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(1 downto 0) <= "11"; -- Error
                 end if ;
-                if unsigned(left_ring_shift) < 10 then
-                  display_i_type <= '0';
-                  display_i_in <= ERROR_LETTER;
-                  display_l_type <= '1';
-                  display_l_in <= left_ring_shift;
-                elsif unsigned(left_ring_shift) < 20 then
-                  display_i_type <= '1';
-                  display_i_in <= "00001";
-                  display_l_type <= '1';
-                  display_l_in <= std_logic_vector(unsigned(left_ring_shift) - 10);
-                else
-                  display_i_type <= '1';
-                  display_i_in <= "00010";
-                  display_l_type <= '1';
-                  display_l_in <= std_logic_vector(unsigned(left_ring_shift) - 20);
-                end if ;
-              when others =>
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '0';
-                display_l_in <= ERROR_LETTER;
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
-                display_r_type <= '0';
-                display_r_in <= ERROR_LETTER;
+                if unsigned(right_ring_shift) < 10 then
+                    input_clear(3 downto 2) <= "10";
+                    input_2 <= '1' & right_ring_shift;
+                  elsif unsigned(right_ring_shift) < 20 then
+                    input_clear(3 downto 2) <= "00";
+                    input_3 <= "100001";
+                    input_2 <= '1' & (std_logic_vector(unsigned(right_ring_shift) - 10));
+                  else
+                    input_clear(3 downto 2) <= "00";
+                    input_3 <= "100010";
+                    input_2 <= '1' & (std_logic_vector(unsigned(right_ring_shift) - 20));
+                  end if ;
+              when others => -- undefined state
+                input_clear <= "1111";
             end case ;
           when "01" => -- Middle
             case( setting_mode ) is
               when "00" => -- data
                 if unsigned(input_code) < 26 then
                   if input_enable = '1' then
-                    middle_data <= input_code;
+                     middle_data <= input_code;
                   end if ;
-                  display_r_type <= '0';
-                  display_r_in <= input_code;
-                  input_error <= '0';
+                  input_clear(0) <= '0';
+                  input_0 <= '0' & input_code;
                 else
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(0) <= '1'; -- Error
                 end if ;
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '0';
-                display_l_in <= middle_data;
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
+                input_clear(2) <= '0';
+                input_2 <= '0' & middle_data;
+                input_clear(3) <= '1'; -- clear display 3
+                input_clear(1) <= '1'; -- clear display 1
               when "01" => -- type
                 if unsigned(input_code) < 4 then
                   if input_enable = '1' then
                     middle_rotor_type <= input_code(1 downto 0);
                   end if ;
-                  display_r_type <= '1';
-                  display_r_in <= std_logic_vector(unsigned(input_code)+1);
-                  input_error <= '0';
+                  input_clear(0) <= '0';
+                  input_0 <= '1' & std_logic_vector(unsigned(input_code)+1);
                 else
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(0) <= '1'; -- Error
                 end if ;
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '1';
-                display_l_in <= std_logic_vector(unsigned("000" & middle_rotor_type)+1);
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
+                input_clear(2) <= '0';
+                input_2 <= '1' & std_logic_vector(unsigned("000" & middle_rotor_type)+1);
+                input_clear(3) <= '1'; -- clear display 3
+                input_clear(1) <= '1'; -- clear display 1
               when "10" => -- shift
                 if unsigned(input_code) < 26 then
                   if input_enable = '1' then
-                    middle_ring_shift <= input_code;
+                     middle_ring_shift <= input_code;
                   end if ;
                   if unsigned(input_code) < 10 then
-                    display_m_type <= '0';
-                    display_m_in <= ERROR_LETTER;
-                    display_r_type <= '1';
-                    display_r_in <= input_code;
+                    input_clear(1 downto 0) <= "10";
+                    input_0 <= '1' & input_code;
                   elsif unsigned(input_code) < 20 then
-                    display_m_type <= '1';
-                    display_m_in <= "00001";
-                    display_r_type <= '1';
-                    display_r_in <= std_logic_vector(unsigned(input_code) - 10);
+                    input_clear(1 downto 0) <= "00";
+                    input_1 <= "100001";
+                    input_0 <= '1' & (std_logic_vector(unsigned(input_code) - 10));
                   else
-                    display_m_type <= '1';
-                    display_m_in <= "00010";
-                    display_r_type <= '1';
-                    display_r_in <= std_logic_vector(unsigned(input_code) - 20);
+                    input_clear(1 downto 0) <= "00";
+                    input_1 <= "100010";
+                    input_0 <= '1' & (std_logic_vector(unsigned(input_code) - 20));
                   end if ;
-                  input_error <= '0';
                 else
-                  display_m_type <= '0';
-                  display_m_in <= ERROR_LETTER;
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(1 downto 0) <= "11"; -- Error
                 end if ;
                 if unsigned(middle_ring_shift) < 10 then
-                  display_i_type <= '0';
-                  display_i_in <= ERROR_LETTER;
-                  display_l_type <= '1';
-                  display_l_in <= middle_ring_shift;
-                elsif unsigned(middle_ring_shift) < 20 then
-                  display_i_type <= '1';
-                  display_i_in <= "00001";
-                  display_l_type <= '1';
-                  display_l_in <= std_logic_vector(unsigned(middle_ring_shift) - 10);
-                else
-                  display_i_type <= '1';
-                  display_i_in <= "00010";
-                  display_l_type <= '1';
-                  display_l_in <= std_logic_vector(unsigned(middle_ring_shift) - 20);
-                end if ;
-              when others =>
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '0';
-                display_l_in <= ERROR_LETTER;
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
-                display_r_type <= '0';
-                display_r_in <= ERROR_LETTER;
+                    input_clear(3 downto 2) <= "10";
+                    input_2 <= '1' & middle_ring_shift;
+                  elsif unsigned(middle_ring_shift) < 20 then
+                    input_clear(3 downto 2) <= "00";
+                    input_3 <= "100001";
+                    input_2 <= '1' & (std_logic_vector(unsigned(middle_ring_shift) - 10));
+                  else
+                    input_clear(3 downto 2) <= "00";
+                    input_3 <= "100010";
+                    input_2 <= '1' & (std_logic_vector(unsigned(middle_ring_shift) - 20));
+                  end if ;
+              when others => -- undefined state
+                input_clear <= "1111";
             end case ;
-          when "10" => -- Right
+          when "10" => -- Left
             case( setting_mode ) is
               when "00" => -- data
                 if unsigned(input_code) < 26 then
                   if input_enable = '1' then
-                    right_data <= input_code;
+                     left_data <= input_code;
                   end if ;
-                  display_r_type <= '0';
-                  display_r_in <= input_code;
-                  input_error <= '0';
+                  input_clear(0) <= '0';
+                  input_0 <= '0' & input_code;
                 else
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(0) <= '1'; -- Error
                 end if ;
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '0';
-                display_l_in <= right_data;
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
+                input_clear(2) <= '0';
+                input_2 <= '0' & left_data;
+                input_clear(3) <= '1'; -- clear display 3
+                input_clear(1) <= '1'; -- clear display 1
               when "01" => -- type
                 if unsigned(input_code) < 4 then
                   if input_enable = '1' then
-                    right_rotor_type <= input_code(1 downto 0);
+                    left_rotor_type <= input_code(1 downto 0);
                   end if ;
-                  display_r_type <= '1';
-                  display_r_in <= std_logic_vector(unsigned(input_code)+1);
-                  input_error <= '0';
+                  input_clear(0) <= '0';
+                  input_0 <= '1' & std_logic_vector(unsigned(input_code)+1);
                 else
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(0) <= '1'; -- Error
                 end if ;
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '1';
-                display_l_in <= std_logic_vector(unsigned("000" & right_rotor_type)+1);
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
+                input_clear(2) <= '0';
+                input_2 <= '1' & std_logic_vector(unsigned("000" & left_rotor_type)+1);
+                input_clear(3) <= '1'; -- clear display 3
+                input_clear(1) <= '1'; -- clear display 1
               when "10" => -- shift
                 if unsigned(input_code) < 26 then
                   if input_enable = '1' then
-                    right_ring_shift <= input_code;
+                     left_ring_shift <= input_code;
                   end if ;
                   if unsigned(input_code) < 10 then
-                    display_m_type <= '0';
-                    display_m_in <= ERROR_LETTER;
-                    display_r_type <= '1';
-                    display_r_in <= input_code;
+                    input_clear(1 downto 0) <= "10";
+                    input_0 <= '1' & input_code;
                   elsif unsigned(input_code) < 20 then
-                    display_m_type <= '1';
-                    display_m_in <= "00001";
-                    display_r_type <= '1';
-                    display_r_in <= std_logic_vector(unsigned(input_code) - 10);
+                    input_clear(1 downto 0) <= "00";
+                    input_1 <= "100001";
+                    input_0 <= '1' & (std_logic_vector(unsigned(input_code) - 10));
                   else
-                    display_m_type <= '1';
-                    display_m_in <= "00010";
-                    display_r_type <= '1';
-                    display_r_in <= std_logic_vector(unsigned(input_code) - 20);
+                    input_clear(1 downto 0) <= "00";
+                    input_1 <= "100010";
+                    input_0 <= '1' & (std_logic_vector(unsigned(input_code) - 20));
                   end if ;
-                  input_error <= '0';
                 else
-                  display_m_type <= '0';
-                  display_m_in <= ERROR_LETTER;
-                  display_r_type <= '0';
-                  display_r_in <= ERROR_LETTER;
-                  input_error <= '1';
+                  input_clear(1 downto 0) <= "11"; -- Error
                 end if ;
-                if unsigned(right_ring_shift) < 10 then
-                  display_i_type <= '0';
-                  display_i_in <= ERROR_LETTER;
-                  display_l_type <= '1';
-                  display_l_in <= right_ring_shift;
-                elsif unsigned(right_ring_shift) < 20 then
-                  display_i_type <= '1';
-                  display_i_in <= "00001";
-                  display_l_type <= '1';
-                  display_l_in <= std_logic_vector(unsigned(right_ring_shift) - 10);
-                else
-                  display_i_type <= '1';
-                  display_i_in <= "00010";
-                  display_l_type <= '1';
-                  display_l_in <= std_logic_vector(unsigned(right_ring_shift) - 20);
-                end if ;
-              when others =>
-                display_i_type <= '0';
-                display_i_in <= ERROR_LETTER;
-                display_l_type <= '0';
-                display_l_in <= ERROR_LETTER;
-                display_m_type <= '0';
-                display_m_in <= ERROR_LETTER;
-                display_r_type <= '0';
-                display_r_in <= ERROR_LETTER;
+                if unsigned(left_ring_shift) < 10 then
+                    input_clear(3 downto 2) <= "10";
+                    input_2 <= '1' & left_ring_shift;
+                  elsif unsigned(left_ring_shift) < 20 then
+                    input_clear(3 downto 2) <= "00";
+                    input_3 <= "100001";
+                    input_2 <= '1' & (std_logic_vector(unsigned(left_ring_shift) - 10));
+                  else
+                    input_clear(3 downto 2) <= "00";
+                    input_3 <= "100010";
+                    input_2 <= '1' & (std_logic_vector(unsigned(left_ring_shift) - 20));
+                  end if ;
+              when others => -- undefined state
+                input_clear <= "1111";
             end case ;
-          when "11" => -- Reflector (only has one setting)
+          when "11" => -- Reflector
             if input_enable = '1' then
               reflector_type <= input_code(0);
             end if ;
-            display_i_type <= '0';
-            display_i_in <= ERROR_LETTER;
-            display_l_type <= '1';
-            display_l_in <= "0000" & reflector_type;
-            display_m_type <= '0';
-            display_m_in <= ERROR_LETTER;
-            display_r_type <= '1';
-            display_r_in <= "0000" & input_code(0);
-            input_error <= '0';
-          when others =>
-            display_i_type <= '0';
-            display_i_in <= ERROR_LETTER;
-            display_l_type <= '0';
-            display_l_in <= ERROR_LETTER;
-            display_m_type <= '0';
-            display_m_in <= ERROR_LETTER;
-            display_r_type <= '0';
-            display_r_in <= ERROR_LETTER;
-            input_error <= '1';
+            input_clear(0) <= '0';
+            input_0 <= "10000" & input_code(0);
+            input_clear(2) <= '0';
+            input_2 <= "10000" & reflector_type;
+            input_clear(3) <= '1'; -- clear display 3
+            input_clear(1) <= '1'; -- clear display 1
+          when others => -- undefined state
+            input_clear <= "1111";
         end case ;
       else
-        -- accept input
-        if unsigned(input_code) < 26 then
-          display_r_type <= '0';
-          display_r_in <= input_code;
-          input_error <= '0';
-        else
-          display_r_type <= '0';
-          display_r_in <= ERROR_LETTER;
-          input_error <= '1';
-        end if ;
-        display_i_type <= '0';
-        display_i_in <= ERROR_LETTER;
-        display_l_type <= '0';
-        display_l_in <= enigma_output;
-        display_m_type <= '0';
-        display_m_in <= ERROR_LETTER;
+        input_clear(0) <= '0';
+        input_0 <= '0' & input_code;
+        input_clear(2) <= '0';
+        input_2 <= '0' & enigma_output;
+        input_clear(3) <= '1'; -- clear display 3
+        input_clear(1) <= '1'; -- clear display 1
       end if ;
-      led_error(4) <= input_error;
     end if ;
-  end process ; -- UI
+  end process ; -- UI_INPUT
 
-  RISING_KEYPRESS : process( clock, keypress, state, keypress_up, keypress_down, keypress_enable )
+  UI_OUTPUT : process( input_clear, input_3, input_2, input_1, input_0 )
   begin
-    if state = "00" then
-      if keypress = '0' then
-        state <= "01";
-      end if ;
-      input_enable <= '0';
-      keypress_up <= '1';
-      keypress_down <= '0';
-      keypress_enable <= '0';
-    elsif state = "01" then
-      if keypress = '1' then
-        state <= "10";
-      end if ;
-      input_enable <= '0';
-      keypress_up <= '0';
-      keypress_down <= '1';
-      keypress_enable <= '0';
-    elsif state = "10" then
-      input_enable <= '1';
-      hold <= '1';
-      state <= "11";
-      keypress_up <= '1';
-      keypress_down <= '0';
-      keypress_enable <= '1';
+    if input_clear(3) = '1' then
+      display_type_3 <= '0';
+      display_input_3 <= ERROR_CODE;
     else
-      keypress_up <= '1';
-      keypress_down <= '0';
-      if rising_edge(clock) then
-        if hold = '1' then
-          hold <= '0';
-        end if ;
-      end if ;
-      if falling_edge(clock) then
-        if hold = '0' then
-          state <= "00";
-          input_enable <= '0';
-          keypress_enable <= '0';
-        end if ;
-      end if ;
+      display_type_3 <= input_3(5);
+      display_input_3 <= input_3(4 downto 0);
     end if ;
-    led_error(3) <= keypress_down;
-    led_error(2) <= keypress_up;
-    led_error(0) <= keypress_enable;
-  end process ; -- KEYPRESS
+    if input_clear(2) = '1' then
+      display_type_2 <= '0';
+      display_input_2 <= ERROR_CODE;
+    else
+      display_type_2 <= input_2(5);
+      display_input_2 <= input_2(4 downto 0);
+    end if ;
+    if input_clear(1) = '1' then
+      display_type_1 <= '0';
+      display_input_1 <= ERROR_CODE;
+    else
+      display_type_1 <= input_1(5);
+      display_input_1 <= input_1(4 downto 0);
+    end if ;
+    if input_clear(0) = '1' then
+      display_type_0 <= '0';
+      display_input_0 <= ERROR_CODE;
+    else
+      display_type_0 <= input_0(5);
+      display_input_0 <= input_0(4 downto 0);
+    end if ;
+  end process ; -- UI_OUTPUT
+
+  KEYPRESS_STATE_PROCESS : process( clock, keypress )
+  begin
+    if rising_edge(clock) then
+      case( keypress_state ) is
+        when A =>
+          if keypress = '0' then
+            keypress_state <= B;
+          else
+            keypress_state <= A;
+          end if ;
+        when B =>
+          if keypress = '1' then
+            keypress_state <= C;
+          else
+            keypress_state <= B;
+          end if ;
+        when C =>
+          keypress_state <= A;
+      end case ;
+    end if ;
+  end process ; -- KEYPRESS_STATE_PROCESS
+
+  COUNTER_ENABLE : process( keypress_state )
+  begin
+    case( keypress_state ) is
+      when A =>
+        input_enable <= '0';
+      when B =>
+        input_enable <= '0';
+      when C =>
+        input_enable <= '1';
+    end case ;
+  end process ; -- COUNTER_ENABLE
 end architecture ; -- arch

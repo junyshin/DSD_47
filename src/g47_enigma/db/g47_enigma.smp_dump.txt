@@ -1,0 +1,21 @@
+
+State Machine - |g47_ui|keypress_state
+Name keypress_state.C keypress_state.B keypress_state.A 
+keypress_state.A 0 0 0 
+keypress_state.B 0 1 1 
+keypress_state.C 1 0 1 
+
+State Machine - |g47_ui|g47_enigma:ENIGMA|state
+Name state.C state.B state.A 
+state.A 0 0 0 
+state.B 0 1 1 
+state.C 1 0 1 
+
+State Machine - |g47_ui|g47_enigma:ENIGMA|g47_fsm:FSM|state
+Name state.F state.E state.D state.C state.B state.A 
+state.A 0 0 0 0 0 0 
+state.B 0 0 0 0 1 1 
+state.C 0 0 0 1 0 1 
+state.D 0 0 1 0 0 1 
+state.E 0 1 0 0 0 1 
+state.F 1 0 0 0 0 1 

@@ -275,7 +275,28 @@ BEGIN
   wait for 10 ns;
 
   clock <= '0';
-  init <= '0';
+  wait for 10 ns;
+  clock <= '1';
+  wait for 10 ns;
+
+  clock <= '0';
+  keypress <= '0';
+  wait for 10 ns;
+  clock <= '1';
+  wait for 10 ns;
+
+  clock <= '0';
+  wait for 10 ns;
+  clock <= '1';
+  wait for 10 ns;
+
+  clock <= '0';
+  keypress <= '1';
+  wait for 10 ns;
+  clock <= '1';
+  wait for 10 ns;
+
+  clock <= '0';
   wait for 10 ns;
   clock <= '1';
   wait for 10 ns;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g47_enigma
-Fri Apr 08 13:14:28 2016
+Fri Apr 08 22:38:53 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,34 +13,38 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_OUT_VALUE"
- 14. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_ROTOR"
- 15. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_RING"
- 16. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_OUT_DECODER"
- 17. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:LTR_PERMUTATION"
- 18. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_IN_ENCODER"
- 19. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING"
- 20. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_ROTOR"
- 21. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_IN_LETTER"
- 22. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_OUT_VALUE"
- 23. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_ROTOR"
- 24. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_RING"
- 25. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_OUT_DECODER"
- 26. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:RTL_PERMUTATION"
- 27. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_IN_ENCODER"
- 28. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_RING"
- 29. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR"
- 30. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_IN_LETTER"
- 31. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT"
- 32. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_5_comp:COMP_RIGHT"
- 33. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_5_comp:COMP_MIDDLE"
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+  8. State Machine - |g47_ui|keypress_state
+  9. State Machine - |g47_ui|g47_enigma:ENIGMA|state
+ 10. State Machine - |g47_ui|g47_enigma:ENIGMA|g47_fsm:FSM|state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Port Connectivity Checks: "g47_0_25_counter:COUNTER"
+ 17. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_OUT_VALUE"
+ 18. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_ROTOR"
+ 19. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_RING"
+ 20. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_OUT_DECODER"
+ 21. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:LTR_PERMUTATION"
+ 22. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_IN_ENCODER"
+ 23. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING"
+ 24. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_ROTOR"
+ 25. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_IN_LETTER"
+ 26. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_OUT_VALUE"
+ 27. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_ROTOR"
+ 28. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_RING"
+ 29. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_OUT_DECODER"
+ 30. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:RTL_PERMUTATION"
+ 31. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_IN_ENCODER"
+ 32. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_RING"
+ 33. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR"
+ 34. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_IN_LETTER"
+ 35. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT"
+ 36. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_5_comp:COMP_RIGHT"
+ 37. Port Connectivity Checks: "g47_enigma:ENIGMA|g47_5_comp:COMP_MIDDLE"
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -66,16 +70,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 08 13:14:28 2016           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 08 22:38:53 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; g47_enigma                                      ;
 ; Top-level Entity Name              ; g47_ui                                          ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 5,827                                           ;
-;     Total combinational functions  ; 5,790                                           ;
-;     Dedicated logic registers      ; 84                                              ;
-; Total registers                    ; 84                                              ;
-; Total pins                         ; 46                                              ;
+; Total logic elements               ; 5,785                                           ;
+;     Total combinational functions  ; 5,748                                           ;
+;     Dedicated logic registers      ; 89                                              ;
+; Total registers                    ; 89                                              ;
+; Total pins                         ; 52                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -185,25 +189,25 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                          ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; g47_ui.vhd                       ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_ui.vhd               ;         ;
-; g47_stecker.vhd                  ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_stecker.vhd          ;         ;
-; g47_rotor.vhd                    ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_rotor.vhd            ;         ;
-; g47_reflector.vhd                ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_reflector.vhd        ;         ;
-; g47_permutation.vhd              ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_permutation.vhd      ;         ;
-; g47_fsm.vhd                      ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_fsm.vhd              ;         ;
-; g47_enigma.vhd                   ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_enigma.vhd           ;         ;
-; g47_26_barrelshift.vhd           ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd   ;         ;
-; g47_26_5_encoder.vhd             ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_26_5_encoder.vhd     ;         ;
-; g47_7_segmentdecoder.vhd         ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_7_segmentdecoder.vhd ;         ;
-; g47_5_comp.vhd                   ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_5_comp.vhd           ;         ;
-; g47_5_26_decoder.vhd             ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_5_26_decoder.vhd     ;         ;
-; g47_0_25_counter.vhd             ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                        ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                 ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; g47_hex_display.vhd              ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_hex_display.vhd    ;         ;
+; g47_ui.vhd                       ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_ui.vhd             ;         ;
+; g47_stecker.vhd                  ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_stecker.vhd        ;         ;
+; g47_rotor.vhd                    ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_rotor.vhd          ;         ;
+; g47_reflector.vhd                ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_reflector.vhd      ;         ;
+; g47_permutation.vhd              ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_permutation.vhd    ;         ;
+; g47_fsm.vhd                      ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_fsm.vhd            ;         ;
+; g47_enigma.vhd                   ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_enigma.vhd         ;         ;
+; g47_26_barrelshift.vhd           ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_26_barrelshift.vhd ;         ;
+; g47_26_5_encoder.vhd             ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_26_5_encoder.vhd   ;         ;
+; g47_5_comp.vhd                   ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_5_comp.vhd         ;         ;
+; g47_5_26_decoder.vhd             ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_5_26_decoder.vhd   ;         ;
+; g47_0_25_counter.vhd             ; yes             ; User VHDL File  ; Y:/DSD/src/g47_enigma/g47_0_25_counter.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
 
 
 +------------------------------------------------------------------+
@@ -211,27 +215,27 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 5,827              ;
+; Estimated Total logic elements              ; 5,785              ;
 ;                                             ;                    ;
-; Total combinational functions               ; 5790               ;
+; Total combinational functions               ; 5748               ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 4819               ;
-;     -- 3 input functions                    ; 775                ;
-;     -- <=2 input functions                  ; 196                ;
+;     -- 4 input functions                    ; 4800               ;
+;     -- 3 input functions                    ; 757                ;
+;     -- <=2 input functions                  ; 191                ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 5774               ;
-;     -- arithmetic mode                      ; 16                 ;
+;     -- normal mode                          ; 5728               ;
+;     -- arithmetic mode                      ; 20                 ;
 ;                                             ;                    ;
-; Total registers                             ; 84                 ;
-;     -- Dedicated logic registers            ; 84                 ;
+; Total registers                             ; 89                 ;
+;     -- Dedicated logic registers            ; 89                 ;
 ;     -- I/O registers                        ; 0                  ;
 ;                                             ;                    ;
-; I/O pins                                    ; 46                 ;
+; I/O pins                                    ; 52                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                  ;
 ; Maximum fan-out node                        ; left_ring_shift[3] ;
 ; Maximum fan-out                             ; 299                ;
-; Total fan-out                               ; 22279              ;
+; Total fan-out                               ; 22152              ;
 ; Average fan-out                             ; 3.76               ;
 +---------------------------------------------+--------------------+
 
@@ -241,30 +245,27 @@ applicable agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
-; |g47_ui                                         ; 5790 (179)        ; 84 (62)      ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |g47_ui                                                                               ; work         ;
-;    |g47_7_segmentdecoder:DISPLAY_I|             ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_7_segmentdecoder:DISPLAY_I                                                ; work         ;
-;    |g47_7_segmentdecoder:DISPLAY_L|             ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_7_segmentdecoder:DISPLAY_L                                                ; work         ;
-;    |g47_7_segmentdecoder:DISPLAY_M|             ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_7_segmentdecoder:DISPLAY_M                                                ; work         ;
-;    |g47_7_segmentdecoder:DISPLAY_R|             ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_7_segmentdecoder:DISPLAY_R                                                ; work         ;
-;    |g47_enigma:ENIGMA|                          ; 5537 (10)         ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA                                                             ; work         ;
+; |g47_ui                                         ; 5748 (140)        ; 89 (61)      ; 0           ; 0            ; 0       ; 0         ; 52   ; 0            ; |g47_ui                                                                               ; work         ;
+;    |g47_0_25_counter:COUNTER|                   ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_0_25_counter:COUNTER                                                      ; work         ;
+;    |g47_enigma:ENIGMA|                          ; 5515 (7)          ; 23 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA                                                             ; work         ;
 ;       |g47_5_comp:COMP_MIDDLE|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_5_comp:COMP_MIDDLE                                      ; work         ;
 ;       |g47_5_comp:COMP_RIGHT|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_5_comp:COMP_RIGHT                                       ; work         ;
-;       |g47_fsm:FSM|                             ; 29 (29)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_fsm:FSM                                                 ; work         ;
+;       |g47_fsm:FSM|                             ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_fsm:FSM                                                 ; work         ;
 ;       |g47_reflector:REFLECTOR|                 ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_reflector:REFLECTOR                                     ; work         ;
-;       |g47_rotor:ROTOR_LEFT|                    ; 1857 (0)          ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT                                        ; work         ;
+;       |g47_rotor:ROTOR_LEFT|                    ; 1855 (0)          ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT                                        ; work         ;
 ;          |g47_0_25_counter:ROTOR_SHIFT_COUNTER| ; 13 (13)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_0_25_counter:ROTOR_SHIFT_COUNTER   ; work         ;
 ;          |g47_26_5_encoder:LTR_IN_ENCODER|      ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_IN_ENCODER        ; work         ;
 ;          |g47_26_5_encoder:LTR_OUT_VALUE|       ; 38 (38)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_OUT_VALUE         ; work         ;
 ;          |g47_26_5_encoder:RTL_IN_ENCODER|      ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_IN_ENCODER        ; work         ;
 ;          |g47_26_5_encoder:RTL_OUT_VALUE|       ; 38 (38)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_OUT_VALUE         ; work         ;
-;          |g47_26_barrelshift:LTR_IN_RING|       ; 257 (257)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING         ; work         ;
+;          |g47_26_barrelshift:LTR_IN_RING|       ; 258 (258)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING         ; work         ;
 ;          |g47_26_barrelshift:LTR_IN_ROTOR|      ; 129 (129)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_ROTOR        ; work         ;
-;          |g47_26_barrelshift:LTR_OUT_RING|      ; 172 (172)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_RING        ; work         ;
+;          |g47_26_barrelshift:LTR_OUT_RING|      ; 171 (171)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_RING        ; work         ;
 ;          |g47_26_barrelshift:LTR_OUT_ROTOR|     ; 202 (202)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_ROTOR       ; work         ;
 ;          |g47_26_barrelshift:RTL_IN_RING|       ; 257 (257)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_RING         ; work         ;
-;          |g47_26_barrelshift:RTL_IN_ROTOR|      ; 136 (136)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR        ; work         ;
+;          |g47_26_barrelshift:RTL_IN_ROTOR|      ; 139 (139)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR        ; work         ;
 ;          |g47_26_barrelshift:RTL_OUT_RING|      ; 181 (181)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_RING        ; work         ;
-;          |g47_26_barrelshift:RTL_OUT_ROTOR|     ; 210 (210)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_ROTOR       ; work         ;
+;          |g47_26_barrelshift:RTL_OUT_ROTOR|     ; 205 (205)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_ROTOR       ; work         ;
 ;          |g47_5_26_decoder:LTR_IN_LETTER|       ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_IN_LETTER         ; work         ;
 ;          |g47_5_26_decoder:LTR_OUT_DECODER|     ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:LTR_OUT_DECODER       ; work         ;
 ;          |g47_5_26_decoder:RTL_IN_LETTER|       ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_IN_LETTER         ; work         ;
@@ -278,73 +279,116 @@ applicable agreement for further details.
 ;          |g47_26_5_encoder:RTL_IN_ENCODER|      ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_IN_ENCODER      ; work         ;
 ;          |g47_26_5_encoder:RTL_OUT_VALUE|       ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_OUT_VALUE       ; work         ;
 ;          |g47_26_barrelshift:LTR_IN_RING|       ; 223 (223)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_RING       ; work         ;
-;          |g47_26_barrelshift:LTR_IN_ROTOR|      ; 136 (136)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_ROTOR      ; work         ;
+;          |g47_26_barrelshift:LTR_IN_ROTOR|      ; 139 (139)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_ROTOR      ; work         ;
 ;          |g47_26_barrelshift:LTR_OUT_RING|      ; 170 (170)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_OUT_RING      ; work         ;
 ;          |g47_26_barrelshift:LTR_OUT_ROTOR|     ; 204 (204)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_OUT_ROTOR     ; work         ;
-;          |g47_26_barrelshift:RTL_IN_RING|       ; 260 (260)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_IN_RING       ; work         ;
+;          |g47_26_barrelshift:RTL_IN_RING|       ; 259 (259)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_IN_RING       ; work         ;
 ;          |g47_26_barrelshift:RTL_IN_ROTOR|      ; 131 (131)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_IN_ROTOR      ; work         ;
-;          |g47_26_barrelshift:RTL_OUT_RING|      ; 181 (181)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_RING      ; work         ;
-;          |g47_26_barrelshift:RTL_OUT_ROTOR|     ; 212 (212)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_ROTOR     ; work         ;
+;          |g47_26_barrelshift:RTL_OUT_RING|      ; 182 (182)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_RING      ; work         ;
+;          |g47_26_barrelshift:RTL_OUT_ROTOR|     ; 209 (209)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_ROTOR     ; work         ;
 ;          |g47_5_26_decoder:LTR_IN_LETTER|       ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:LTR_IN_LETTER       ; work         ;
 ;          |g47_5_26_decoder:LTR_OUT_DECODER|     ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:LTR_OUT_DECODER     ; work         ;
 ;          |g47_5_26_decoder:RTL_IN_LETTER|       ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:RTL_IN_LETTER       ; work         ;
 ;          |g47_5_26_decoder:RTL_OUT_DECODER|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_5_26_decoder:RTL_OUT_DECODER     ; work         ;
 ;          |g47_permutation:LTR_PERMUTATION|      ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_permutation:LTR_PERMUTATION      ; work         ;
 ;          |g47_permutation:RTL_PERMUTATION|      ; 60 (60)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_permutation:RTL_PERMUTATION      ; work         ;
-;       |g47_rotor:ROTOR_RIGHT|                   ; 1770 (0)          ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT                                       ; work         ;
+;       |g47_rotor:ROTOR_RIGHT|                   ; 1775 (0)          ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT                                       ; work         ;
 ;          |g47_0_25_counter:ROTOR_SHIFT_COUNTER| ; 13 (13)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_0_25_counter:ROTOR_SHIFT_COUNTER  ; work         ;
-;          |g47_26_5_encoder:LTR_IN_ENCODER|      ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_IN_ENCODER       ; work         ;
-;          |g47_26_5_encoder:LTR_OUT_VALUE|       ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_OUT_VALUE        ; work         ;
+;          |g47_26_5_encoder:LTR_IN_ENCODER|      ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_IN_ENCODER       ; work         ;
+;          |g47_26_5_encoder:LTR_OUT_VALUE|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_OUT_VALUE        ; work         ;
 ;          |g47_26_5_encoder:RTL_IN_ENCODER|      ; 31 (31)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_IN_ENCODER       ; work         ;
 ;          |g47_26_5_encoder:RTL_OUT_VALUE|       ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_OUT_VALUE        ; work         ;
-;          |g47_26_barrelshift:LTR_IN_RING|       ; 214 (214)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_RING        ; work         ;
-;          |g47_26_barrelshift:LTR_IN_ROTOR|      ; 139 (139)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_ROTOR       ; work         ;
-;          |g47_26_barrelshift:LTR_OUT_RING|      ; 170 (170)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_RING       ; work         ;
-;          |g47_26_barrelshift:LTR_OUT_ROTOR|     ; 201 (201)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_ROTOR      ; work         ;
-;          |g47_26_barrelshift:RTL_IN_RING|       ; 258 (258)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_RING        ; work         ;
-;          |g47_26_barrelshift:RTL_IN_ROTOR|      ; 137 (137)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_ROTOR       ; work         ;
+;          |g47_26_barrelshift:LTR_IN_RING|       ; 216 (216)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_RING        ; work         ;
+;          |g47_26_barrelshift:LTR_IN_ROTOR|      ; 142 (142)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_ROTOR       ; work         ;
+;          |g47_26_barrelshift:LTR_OUT_RING|      ; 169 (169)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_RING       ; work         ;
+;          |g47_26_barrelshift:LTR_OUT_ROTOR|     ; 203 (203)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_ROTOR      ; work         ;
+;          |g47_26_barrelshift:RTL_IN_RING|       ; 259 (259)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_RING        ; work         ;
+;          |g47_26_barrelshift:RTL_IN_ROTOR|      ; 136 (136)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_ROTOR       ; work         ;
 ;          |g47_26_barrelshift:RTL_OUT_RING|      ; 135 (135)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_OUT_RING       ; work         ;
 ;          |g47_26_barrelshift:RTL_OUT_ROTOR|     ; 211 (211)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_OUT_ROTOR      ; work         ;
 ;          |g47_5_26_decoder:LTR_IN_LETTER|       ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:LTR_IN_LETTER        ; work         ;
 ;          |g47_5_26_decoder:LTR_OUT_DECODER|     ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:LTR_OUT_DECODER      ; work         ;
-;          |g47_5_26_decoder:RTL_IN_LETTER|       ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:RTL_IN_LETTER        ; work         ;
+;          |g47_5_26_decoder:RTL_IN_LETTER|       ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:RTL_IN_LETTER        ; work         ;
 ;          |g47_5_26_decoder:RTL_OUT_DECODER|     ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_5_26_decoder:RTL_OUT_DECODER      ; work         ;
 ;          |g47_permutation:LTR_PERMUTATION|      ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_permutation:LTR_PERMUTATION       ; work         ;
 ;          |g47_permutation:RTL_PERMUTATION|      ; 60 (60)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_permutation:RTL_PERMUTATION       ; work         ;
 ;       |g47_stecker:STECKER_IN|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_stecker:STECKER_IN                                      ; work         ;
 ;       |g47_stecker:STECKER_OUT|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_enigma:ENIGMA|g47_stecker:STECKER_OUT                                     ; work         ;
+;    |g47_hex_display:HEX_0|                      ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_hex_display:HEX_0                                                         ; work         ;
+;    |g47_hex_display:HEX_1|                      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_hex_display:HEX_1                                                         ; work         ;
+;    |g47_hex_display:HEX_2|                      ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_hex_display:HEX_2                                                         ; work         ;
+;    |g47_hex_display:HEX_3|                      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g47_ui|g47_hex_display:HEX_3                                                         ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                 ;
-+----------------------------------------------------+---------------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal                   ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------------------------+------------------------+
-; g47_enigma:ENIGMA|prev_output_code[0]              ; g47_enigma:ENIGMA|prev_output_code[4] ; yes                    ;
-; g47_enigma:ENIGMA|prev_output_code[1]              ; g47_enigma:ENIGMA|prev_output_code[4] ; yes                    ;
-; g47_enigma:ENIGMA|prev_output_code[2]              ; g47_enigma:ENIGMA|prev_output_code[4] ; yes                    ;
-; g47_enigma:ENIGMA|prev_output_code[4]              ; g47_enigma:ENIGMA|prev_output_code[4] ; yes                    ;
-; g47_enigma:ENIGMA|prev_output_code[3]              ; g47_enigma:ENIGMA|prev_output_code[4] ; yes                    ;
-; g47_enigma:ENIGMA|state[1]                         ; g47_enigma:ENIGMA|state[1]            ; yes                    ;
-; g47_enigma:ENIGMA|state[0]                         ; g47_enigma:ENIGMA|state[1]            ; yes                    ;
-; Number of user-specified and inferred latches = 7  ;                                       ;                        ;
-+----------------------------------------------------+---------------------------------------+------------------------+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------+
+; State Machine - |g47_ui|keypress_state                                    ;
++------------------+------------------+------------------+------------------+
+; Name             ; keypress_state.C ; keypress_state.B ; keypress_state.A ;
++------------------+------------------+------------------+------------------+
+; keypress_state.A ; 0                ; 0                ; 0                ;
+; keypress_state.B ; 0                ; 1                ; 1                ;
+; keypress_state.C ; 1                ; 0                ; 1                ;
++------------------+------------------+------------------+------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------+
+; State Machine - |g47_ui|g47_enigma:ENIGMA|state ;
++---------+---------+---------+-------------------+
+; Name    ; state.C ; state.B ; state.A           ;
++---------+---------+---------+-------------------+
+; state.A ; 0       ; 0       ; 0                 ;
+; state.B ; 0       ; 1       ; 1                 ;
+; state.C ; 1       ; 0       ; 1                 ;
++---------+---------+---------+-------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------+
+; State Machine - |g47_ui|g47_enigma:ENIGMA|g47_fsm:FSM|state         ;
++---------+---------+---------+---------+---------+---------+---------+
+; Name    ; state.F ; state.E ; state.D ; state.C ; state.B ; state.A ;
++---------+---------+---------+---------+---------+---------+---------+
+; state.A ; 0       ; 0       ; 0       ; 0       ; 0       ; 0       ;
+; state.B ; 0       ; 0       ; 0       ; 0       ; 1       ; 1       ;
+; state.C ; 0       ; 0       ; 0       ; 1       ; 0       ; 1       ;
+; state.D ; 0       ; 0       ; 1       ; 0       ; 0       ; 1       ;
+; state.E ; 0       ; 1       ; 0       ; 0       ; 0       ; 1       ;
+; state.F ; 1       ; 0       ; 0       ; 0       ; 0       ; 1       ;
++---------+---------+---------+---------+---------+---------+---------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                     ;
++----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------+------------------------+
+; g47_enigma:ENIGMA|output_code[0]                   ; g47_enigma:ENIGMA|state.C ; yes                    ;
+; g47_enigma:ENIGMA|output_code[1]                   ; g47_enigma:ENIGMA|state.C ; yes                    ;
+; g47_enigma:ENIGMA|output_code[2]                   ; g47_enigma:ENIGMA|state.C ; yes                    ;
+; g47_enigma:ENIGMA|output_code[4]                   ; g47_enigma:ENIGMA|state.C ; yes                    ;
+; g47_enigma:ENIGMA|output_code[3]                   ; g47_enigma:ENIGMA|state.C ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                           ;                        ;
++----------------------------------------------------+---------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------+
-; Registers Removed During Synthesis                                  ;
-+---------------------------------------+-----------------------------+
-; Register name                         ; Reason for Removal          ;
-+---------------------------------------+-----------------------------+
-; display_m_in[3,4]                     ; Merged with display_m_in[2] ;
-; display_i_in[3,4]                     ; Merged with display_i_in[2] ;
-; display_i_type                        ; Merged with display_i_in[2] ;
-; display_m_type                        ; Merged with display_m_in[2] ;
-; Total Number of Removed Registers = 6 ;                             ;
-+---------------------------------------+-----------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; input_3[3,4]                          ; Merged with input_3[2]                 ;
+; input_1[3,4]                          ; Merged with input_1[2]                 ;
+; input_3[5]                            ; Stuck at VCC due to stuck port data_in ;
+; input_1[5]                            ; Stuck at VCC due to stuck port data_in ;
+; keypress_state.A                      ; Lost fanout                            ;
+; g47_enigma:ENIGMA|state.A             ; Lost fanout                            ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -352,12 +396,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 84    ;
-; Number of registers using Synchronous Clear  ; 2     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 27    ;
+; Total registers                              ; 89    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 28    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 61    ;
+; Number of registers using Clock Enable       ; 68    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -367,83 +411,93 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; display_i_in[1]                         ; 4       ;
-; display_i_in[0]                         ; 4       ;
-; display_i_in[2]                         ; 6       ;
-; display_l_in[3]                         ; 19      ;
-; display_l_in[4]                         ; 13      ;
-; display_l_in[0]                         ; 18      ;
-; display_l_in[1]                         ; 17      ;
-; display_l_in[2]                         ; 18      ;
-; display_m_in[1]                         ; 4       ;
-; display_m_in[0]                         ; 4       ;
-; display_m_in[2]                         ; 6       ;
-; display_r_in[3]                         ; 19      ;
-; display_r_in[4]                         ; 13      ;
-; display_r_in[0]                         ; 18      ;
-; display_r_in[1]                         ; 17      ;
-; display_r_in[2]                         ; 18      ;
-; hold                                    ; 5       ;
-; g47_enigma:ENIGMA|g47_fsm:FSM|hold      ; 7       ;
+; input_3[1]                              ; 4       ;
+; input_3[0]                              ; 4       ;
+; input_3[2]                              ; 7       ;
+; input_2[3]                              ; 15      ;
+; input_2[4]                              ; 15      ;
+; input_2[0]                              ; 21      ;
+; input_2[1]                              ; 19      ;
+; input_2[2]                              ; 20      ;
+; input_2[5]                              ; 17      ;
+; input_1[1]                              ; 4       ;
+; input_1[0]                              ; 4       ;
+; input_1[2]                              ; 6       ;
+; input_0[3]                              ; 15      ;
+; input_0[4]                              ; 15      ;
+; input_0[0]                              ; 19      ;
+; input_0[1]                              ; 18      ;
+; input_0[2]                              ; 19      ;
+; input_0[5]                              ; 16      ;
 ; Total number of inverted registers = 18 ;         ;
 +-----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_0_25_counter:ROTOR_SHIFT_COUNTER|count_previous[0]  ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_0_25_counter:ROTOR_SHIFT_COUNTER|count_previous[4] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_0_25_counter:ROTOR_SHIFT_COUNTER|count_previous[3]   ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|middle_rotor_type[1]                                                                            ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|right_rotor_type[1]                                                                             ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|left_rotor_type[1]                                                                              ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|middle_ring_shift[4]                                                                            ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|right_ring_shift[0]                                                                             ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|left_ring_shift[1]                                                                              ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|middle_data[0]                                                                                  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|right_data[0]                                                                                   ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|left_data[0]                                                                                    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|display_m_in[1]                                                                                 ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|display_i_in[0]                                                                                 ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; Yes        ; |g47_ui|display_r_in[2]                                                                                 ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 20 LEs               ; 6 LEs                  ; Yes        ; |g47_ui|display_l_in[3]                                                                                 ;
-; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING|Mux27                     ;
-; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_RING|Mux0                   ;
-; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_RING|Mux27                    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:RTL_PERMUTATION|Mux40                    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_permutation:LTR_PERMUTATION|Mux47                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_permutation:LTR_PERMUTATION|Mux46                   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g47_ui|state[0]                                                                                        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_fsm:FSM|state[0]                                                          ;
-; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_ROTOR|Mux1                    ;
-; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_ROTOR|Mux27                 ;
-; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_ROTOR|Mux27                   ;
-; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_OUT_RING|Mux24                    ;
-; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_IN_RING|Mux36                   ;
-; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_RING|Mux12                   ;
-; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_ROTOR|Mux20                   ;
-; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_ROTOR|Mux42                 ;
-; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_OUT_ROTOR|Mux50                   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|state[0]                                                                      ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |g47_ui|g47_7_segmentdecoder:DISPLAY_I|tmp[3]                                                           ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |g47_ui|g47_7_segmentdecoder:DISPLAY_M|tmp[1]                                                           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g47_ui|Add0                                                                                            ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_IN_ENCODER|index[3]                ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_OUT_VALUE|index[3]                 ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_IN_ENCODER|index[4]               ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_OUT_VALUE|index[3]                ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_IN_ENCODER|index[3]                 ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_OUT_VALUE|index[3]                  ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_IN_ENCODER|index[4]                 ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_OUT_VALUE|index[3]                  ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:LTR_IN_ENCODER|index[3]               ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:LTR_OUT_VALUE|index[3]                ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_IN_ENCODER|index[4]                ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_OUT_VALUE|index[3]                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_0_25_counter:ROTOR_SHIFT_COUNTER|cnt[0] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_0_25_counter:ROTOR_SHIFT_COUNTER|cnt[4]  ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_0_25_counter:ROTOR_SHIFT_COUNTER|cnt[0]   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|middle_rotor_type[1]                                                                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|left_rotor_type[0]                                                                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|right_rotor_type[1]                                                                  ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|middle_ring_shift[0]                                                                 ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|left_ring_shift[0]                                                                   ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|right_ring_shift[4]                                                                  ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|middle_data[0]                                                                       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|left_data[0]                                                                         ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|right_data[4]                                                                        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|input_1[5]                                                                           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |g47_ui|input_1[0]                                                                           ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |g47_ui|input_3[2]                                                                           ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |g47_ui|input_3[1]                                                                           ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 6 LEs                ; 15 LEs                 ; Yes        ; |g47_ui|input_0[4]                                                                           ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |g47_ui|input_2[3]                                                                           ;
+; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_ROTOR|Mux1        ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_permutation:RTL_PERMUTATION|Mux40       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_fsm:FSM|state                                                  ;
+; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_ROTOR|Mux0         ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_permutation:RTL_PERMUTATION|Mux40        ;
+; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_OUT_RING|Mux0         ;
+; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_OUT_RING|Mux0        ;
+; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING|Mux27          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:LTR_PERMUTATION|Mux45         ;
+; 3:1                ; 104 bits  ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR|Mux0          ;
+; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:LTR_IN_ROTOR|Mux25       ;
+; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:LTR_IN_ROTOR|Mux6         ;
+; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_barrelshift:RTL_IN_RING|Mux32         ;
+; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_barrelshift:RTL_OUT_RING|Mux19       ;
+; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:LTR_IN_RING|Mux46          ;
+; 5:1                ; 104 bits  ; 312 LEs       ; 312 LEs              ; 0 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR|Mux20         ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |g47_ui|g47_hex_display:HEX_3|tmp[3]                                                         ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |g47_ui|g47_hex_display:HEX_1|tmp[5]                                                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g47_ui|Add0                                                                                 ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_IN_ENCODER|index[3]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:RTL_OUT_VALUE|index[3]      ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_IN_ENCODER|index[3]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:RTL_OUT_VALUE|index[4]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_IN_ENCODER|index[4]      ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_OUT_VALUE|index[4]       ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_IN_ENCODER|index[3]      ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:LTR_OUT_VALUE|index[3]       ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:LTR_IN_ENCODER|index[3]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_MIDDLE|g47_26_5_encoder:LTR_OUT_VALUE|index[3]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_IN_ENCODER|index[3]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |g47_ui|g47_enigma:ENIGMA|g47_rotor:ROTOR_RIGHT|g47_26_5_encoder:LTR_OUT_VALUE|index[3]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "g47_0_25_counter:COUNTER" ;
++------+-------+----------+----------------------------+
+; Port ; Type  ; Severity ; Details                    ;
++------+-------+----------+----------------------------+
+; load ; Input ; Info     ; Stuck at GND               ;
+; data ; Input ; Info     ; Stuck at GND               ;
++------+-------+----------+----------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------+
@@ -640,7 +694,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:43     ;
+; Top            ; 00:01:46     ;
 +----------------+--------------+
 
 
@@ -650,9 +704,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 08 13:12:40 2016
+    Info: Processing started: Fri Apr 08 22:37:02 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g47_enigma -c g47_enigma
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file g47_hex_display.vhd
+    Info (12022): Found design unit 1: g47_hex_display-arch
+    Info (12023): Found entity 1: g47_hex_display
 Info (12021): Found 2 design units, including 1 entities, in source file g47_ui.vhd
     Info (12022): Found design unit 1: g47_ui-arch
     Info (12023): Found entity 1: g47_ui
@@ -680,9 +737,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file g47_26_
 Info (12021): Found 2 design units, including 1 entities, in source file g47_26_5_encoder.vhd
     Info (12022): Found design unit 1: g47_26_5_encoder-arch
     Info (12023): Found entity 1: g47_26_5_encoder
-Info (12021): Found 2 design units, including 1 entities, in source file g47_7_segmentdecoder.vhd
-    Info (12022): Found design unit 1: g47_7_segmentdecoder-arch
-    Info (12023): Found entity 1: g47_7_segmentdecoder
 Info (12021): Found 2 design units, including 1 entities, in source file g47_5_comp.vhd
     Info (12022): Found design unit 1: g47_5_comp-arch
     Info (12023): Found entity 1: g47_5_comp
@@ -693,57 +747,45 @@ Info (12021): Found 2 design units, including 1 entities, in source file g47_0_2
     Info (12022): Found design unit 1: g47_0_25_counter-arch
     Info (12023): Found entity 1: g47_0_25_counter
 Info (12127): Elaborating entity "g47_ui" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at g47_ui.vhd(18): used implicit default value for signal "led_error" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10540): VHDL Signal Declaration warning at g47_ui.vhd(75): used explicit default value for signal "load" because signal was never assigned a value
 Info (12128): Elaborating entity "g47_enigma" for hierarchy "g47_enigma:ENIGMA"
-Warning (10631): VHDL Process Statement warning at g47_enigma.vhd(164): inferring latch(es) for signal or variable "prev_output_code", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g47_enigma.vhd(164): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "state[0]" at g47_enigma.vhd(164)
-Info (10041): Inferred latch for "state[1]" at g47_enigma.vhd(164)
-Info (10041): Inferred latch for "prev_output_code[0]" at g47_enigma.vhd(164)
-Info (10041): Inferred latch for "prev_output_code[1]" at g47_enigma.vhd(164)
-Info (10041): Inferred latch for "prev_output_code[2]" at g47_enigma.vhd(164)
-Info (10041): Inferred latch for "prev_output_code[3]" at g47_enigma.vhd(164)
-Info (10041): Inferred latch for "prev_output_code[4]" at g47_enigma.vhd(164)
+Warning (10492): VHDL Process Statement warning at g47_enigma.vhd(205): signal "stecker_output_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at g47_enigma.vhd(194): inferring latch(es) for signal or variable "output_code", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "output_code[0]" at g47_enigma.vhd(194)
+Info (10041): Inferred latch for "output_code[1]" at g47_enigma.vhd(194)
+Info (10041): Inferred latch for "output_code[2]" at g47_enigma.vhd(194)
+Info (10041): Inferred latch for "output_code[3]" at g47_enigma.vhd(194)
+Info (10041): Inferred latch for "output_code[4]" at g47_enigma.vhd(194)
 Info (12128): Elaborating entity "g47_5_comp" for hierarchy "g47_enigma:ENIGMA|g47_5_comp:COMP_MIDDLE"
 Info (12128): Elaborating entity "g47_fsm" for hierarchy "g47_enigma:ENIGMA|g47_fsm:FSM"
 Info (12128): Elaborating entity "g47_reflector" for hierarchy "g47_enigma:ENIGMA|g47_reflector:REFLECTOR"
 Info (12128): Elaborating entity "g47_rotor" for hierarchy "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT"
 Info (12128): Elaborating entity "g47_0_25_counter" for hierarchy "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_0_25_counter:ROTOR_SHIFT_COUNTER"
+Warning (10492): VHDL Process Statement warning at g47_0_25_counter.vhd(34): signal "cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "g47_5_26_decoder" for hierarchy "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_5_26_decoder:RTL_IN_LETTER"
 Info (12128): Elaborating entity "g47_26_barrelshift" for hierarchy "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_barrelshift:RTL_IN_ROTOR"
 Info (12128): Elaborating entity "g47_26_5_encoder" for hierarchy "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_26_5_encoder:RTL_IN_ENCODER"
 Info (12128): Elaborating entity "g47_permutation" for hierarchy "g47_enigma:ENIGMA|g47_rotor:ROTOR_LEFT|g47_permutation:RTL_PERMUTATION"
 Info (12128): Elaborating entity "g47_stecker" for hierarchy "g47_enigma:ENIGMA|g47_stecker:STECKER_IN"
-Info (12128): Elaborating entity "g47_7_segmentdecoder" for hierarchy "g47_7_segmentdecoder:DISPLAY_I"
-Warning (13012): Latch g47_enigma:ENIGMA|state[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal g47_enigma:ENIGMA|state[1]
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "keypress_enable" is converted into an equivalent circuit using register "keypress_enable~_emulated" and latch "keypress_enable~1"
-    Warning (13310): Register "state[1]" is converted into an equivalent circuit using register "state[1]~_emulated" and latch "state[1]~1"
-    Warning (13310): Register "state[0]" is converted into an equivalent circuit using register "state[0]~_emulated" and latch "state[0]~6"
-    Warning (13310): Register "input_enable" is converted into an equivalent circuit using register "input_enable~_emulated" and latch "input_enable~1"
-    Warning (13310): Register "g47_enigma:ENIGMA|g47_fsm:FSM|load" is converted into an equivalent circuit using register "g47_enigma:ENIGMA|g47_fsm:FSM|load~_emulated" and latch "g47_enigma:ENIGMA|g47_fsm:FSM|load~1"
-    Warning (13310): Register "g47_enigma:ENIGMA|g47_fsm:FSM|en_r" is converted into an equivalent circuit using register "g47_enigma:ENIGMA|g47_fsm:FSM|en_r~_emulated" and latch "g47_enigma:ENIGMA|g47_fsm:FSM|en_r~1"
-    Warning (13310): Register "g47_enigma:ENIGMA|g47_fsm:FSM|en_m" is converted into an equivalent circuit using register "g47_enigma:ENIGMA|g47_fsm:FSM|en_m~_emulated" and latch "g47_enigma:ENIGMA|g47_fsm:FSM|en_m~1"
-    Warning (13310): Register "g47_enigma:ENIGMA|g47_fsm:FSM|en_l" is converted into an equivalent circuit using register "g47_enigma:ENIGMA|g47_fsm:FSM|en_l~_emulated" and latch "g47_enigma:ENIGMA|g47_fsm:FSM|en_l~1"
-    Warning (13310): Register "g47_enigma:ENIGMA|g47_fsm:FSM|state[1]" is converted into an equivalent circuit using register "g47_enigma:ENIGMA|g47_fsm:FSM|state[1]~_emulated" and latch "g47_enigma:ENIGMA|g47_fsm:FSM|state[1]~1"
-    Warning (13310): Register "g47_enigma:ENIGMA|g47_fsm:FSM|state[0]" is converted into an equivalent circuit using register "g47_enigma:ENIGMA|g47_fsm:FSM|state[0]~_emulated" and latch "g47_enigma:ENIGMA|g47_fsm:FSM|state[0]~6"
+Info (12128): Elaborating entity "g47_hex_display" for hierarchy "g47_hex_display:HEX_3"
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led_error[0]" is stuck at GND
     Warning (13410): Pin "led_error[1]" is stuck at GND
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register hold will power up to High
-    Critical Warning (18010): Register g47_enigma:ENIGMA|g47_fsm:FSM|hold will power up to High
+    Warning (13410): Pin "led_error[2]" is stuck at GND
+    Warning (13410): Pin "led_error[3]" is stuck at GND
+    Warning (13410): Pin "led_error[4]" is stuck at GND
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5884 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 5838 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 523 megabytes
-    Info: Processing ended: Fri Apr 08 13:14:28 2016
-    Info: Elapsed time: 00:01:48
-    Info: Total CPU time (on all processors): 00:01:46
+Info (21057): Implemented 5839 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 38 output pins
+    Info (21061): Implemented 5787 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 537 megabytes
+    Info: Processing ended: Fri Apr 08 22:38:53 2016
+    Info: Elapsed time: 00:01:51
+    Info: Total CPU time (on all processors): 00:01:50
 
 
