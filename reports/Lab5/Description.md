@@ -26,3 +26,8 @@ The UI relies mostly on the hex displays to inform the user what is currently be
 
 In order to test our design, we first performed a functional simulation of our enigma machine. We tested every letter of the alphabet with certain input conditions and made sure that the decrypted output was correct. Once our UI was completed, we performed several tests by setting specific initial conditions, choosing a message code, and encrypting a small message.
 
+# Conclusion
+
+One major issue that arose with an early design was the handling of keypress events. Our early implementation of a Finite State Machine (FSM) was flawed, which led to poor implementations of other keypress handlers. Unfortunately, it was difficult to pin down this issue, since the keypress seemed to be working properly, but would cause our enigma machine to end up in undefined states. In one such state, the keypress signal was constantly asserted, so nothing productive could be done. Once we determined the root of the issue, we solved it by cleaning up our keypress handler implementation.
+
+A possible improvement to our system, would be to plug in a rudimentary (26 key) keyboard and implement a buffer to make it easier to encrypt and decrypt messages.
