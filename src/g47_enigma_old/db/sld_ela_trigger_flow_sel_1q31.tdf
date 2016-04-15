@@ -1,5 +1,5 @@
 --sld_ela_trigger_flow_sel CONDITION_WIDTH=1 POST_FILL_COUNT_WIDTH=7 RESOURCE_WIDTH=1 STATE_WIDTH=2 TRIGGER_FLOW_ENTITY_NAME="sld_reserved_g47_enigma_auto_signaltap_0_flow_mgr_c90c" acq_clk condition_met config_clk config_enable config_in config_out current_resource_value current_state final_trigger post_fill_count reset segment_trigger start_acq use_post_fill_count
---VERSION_BEGIN 13.0 cbx_mgl 2013:06:12:18:05:10:SJ cbx_sld_ela_trigger_flow_sel 2013:06:12:18:03:43:SJ  VERSION_END
+--VERSION_BEGIN 13.0 cbx_mgl 2013:06:12:18:04:42:SJ cbx_sld_ela_trigger_flow_sel 2013:06:12:18:03:40:SJ  VERSION_END
 
 
 -- Copyright (C) 1991-2013 Altera Corporation

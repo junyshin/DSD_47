@@ -1,0 +1,165 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity g47_rotor is
+  port (
+    clock: in std_logic;
+    -- inner rotor
+    reset: in std_logic;
+    enable: in std_logic;
+    load: in std_logic;
+    data: in std_logic_vector(4 downto 0);
+    -- ring
+    ring_shift: in std_logic_vector(4 downto 0);
+    -- rotor type
+    rotor_type: in std_logic_vector(1 downto 0);
+    -- signal
+    right_code: in std_logic_vector(4 downto 0);
+    left_code: in std_logic_vector(4 downto 0);
+    output_code: out std_logic_vector(4 downto 0)
+  ) ;
+end entity ; -- g47_rotor
+
+architecture arch of g47_rotor is
+  -- Components
+  component g47_0_25_counter
+    port (
+      clock: in std_logic;
+      reset: in std_logic;
+      enable: in std_logic;
+      count: out std_logic_vector(4 downto 0);
+      --
+      load: in std_logic;
+      data: in std_logic_vector(4 downto 0)
+    ) ;
+  end component;
+  component g47_5_26_decoder
+    port (
+      index: in std_logic_vector(4 downto 0);
+      letter: out std_logic_vector(25 downto 0);
+      error: out std_logic
+    ) ;
+  end component;
+  component g47_26_5_encoder
+    port (
+      letter: in std_logic_vector(25 downto 0);
+      index: out std_logic_vector(4 downto 0);
+      error: out std_logic
+    ) ;
+  end component;
+  component g47_barrelshift
+    port (
+      direction: in std_logic;
+      X: in std_logic_vector(25 downto 0);
+      shift: in std_logic_vector(4 downto 0);
+      Y: out std_logic_vector(25 downto 0)
+    ) ;
+  end component;
+  component g47_permutation
+    port (
+      rotor_type: in std_logic_vector(1 downto 0);
+      input_code: in std_logic_vector(4 downto 0);
+      output_code: out std_logic_vector(4 downto 0);
+      inv_output_code: out std_logic_vector(4 downto 0)
+    ) ;
+  end component;
+
+  -- Constants
+  constant direction_0 : std_logic := '0';
+  constant direction_1 : std_logic := '1';
+  constant direction_2 : std_logic := '0';
+  constant direction_3 : std_logic := '1';
+
+  -- Variables
+  signal error_decode_i, error_decode_o,
+         error_encode_i, error_encode_o
+    : std_logic;
+  signal rotor_shift, in_value, out_value : std_logic_vector(4 downto 0);
+  signal input_letter, output_letter,
+         in_rotor_letter, in_ring_letter,
+         out_rotor_letter, out_ring_letter
+    : std_logic_vector(25 downto 0);
+begin
+  ROTOR_SHIFT : g47_0_25_counter;
+    port map(clock => clock, reset => reset, enable => enable,
+             load => load, data => data,
+             count => rotor_shift);
+
+  -- RIGHT PATH
+
+  INPUT_LETTER : g47_5_26_decoder
+    port map(index => input_code, letter => input_letter, error => error_decode_i);
+
+  IN_ROTOR : g47_barrelshift
+    port map(direction => direction_0, shift => rotor_shift,
+             X => input_letter,
+             Y => in_rotor_letter);
+
+  IN_RING : g47_barrelshift
+    port map(direction => direction_1, shift => ring_shift,
+             X => in_rotor_letter,
+             Y => in_ring_letter);
+
+  IN_ENCODER : g47_26_5_encoder
+    port map(letter => in_ring_letter, index => in_value, error => error_encode_i);
+
+  PERMUTATION : g47_permutation
+    port map(rotor_type => rotor_type,
+             input_code => in_value,
+             output_code => out_value);
+
+  OUT_DECODER : g47_5_26_decoder
+    port map(index => out_value, letter => out_ring_letter, error => error_decode_o);
+
+  OUT_RING : g47_barrelshift
+    port map(direction => direction_2, shift => ring_shift,
+             X => out_ring_letter,
+             Y => out_rotor_letter);
+
+  OUT_ROTOR : g47_barrelshift
+    port map(direction => direction_3, shift => rotor_shift,
+             X => out_rotor_letter,
+             Y => output_letter);
+
+  OUTPUT_VALUE : g47_26_5_encoder
+    port map(letter => output_letter, index => output_code, error => error_encode_o);
+
+  -- LEFT PATH
+
+  INPUT_LETTER : g47_5_26_decoder
+    port map(index => , letter => , error => );
+
+  IN_ROTOR : g47_barrelshift
+    port map(direction => , shift => ,
+             X => ,
+             Y => );
+
+  IN_RING : g47_barrelshift
+    port map(direction => , shift => ,
+             X => ,
+             Y => );
+
+  IN_ENCODER : g47_26_5_encoder
+    port map(letter => , index => , error => );
+
+  PERMUTATION : g47_permutation
+    port map(rotor_type => ,
+             input_code => ,
+             output_code => , inv_output_code => );
+
+  OUT_DECODER : g47_5_26_decoder
+    port map(index => , letter => , error => );
+
+  OUT_RING : g47_barrelshift
+    port map(direction => , shift => ,
+             X => ,
+             Y => );
+
+  OUT_ROTOR : g47_barrelshift
+    port map(direction => , shift => ,
+             X => ,
+             Y => );
+
+  OUTPUT_VALUE : g47_26_5_encoder
+    port map(letter => , index => , error => );
+end architecture ; -- arch

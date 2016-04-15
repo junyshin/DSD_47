@@ -121,6 +121,8 @@ BEGIN
   -- reflector
   reflector_type <= '0';
   wait for 10 ns;
+  init <= '0';
+  wait for 10 ns;
   for i in 0 to 25 loop
     -- read input
     input_code <= std_logic_vector(to_unsigned(i, 5));
@@ -162,7 +164,6 @@ BEGIN
     wait for 10 ns;
     clock <= '0';
     wait for 10 ns;
-    init <= '1';
     clock <= '1';
     wait for 10 ns;
     clock <= '0';

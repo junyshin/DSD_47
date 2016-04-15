@@ -1,6 +1,6 @@
 EDA Netlist Writer report for g47_enigma
-Thu Apr 07 13:18:37 2016
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Apr 15 16:01:40 2016
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Apr 07 13:18:37 2016 ;
+; EDA Netlist Writer Status ; Successful - Fri Apr 15 16:01:40 2016 ;
 ; Revision Name             ; g47_enigma                            ;
 ; Top-level Entity Name     ; g47_ui                                ;
 ; Family                    ; Cyclone II                            ;
@@ -66,31 +66,31 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-------------------------------------------------------------------+
-; Simulation Generated Files                                        ;
-+-------------------------------------------------------------------+
-; Generated Files                                                   ;
-+-------------------------------------------------------------------+
-; Y:/DSD/src/g47_enigma/simulation/modelsim/g47_enigma.vho          ;
-; Y:/DSD/src/g47_enigma/simulation/modelsim/g47_enigma_fast.vho     ;
-; Y:/DSD/src/g47_enigma/simulation/modelsim/g47_enigma_vhd.sdo      ;
-; Y:/DSD/src/g47_enigma/simulation/modelsim/g47_enigma_vhd_fast.sdo ;
-+-------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                 ;
++--------------------------------------------------------------------------------------------+
+; Generated Files                                                                            ;
++--------------------------------------------------------------------------------------------+
+; Z:/Documents/DSD_LAB/DSD_47/src/g47_enigma_old/simulation/modelsim/g47_enigma.vho          ;
+; Z:/Documents/DSD_LAB/DSD_47/src/g47_enigma_old/simulation/modelsim/g47_enigma_fast.vho     ;
+; Z:/Documents/DSD_LAB/DSD_47/src/g47_enigma_old/simulation/modelsim/g47_enigma_vhd.sdo      ;
+; Z:/Documents/DSD_LAB/DSD_47/src/g47_enigma_old/simulation/modelsim/g47_enigma_vhd_fast.sdo ;
++--------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit EDA Netlist Writer
+Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Apr 07 13:18:31 2016
+    Info: Processing started: Fri Apr 15 16:01:27 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off g47_enigma -c g47_enigma
-Info (204026): Generated files "g47_enigma.vho", "g47_enigma_fast.vho", "g47_enigma_vhd.sdo" and "g47_enigma_vhd_fast.sdo" in directory "Y:/DSD/src/g47_enigma/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 473 megabytes
-    Info: Processing ended: Thu Apr 07 13:18:37 2016
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+Info (204026): Generated files "g47_enigma.vho", "g47_enigma_fast.vho", "g47_enigma_vhd.sdo" and "g47_enigma_vhd_fast.sdo" in directory "Z:/Documents/DSD_LAB/DSD_47/src/g47_enigma_old/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 378 megabytes
+    Info: Processing ended: Fri Apr 15 16:01:41 2016
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:10
 
 
