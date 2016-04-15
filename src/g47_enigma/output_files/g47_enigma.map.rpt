@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g47_enigma
-Fri Apr 08 22:38:53 2016
+Sat Apr 09 13:24:01 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -70,7 +70,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 08 22:38:53 2016           ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 09 13:24:01 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; g47_enigma                                      ;
 ; Top-level Entity Name              ; g47_ui                                          ;
@@ -694,7 +694,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:46     ;
+; Top            ; 00:01:45     ;
 +----------------+--------------+
 
 
@@ -704,7 +704,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 08 22:37:02 2016
+    Info: Processing started: Sat Apr 09 13:22:11 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g47_enigma -c g47_enigma
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file g47_hex_display.vhd
@@ -783,9 +783,9 @@ Info (21057): Implemented 5839 device resources after synthesis - the final reso
     Info (21059): Implemented 38 output pins
     Info (21061): Implemented 5787 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 537 megabytes
-    Info: Processing ended: Fri Apr 08 22:38:53 2016
-    Info: Elapsed time: 00:01:51
-    Info: Total CPU time (on all processors): 00:01:50
+    Info: Peak virtual memory: 543 megabytes
+    Info: Processing ended: Sat Apr 09 13:24:01 2016
+    Info: Elapsed time: 00:01:50
+    Info: Total CPU time (on all processors): 00:01:48
 
 

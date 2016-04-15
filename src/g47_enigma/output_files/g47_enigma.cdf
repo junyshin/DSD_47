@@ -4,10 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("Y:/DSD/src/g47_enigma/output_files/") File("g47_enigma.sof") MfrSpec(OpMask(1));
+		Device PartName(EPCS4) Path("Y:/DSD/src/g47_enigma/output_files/") File("g47_enigma.pof") MfrSpec(OpMask(3) Child_OpMask(1 3));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(JTAG);
+	ChainType(asc);
 AlteraEnd;
