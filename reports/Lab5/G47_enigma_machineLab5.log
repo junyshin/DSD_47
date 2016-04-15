@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 APR 2016 23:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 APR 2016 10:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -445,14 +445,14 @@ Package pdftex.def Info: ./enigma_machine_BD.png used on input line 24.
 File: ./rotor_encryption.png Graphic file (type png)
 
 <use ./rotor_encryption.png>
-Package pdftex.def Info: ./rotor_encryption.png used on input line 32.
+Package pdftex.def Info: ./rotor_encryption.png used on input line 31.
 (pdftex.def)             Requested size: 350.33727pt x 78.4561pt.
 
 <./reflector_encryption.png, id=22, 723.70375pt x 79.29625pt>
 File: ./reflector_encryption.png Graphic file (type png)
 
 <use ./reflector_encryption.png>
-Package pdftex.def Info: ./reflector_encryption.png used on input line 39.
+Package pdftex.def Info: ./reflector_encryption.png used on input line 38.
 (pdftex.def)             Requested size: 350.33727pt x 38.38602pt.
  [1
 
@@ -477,14 +477,14 @@ Here is how much of TeX's memory you used:
  10438 multiletter control sequences out of 15000+600000
  10888 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,6n,32p,1170b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,6n,32p,1169b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on G47_enigma_machineLab5.pdf (2 pages, 165831 bytes).
+Output written on G47_enigma_machineLab5.pdf (2 pages, 165826 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream
