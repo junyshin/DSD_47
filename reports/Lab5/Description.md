@@ -1,6 +1,6 @@
 # System Features
 
-
+The enigma machine is a system that encrypts messages.[idk what to put here]
 
 # System description
 
@@ -23,3 +23,6 @@ The UI uses switches as the primary input source, alongside two push-buttons. Fo
 The UI relies mostly on the hex displays to inform the user what is currently being done. No matter what operation mode we're in, we use Hex 0 and 1 to display the current input value. During initialization, Hex 2 and 3 are used to display the system's current value. During encryption, these displays instead display the encrypted value (after the keypress). Finally, since pushbutton debouncing is tricky, we use the green LED 0-4 to display the number of times the button has been pressed (modulus 26).
 
 # Testing
+
+In order to test our design, we first performed a functional simulation of our enigma machine. We tested every letter of the alphabet with certain input conditions and made sure that the decrypted output was correct. Once our UI was completed, we performed several tests by setting specific initial conditions, choosing a message code, and encrypting a small message.
+
