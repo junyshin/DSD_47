@@ -77,22 +77,24 @@ Finally, the output of the last rotor is passed to a reflector circuit which is 
     \caption{Encryption pattern for the reflector.}
     \label{fig:reflector_encryption}
 \end{figure}
+\newline
 The output of the reflector is passed back through the rotors, using the inverse permutation for each rotor, and the stecker circuit. This provides our system with the final encrypted letter.
 
 \section{User Interface}
 In order to provide a simple User Interface (UI) to an end user, we decided to use a simple combination components for input and output. You can see the layout of the control on the Altera board on the figure \ref{fig:Altera_ui}.\\
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.7\textwidth]{./Altera_ui.png}
+    \includegraphics[width=0.6\textwidth]{./Altera_ui.png}
     \caption{User Interface layout on the Altera Board.}
     \label{fig:Altera_ui}
 \end{figure}
+\newpage
 The UI uses switches as the primary input source, alongside two push-buttons. For the Enigma machine, there are two main modes of operation: initialization and encryption. Therefore, it made sense to assign Switch $SW9$ to control the mode of operation. While initializing the machine we have a total of 10 settings to determine: 3 settings per rotor as well as the reflector type. We decided to use Switches $SW7$ and $SW8$ to control which component we were setting (right, middle, left, or reflector). The setting being changed was determined by Switches $SW5$ and $SW6$, depending on the type of component we were changing. For the Rotors, binary values 0-2 are used for each initial setting. The reflector, on the other hand, ignores the setting type since it only has one setting. The last 5 Switches $SW4$ to $SW0$ are used to indicate input values. In order to simulate a keypress, we use Pushbutton $KEY0$ as a validation button for the current input setting. Lastly, we use Pushbutton $KEY3$ as an asynchronous circuit reset.\\
 
 The UI relies mostly on the hex displays to inform the user what is currently being done. No matter what operation mode we're in, we use Hex 0 and 1 to display the current input value. During initialization, Hex 2 and 3 are used to display the system's current value. During encryption, these displays instead display the encrypted value (after the keypress). Finally, since pushbutton debouncing is tricky, we use the green LED 0-4 to display the number of times the button has been pressed (modulus 26).\\
 
 \section{Testing of the Enigma machine}
-In laboratory 5, we had to create a stecker, a reflector, and a rotor. These components are a very important part of the enigma machine, as you can see from the figure \ref{fig:enigma_machine_BD}. After writing the g47\_stecker.vhdl and the g47\_reflector.vhdl, we tested the circuit to make sure it is working as it should. In the figure \ref{fig:stecker_test} we can see the input and the output of stecker. In the figure \ref{fig:refector_0_test} and figure \ref{fig:refector_1_test}.
+In laboratory 5, we had to create a stecker, a reflector, and a rotor. These components are a very important part of the enigma machine, as you can see from the figure \ref{fig:enigma_machine_BD}. After writing the g47\_stecker.vhdl and the g47\_reflector.vhdl, we tested the circuit to make sure it is working as it should. In the figure \ref{fig:stecker_test} we can see the input and the output of stecker. In the figure \ref{fig:refector_0_test} and figure \ref{fig:refector_1_test}.\\
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1\textwidth]{./stecker_test.png}
@@ -111,7 +113,9 @@ In laboratory 5, we had to create a stecker, a reflector, and a rotor. These com
     \caption{The tested output and input of the reflector at type 1.}
     \label{fig:refector_1_test}
 \end{figure}
+\newline
 Knowing that the stecker and reflector function as intended, we completed the design of the enigma machine as seen in figure \ref{fig:Enigma_machine_sch}.\\
+
 In order to test our design, we first performed a functional simulation of our enigma machine. We tested every letter of the alphabet with certain input conditions and made sure that the decrypted output was correct. Additionally, once our UI was completed, we performed several tests by setting specific initial conditions, choosing a message code, and encrypting a small message.
 \begin{figure}[!htb]
     \centering
@@ -120,10 +124,11 @@ In order to test our design, we first performed a functional simulation of our e
     \label{fig:enigma_machine_test}
 \end{figure}
 In the figure \ref{fig:enigma_machine_test}, we tested the circuit by setting all the rotor type II, the initial position to be at $'A'$ and the ring setting to be at $'A'$ for each rotor. The reflector was set to type $'0'$. The rest of the rtl\_input\_code, rtl\_output\_code, ltr\_input\_code and ltr\_output\_code are the input and output of each rotor. The pins can be viewed on the figure \ref{fig:rotor_layout}. We can see from the test on figure \ref{fig:enigma_machine_test} that at every key press, the machine accepts the input letter and output the encrypted letter accordingly.\\
+\newpage
 For the timing of the enigma machine, we get $"$Fast Model Hold Slack Value$"$ of 0.215, a $"$Slow Model Setup Slack Value$"$ of -1.616 and $"$Slow Model Fmax$"$ of 43.04MHz. The negative slow model setup slack is noticed on the board when testing it as the initiation problem at first. To resolve the issue, we need to set initialization switch to high and then back to low to fix the issue.
 
 \section{Full test on the Altera's FPGA board}
-As shown in figure \ref{fig:Altera_ui}, we used all the available switches to be able to set the initial setting of each rotor and the reflector. To test if our UI works perfectly on our system, we test input characters. We will be using the letter $"$A, B, C, D and E$"$ in order. First we set every to $'0'$. The output that we get from the board is $"$K, Y, X, U and N$"$. If we input the value in order, we get $"$A, B, C, D and E$"$ and this can be seen in figure \ref{fig:letter_encrypt} and figure \ref{fig:encrypt_letter}.
+As shown in figure \ref{fig:Altera_ui}, we used all the available switches to be able to set the initial setting of each rotor and the reflector. To test if our UI works perfectly on our system, we test input characters. We will be using the letter $"$A, B, C, D and E$"$ in order. First we set every to $'0'$. The output that we get from the board is $"$K, Y, X, U and N$"$. If we input the value in order, we get $"$A, B, C, D and E$"$ and this can be seen in figure \ref{fig:letter_encrypt} and figure \ref{fig:encrypt_letter}.\\
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1\textwidth]{./letter_encrypt.png}
@@ -136,10 +141,14 @@ As shown in figure \ref{fig:Altera_ui}, we used all the available switches to be
     \caption{Encrypted input to Decrypted output (Right is the input / left is the output)}
     \label{fig:encrypt_letter}
 \end{figure}
+\newline
+
 As you can see, the enigma machine works as intended. We also test it by changing the initial conditions. The second test is done by setting reflector to $'1'$ and the middle rotor's ring shifted by 10. With the same input, we get an output of $"$M, P, O, W and X$"$. When the encrypted output in put back to the enigma machine, we get an output of $"$A, B, C, D and E$"$. This concludes that the the UI and enigma machine are both working perfectly.
 
 \section{Conclusion}
+One major issue that arose with an early design was the handling of keypress events. Our early implementation of a Finite State Machine (FSM) was flawed, which led to poor implementations of other keypress handlers. Unfortunately, it was difficult to pin down this issue, since the keypress seemed to be working properly, but would cause our enigma machine to end up in undefined states. In one such state, the keypress signal was constantly asserted, so nothing productive could be done. Once we determined the root of the issue, we solved it by cleaning up our keypress handler implementation.\\
 
+A possible improvement to our system, would be to plug in a rudimentary (26 key) keyboard and implement a buffer to make it easier to encrypt and decrypt messages.
 
 
 \end{document}

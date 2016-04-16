@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 APR 2016 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 APR 2016 20:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,16 +490,16 @@ Package pdftex.def Info: ./reflector_encryption.png used on input line 76.
 <./Altera_ui.png, id=66, 4015.0pt x 2276.505pt>
 File: ./Altera_ui.png Graphic file (type png)
  <use ./Altera_ui.png>
-Package pdftex.def Info: ./Altera_ui.png used on input line 86.
-(pdftex.def)             Requested size: 350.33727pt x 198.62402pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--91
+Package pdftex.def Info: ./Altera_ui.png used on input line 87.
+(pdftex.def)             Requested size: 300.29344pt x 170.24419pt.
+ [3 <./rotor_encryption.png> <./reflector_layout.png> <./reflector_encryption.p
+ng> <./Altera_ui.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-[3 <./rotor_encryption.png> <./reflector_layout.png> <./reflector_encryption.pn
-g> <./Altera_ui.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
@@ -507,72 +507,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 File: ./stecker_test.png Graphic file (type png)
 
 <use ./stecker_test.png>
-Package pdftex.def Info: ./stecker_test.png used on input line 98.
+Package pdftex.def Info: ./stecker_test.png used on input line 100.
 (pdftex.def)             Requested size: 500.484pt x 20.95085pt.
 
 <./refector_0_test.png, id=82, 1240.635pt x 59.22125pt>
 File: ./refector_0_test.png Graphic file (type png)
 
 <use ./refector_0_test.png>
-Package pdftex.def Info: ./refector_0_test.png used on input line 104.
+Package pdftex.def Info: ./refector_0_test.png used on input line 106.
 (pdftex.def)             Requested size: 500.484pt x 23.89049pt.
 
 <./refector_1_test.png, id=83, 1137.24875pt x 63.23625pt>
 File: ./refector_1_test.png Graphic file (type png)
 
 <use ./refector_1_test.png>
-Package pdftex.def Info: ./refector_1_test.png used on input line 110.
+Package pdftex.def Info: ./refector_1_test.png used on input line 112.
 (pdftex.def)             Requested size: 500.484pt x 27.82982pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--118
+
+ []
 
 <./enigma_machine_test.png, id=85, 1314.9125pt x 317.185pt>
 File: ./enigma_machine_test.png Graphic file (type png)
 
 <use ./enigma_machine_test.png>
-Package pdftex.def Info: ./enigma_machine_test.png used on input line 118.
+Package pdftex.def Info: ./enigma_machine_test.png used on input line 122.
 (pdftex.def)             Requested size: 500.484pt x 120.72513pt.
- [4 <./stecker_test.png> <./refector_0_test.png> <./refector_1_test.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--127
+
+ []
+
+[4 <./stecker_test.png> <./refector_0_test.png> <./refector_1_test.png>]
 <./letter_encrypt.png, id=105, 1018.80624pt x 120.45pt>
 File: ./letter_encrypt.png Graphic file (type png)
 
 <use ./letter_encrypt.png>
-Package pdftex.def Info: ./letter_encrypt.png used on input line 129.
+Package pdftex.def Info: ./letter_encrypt.png used on input line 134.
 (pdftex.def)             Requested size: 500.484pt x 59.1717pt.
 
 <./encrypt_letter.png, id=106, 989.6975pt x 116.435pt>
 File: ./encrypt_letter.png Graphic file (type png)
 
 <use ./encrypt_letter.png>
-Package pdftex.def Info: ./encrypt_letter.png used on input line 135.
+Package pdftex.def Info: ./encrypt_letter.png used on input line 140.
 (pdftex.def)             Requested size: 500.484pt x 58.88004pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
- [5 <./enigma_machine_test.png> <./letter_encrypt.png> <./encrypt_letter.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+[5 <./enigma_machine_test.png> <./letter_encrypt.png> <./encrypt_letter.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (./G47_enigma_machineLab5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 145.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
 Package rerunfilecheck Info: File `G47_enigma_machineLab5.out' has not changed.
 
 (rerunfilecheck)             Checksum: 980846A42377169AD46C373154A51931;342.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 145.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  ) 
 Here is how much of TeX's memory you used:
- 7122 strings out of 493089
- 105017 string characters out of 6134842
+ 7123 strings out of 493089
+ 105023 string characters out of 6134842
  199605 words of memory out of 5000000
  10496 multiletter control sequences out of 15000+600000
  10888 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,6n,32p,1169b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,6n,32p,1166b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on G47_enigma_machineLab5.pdf (5 pages, 21170566 bytes).
+Output written on G47_enigma_machineLab5.pdf (6 pages, 21181551 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 149 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
