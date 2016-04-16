@@ -42,14 +42,20 @@ The Enigma Machine is a complex cipher machine that requires many components to 
     \label{fig:Enigma_machine_sch}
 \end{figure}
 \newline
-First, the input letter passes through a stecker circuit seen in figure \ref{fig:stecker_layout}, which adds an additional scrambling step by exchanging each letter with precisely one other letter. While the Stecker circuit implemented in the original Enigma machine was a plugboard that could change which letters were connected, our machine simply hardcodes these values.\\
+First, the input letter passes through a stecker circuit seen in figure \ref{fig:stecker_layout}, which adds an additional scrambling step by exchanging each letter with precisely one other letter. While the Stecker circuit implemented in the original Enigma machine was a plugboard that could change which letters were connected, our machine simply hardcodes these values. The pattern is shown in figure \ref{fig:stecker_encryption}. The layout the stecker is also shown in figure \ref{fig:stecker_layout}.\\
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.3\textwidth]{./stecker_layout.png}
+    \includegraphics[width=1\textwidth]{./stecker_encryption.png}
+    \caption{The encryption of the stecker.}
+    \label{fig:stecker_encryption}
+\end{figure}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{./stecker_layout.png}
     \caption{The layout of the stecker.}
     \label{fig:stecker_layout}
 \end{figure}
-
+\newline
 Next, the stecker output letter is passed, right to left, through a series of 3 rotors represented in figure \ref{fig:Enigma_machine_sch}. Each rotor has 3 initial settings: the type, the ring setting, and the initial position. Internally, the rotor has an inner core that implements a permutation (based on the rotor type). Depending on the position of the rotor, the rotor input is barrel shifted rightwards before applying that permutation. Additionally, each rotor also has a ring which also shifts the input (leftwards) before the permutation (this happens after the positional shift). After the permutation, the letter is shifted again by the ring and position shift amounts, first by the ring and then by the position (opposite to previous direction). The rotor permutations are shown in figure \ref{fig:rotor_encryption}, corresponding to the rotor type.
 \begin{figure}[!htb]
     \centering
@@ -94,7 +100,7 @@ The UI uses switches as the primary input source, alongside two push-buttons. Fo
 The UI relies mostly on the hex displays to inform the user what is currently being done. No matter what operation mode we're in, we use Hex 0 and 1 to display the current input value. During initialization, Hex 2 and 3 are used to display the system's current value. During encryption, these displays instead display the encrypted value (after the keypress). Finally, since pushbutton debouncing is tricky, we use the green LED 0-4 to display the number of times the button has been pressed (modulus 26).\\
 
 \section{Testing of the Enigma machine}
-In laboratory 5, we had to create a stecker, a reflector, and a rotor. These components are a very important part of the enigma machine, as you can see from the figure \ref{fig:enigma_machine_BD}. After writing the g47\_stecker.vhdl and the g47\_reflector.vhdl, we tested the circuit to make sure it is working as it should. In the figure \ref{fig:stecker_test} we can see the input and the output of stecker. In the figure \ref{fig:refector_0_test} and figure \ref{fig:refector_1_test}.\\
+In laboratory 5, we had to create a stecker, a reflector, and a rotor. These components are a very important part of the enigma machine, as you can see from the figure \ref{fig:enigma_machine_BD}. After writing the g47\_stecker.vhdl and the g47\_reflector.vhdl, we tested the circuit to make sure it is working as it should. In the figure \ref{fig:stecker_test} we can see the input and the output of stecker. In the figure \ref{fig:refector_0_test} and figure \ref{fig:refector_1_test}, you can see the input and output of the reflector according to the reflector types.\\
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1\textwidth]{./stecker_test.png}
@@ -113,31 +119,32 @@ In laboratory 5, we had to create a stecker, a reflector, and a rotor. These com
     \caption{The tested output and input of the reflector at type 1.}
     \label{fig:refector_1_test}
 \end{figure}
-\newline
+\newpage
 Knowing that the stecker and reflector function as intended, we completed the design of the enigma machine as seen in figure \ref{fig:Enigma_machine_sch}.\\
 
-In order to test our design, we first performed a functional simulation of our enigma machine. We tested every letter of the alphabet with certain input conditions and made sure that the decrypted output was correct. Additionally, once our UI was completed, we performed several tests by setting specific initial conditions, choosing a message code, and encrypting a small message.
+In order to test our design, we first performed a functional simulation of our enigma machine. We tested every letter of the alphabet with certain input conditions and made sure that the decrypted output was correct. Additionally, once our UI was completed, we performed several tests by setting specific initial conditions, choosing a message code, and encrypting a small message.\\
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1\textwidth]{./enigma_machine_test.png}
     \caption{The tested output and input of the enigma machine.}
     \label{fig:enigma_machine_test}
 \end{figure}
+\newline
 In the figure \ref{fig:enigma_machine_test}, we tested the circuit by setting all the rotor type II, the initial position to be at $'A'$ and the ring setting to be at $'A'$ for each rotor. The reflector was set to type $'0'$. The rest of the rtl\_input\_code, rtl\_output\_code, ltr\_input\_code and ltr\_output\_code are the input and output of each rotor. The pins can be viewed on the figure \ref{fig:rotor_layout}. We can see from the test on figure \ref{fig:enigma_machine_test} that at every key press, the machine accepts the input letter and output the encrypted letter accordingly.\\
-\newpage
+
 For the timing of the enigma machine, we get $"$Fast Model Hold Slack Value$"$ of 0.215, a $"$Slow Model Setup Slack Value$"$ of -1.616 and $"$Slow Model Fmax$"$ of 43.04MHz. The negative slow model setup slack is noticed on the board when testing it as the initiation problem at first. To resolve the issue, we need to set initialization switch to high and then back to low to fix the issue.
 
 \section{Full test on the Altera's FPGA board}
 As shown in figure \ref{fig:Altera_ui}, we used all the available switches to be able to set the initial setting of each rotor and the reflector. To test if our UI works perfectly on our system, we test input characters. We will be using the letter $"$A, B, C, D and E$"$ in order. First we set every to $'0'$. The output that we get from the board is $"$K, Y, X, U and N$"$. If we input the value in order, we get $"$A, B, C, D and E$"$ and this can be seen in figure \ref{fig:letter_encrypt} and figure \ref{fig:encrypt_letter}.\\
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=1\textwidth]{./letter_encrypt.png}
+    \includegraphics[width=0.7\textwidth]{./letter_encrypt.png}
     \caption{Input Letter to Encrypted output (Right is the input / left is the output)}
     \label{fig:letter_encrypt}
 \end{figure}
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=1\textwidth]{./encrypt_letter.png}
+    \includegraphics[width=0.7\textwidth]{./encrypt_letter.png}
     \caption{Encrypted input to Decrypted output (Right is the input / left is the output)}
     \label{fig:encrypt_letter}
 \end{figure}

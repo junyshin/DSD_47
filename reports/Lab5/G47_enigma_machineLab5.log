@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 APR 2016 20:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 APR 2016 22:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,139 +448,144 @@ File: ./Enigma_machine_sch.png Graphic file (type png)
 Package pdftex.def Info: ./Enigma_machine_sch.png used on input line 40.
 (pdftex.def)             Requested size: 500.484pt x 199.1776pt.
 
-<./stecker_layout.png, id=34, 453.695pt x 154.5775pt>
+<./stecker_encryption.png, id=36, 850.17625pt x 36.135pt>
+File: ./stecker_encryption.png Graphic file (type png)
+
+<use ./stecker_encryption.png>
+Package pdftex.def Info: ./stecker_encryption.png used on input line 48.
+(pdftex.def)             Requested size: 500.484pt x 21.27202pt.
+
+<./stecker_layout.png, id=37, 453.695pt x 154.5775pt>
 File: ./stecker_layout.png Graphic file (type png)
 
 <use ./stecker_layout.png>
-Package pdftex.def Info: ./stecker_layout.png used on input line 48.
-(pdftex.def)             Requested size: 150.14671pt x 51.1546pt.
+Package pdftex.def Info: ./stecker_layout.png used on input line 54.
+(pdftex.def)             Requested size: 200.19054pt x 68.20535pt.
+
+<./rotor_layout.png, id=40, 512.91624pt x 404.51125pt>
+File: ./rotor_layout.png Graphic file (type png)
+
+<use ./rotor_layout.png>
+Package pdftex.def Info: ./rotor_layout.png used on input line 62.
+(pdftex.def)             Requested size: 150.14671pt x 118.4101pt.
+
+<./rotor_encryption.png, id=41, 712.6625pt x 159.59625pt>
+File: ./rotor_encryption.png Graphic file (type png)
+
+<use ./rotor_encryption.png>
+Package pdftex.def Info: ./rotor_encryption.png used on input line 68.
+(pdftex.def)             Requested size: 300.29344pt x 67.24913pt.
  [1
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./enigm
-a_machine_BD.png>]
-<./rotor_layout.png, id=49, 512.91624pt x 404.51125pt>
-File: ./rotor_layout.png Graphic file (type png)
-
-<use ./rotor_layout.png>
-Package pdftex.def Info: ./rotor_layout.png used on input line 56.
-(pdftex.def)             Requested size: 150.14671pt x 118.4101pt.
-
-<./rotor_encryption.png, id=50, 712.6625pt x 159.59625pt>
-File: ./rotor_encryption.png Graphic file (type png)
-
-<use ./rotor_encryption.png>
-Package pdftex.def Info: ./rotor_encryption.png used on input line 62.
-(pdftex.def)             Requested size: 300.29344pt x 67.24913pt.
- [2 <./Enigma_machine_sch.png> <./stecker_layout.png> <./rotor_layout.png>]
-<./reflector_layout.png, id=63, 451.6875pt x 153.57375pt>
+a_machine_BD.png>] [2 <./Enigma_machine_sch.png> <./stecker_encryption.png> <./
+stecker_layout.png>]
+<./reflector_layout.png, id=66, 451.6875pt x 153.57375pt>
 File: ./reflector_layout.png Graphic file (type png)
 
 <use ./reflector_layout.png>
-Package pdftex.def Info: ./reflector_layout.png used on input line 70.
+Package pdftex.def Info: ./reflector_layout.png used on input line 76.
 (pdftex.def)             Requested size: 250.24199pt x 85.08446pt.
 
-<./reflector_encryption.png, id=64, 723.70375pt x 79.29625pt>
+<./reflector_encryption.png, id=67, 723.70375pt x 79.29625pt>
 File: ./reflector_encryption.png Graphic file (type png)
 
 <use ./reflector_encryption.png>
-Package pdftex.def Info: ./reflector_encryption.png used on input line 76.
+Package pdftex.def Info: ./reflector_encryption.png used on input line 82.
 (pdftex.def)             Requested size: 250.24199pt x 27.41893pt.
 
-<./Altera_ui.png, id=66, 4015.0pt x 2276.505pt>
+<./Altera_ui.png, id=69, 4015.0pt x 2276.505pt>
 File: ./Altera_ui.png Graphic file (type png)
  <use ./Altera_ui.png>
-Package pdftex.def Info: ./Altera_ui.png used on input line 87.
+Package pdftex.def Info: ./Altera_ui.png used on input line 93.
 (pdftex.def)             Requested size: 300.29344pt x 170.24419pt.
- [3 <./rotor_encryption.png> <./reflector_layout.png> <./reflector_encryption.p
-ng> <./Altera_ui.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+ [3 <./rotor_layout.png> <./rotor_encryption.png> <./reflector_layout.png> <./r
+eflector_encryption.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-<./stecker_test.png, id=81, 1079.03125pt x 45.16875pt>
+<./stecker_test.png, id=86, 1079.03125pt x 45.16875pt>
 File: ./stecker_test.png Graphic file (type png)
 
 <use ./stecker_test.png>
-Package pdftex.def Info: ./stecker_test.png used on input line 100.
+Package pdftex.def Info: ./stecker_test.png used on input line 106.
 (pdftex.def)             Requested size: 500.484pt x 20.95085pt.
 
-<./refector_0_test.png, id=82, 1240.635pt x 59.22125pt>
+<./refector_0_test.png, id=87, 1240.635pt x 59.22125pt>
 File: ./refector_0_test.png Graphic file (type png)
 
 <use ./refector_0_test.png>
-Package pdftex.def Info: ./refector_0_test.png used on input line 106.
+Package pdftex.def Info: ./refector_0_test.png used on input line 112.
 (pdftex.def)             Requested size: 500.484pt x 23.89049pt.
 
-<./refector_1_test.png, id=83, 1137.24875pt x 63.23625pt>
+<./refector_1_test.png, id=88, 1137.24875pt x 63.23625pt>
 File: ./refector_1_test.png Graphic file (type png)
 
 <use ./refector_1_test.png>
-Package pdftex.def Info: ./refector_1_test.png used on input line 112.
+Package pdftex.def Info: ./refector_1_test.png used on input line 118.
 (pdftex.def)             Requested size: 500.484pt x 27.82982pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--118
+ [4 <./Altera_ui.png> <./stecker_test.png> <./refector_0_test.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-<./enigma_machine_test.png, id=85, 1314.9125pt x 317.185pt>
+<./enigma_machine_test.png, id=100, 1314.9125pt x 317.185pt>
 File: ./enigma_machine_test.png Graphic file (type png)
 
 <use ./enigma_machine_test.png>
-Package pdftex.def Info: ./enigma_machine_test.png used on input line 122.
+Package pdftex.def Info: ./enigma_machine_test.png used on input line 128.
 (pdftex.def)             Requested size: 500.484pt x 120.72513pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--127
+Underfull \hbox (badness 10000) in paragraph at lines 125--134
 
  []
 
-[4 <./stecker_test.png> <./refector_0_test.png> <./refector_1_test.png>]
-<./letter_encrypt.png, id=105, 1018.80624pt x 120.45pt>
+<./letter_encrypt.png, id=107, 1018.80624pt x 120.45pt>
 File: ./letter_encrypt.png Graphic file (type png)
 
 <use ./letter_encrypt.png>
-Package pdftex.def Info: ./letter_encrypt.png used on input line 134.
-(pdftex.def)             Requested size: 500.484pt x 59.1717pt.
+Package pdftex.def Info: ./letter_encrypt.png used on input line 141.
+(pdftex.def)             Requested size: 350.33727pt x 41.41928pt.
 
-<./encrypt_letter.png, id=106, 989.6975pt x 116.435pt>
+<./encrypt_letter.png, id=108, 989.6975pt x 116.435pt>
 File: ./encrypt_letter.png Graphic file (type png)
 
 <use ./encrypt_letter.png>
-Package pdftex.def Info: ./encrypt_letter.png used on input line 140.
-(pdftex.def)             Requested size: 500.484pt x 58.88004pt.
+Package pdftex.def Info: ./encrypt_letter.png used on input line 147.
+(pdftex.def)             Requested size: 350.33727pt x 41.21478pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--145
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 138--152
 
  []
 
-[5 <./enigma_machine_test.png> <./letter_encrypt.png> <./encrypt_letter.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+[5 <./refector_1_test.png> <./enigma_machine_test.png> <./letter_encrypt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
+[6 <./encrypt_letter.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
  (./G47_enigma_machineLab5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `G47_enigma_machineLab5.out' has not changed.
 
 (rerunfilecheck)             Checksum: 980846A42377169AD46C373154A51931;342.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 7123 strings out of 493089
- 105023 string characters out of 6134842
- 199605 words of memory out of 5000000
- 10496 multiletter control sequences out of 15000+600000
+ 7130 strings out of 493089
+ 105193 string characters out of 6134842
+ 199658 words of memory out of 5000000
+ 10501 multiletter control sequences out of 15000+600000
  10888 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  33i,6n,32p,1166b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -590,10 +595,10 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on G47_enigma_machineLab5.pdf (6 pages, 21181551 bytes).
+Output written on G47_enigma_machineLab5.pdf (6 pages, 21177913 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 154 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
